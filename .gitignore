@@ -1,0 +1,20 @@
+# JetBrains / WebStorm
+.idea/
+
+# macOS
+.DS_Store
+
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Build folders
+dist/
+build/
