@@ -164,3 +164,20 @@ body {
     color: #333;
     line-height: 1.35;
 }
+
+/* Small status text in the search panel. */
+.last-updated {
+    font-size: 12px;
+    color: #555;
+    white-space: nowrap;
+}
+
+.data-status {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.data-status.error {
+    color: #cc0000;
+    font-weight: bold;
+}

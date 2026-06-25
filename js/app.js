@@ -294,6 +294,14 @@ function updateLastUpdatedTime() {
     lastUpdatedElement.textContent = `Last updated: ${formattedTime}`;
 }
 
+// Show a short status message when data loading succeeds or fails.
+function updateDataStatus(message, isError = false) {
+    const dataStatusElement = document.getElementById('data-status');
+
+    dataStatusElement.textContent = message;
+    dataStatusElement.classList.toggle('error', isError);
+}
+
 // Reset the search field, filters and map position to the default view.
 function resetMapView() {
     const searchInput = document.getElementById('airport-search');
@@ -397,9 +405,11 @@ function loadAirportWeatherData() {
             updateCategoryFilterOptions();
             applyMarkerFilters();
             updateLastUpdatedTime();
+            updateDataStatus('');
         })
         .catch(error => {
             console.error('Could not load airport or weather data:', error);
+            updateDataStatus('Could not load airport or weather data.', true);
         });
 }
 
