@@ -267,6 +267,44 @@ function setupWeatherRefresh() {
     });
 }
 
+// Build clear popup HTML for airport, METAR and TAF information.
+function createAirportPopupContent(airport, metar, taf, fltCat, categoryReason) {
+    return `
+        <div class="popup-content">
+            <div class="popup-header">
+                <strong>${airport.icao}</strong> — ${airport.name}<br>
+                <span>${airport.country}</span>
+            </div>
+
+            <hr>
+
+            <div class="popup-section">
+                <strong>Flight category</strong><br>
+                <span>${fltCat}</span><br>
+                <small>${categoryReason}</small>
+            </div>
+
+            <div class="popup-section">
+                <strong>Weather details</strong><br>
+                Wind: ${metar?.wdir ?? '—'}° / ${metar?.wspd ?? '—'} kt<br>
+                Visibility: ${metar?.visib ?? '—'} SM<br>
+                Ceiling: ${metar?.ceiling ?? '—'} ft<br>
+                QNH: ${metar?.altim ?? '—'} hPa
+            </div>
+
+            <div class="popup-section">
+                <strong>METAR</strong><br>
+                <small>${metar?.rawOb ?? 'No METAR data available'}</small>
+            </div>
+
+            <div class="popup-section">
+                <strong>TAF</strong><br>
+                <small>${taf?.rawTAF ?? 'No TAF data available'}</small>
+            </div>
+        </div>
+    `;
+}
+
 // Load airport, METAR and TAF data, then combine and place markers.
 function loadAirportWeatherData() {
     clearAirportData();
@@ -295,24 +333,11 @@ function loadAirportWeatherData() {
                 const fltCat = calculateFlightCategory(metar);
                 const categoryReason = getFlightCategoryReason(metar, fltCat);
                 const icon = createIcon(fltCat);
+                const popupContent = createAirportPopupContent(airport, metar, taf, fltCat, categoryReason);
 
                 const marker = L.marker([airport.lat, airport.lon], { icon })
                     .addTo(map)
-                    .bindPopup(`
-                        <strong>${airport.icao}</strong><br>
-                        ${airport.name}<br>
-                        ${airport.country}<br><br>
-                        <strong>Category:</strong> ${fltCat}<br>
-                        <strong>Wind:</strong> ${metar?.wdir ?? '—'}° / ${metar?.wspd ?? '—'} kt<br>
-                        <strong>Visibility:</strong> ${metar?.visib ?? '—'} SM<br>
-                        <strong>Ceiling:</strong> ${metar?.ceiling ?? '—'} ft<br>
-                        <strong>QNH:</strong> ${metar?.altim ?? '—'} hPa<br>
-                        <strong>Reason:</strong> ${categoryReason}<br><br>
-                        <strong>METAR:</strong><br>
-                        <small>${metar?.rawOb ?? 'No METAR data available'}</small><br><br>
-                        <strong>TAF:</strong><br>
-                        <small>${taf?.rawTAF ?? 'No TAF data available'}</small>
-                    `);
+                    .bindPopup(popupContent);
 
                 markerIndex[airport.icao] = marker;
                 airportIndex[airport.icao] = airport;

@@ -122,3 +122,45 @@ body {
     border-radius: 3px;
     flex-shrink: 0;
 }
+
+/* Popup content styling for airport weather information. */
+.popup-content {
+    min-width: 240px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.popup-header {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.popup-header span {
+    color: #555;
+    font-size: 12px;
+}
+
+.popup-content hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 8px 0;
+}
+
+.popup-section {
+    margin-bottom: 10px;
+}
+
+.popup-section:last-child {
+    margin-bottom: 0;
+}
+
+.popup-section strong {
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+.popup-section small {
+    display: block;
+    color: #333;
+    line-height: 1.35;
+}
