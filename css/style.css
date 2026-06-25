@@ -1,185 +1,464 @@
-/* Reset default browser spacing so the map can fill the full screen. */
-* {
+/* ============================================================
+   RESET
+   ============================================================ */
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Make the page use the full browser height. */
-html,
-body {
+html, body {
     width: 100%;
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow: hidden;
 }
 
-/* Leaflet needs an element with a fixed height, otherwise the map will not be visible. */
-#map {
+/* ============================================================
+   TOPBAR  — white, like metar-taf.com
+   ============================================================ */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 68px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    z-index: 2000;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+.topbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 26px;
+    color: #dc3545;
+}
+
+.logo-text strong {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    color: #202124;
+    line-height: 1.15;
+}
+
+.logo-text small {
+    font-size: 14px;
+    color: #5f6368;
+}
+
+.topbar-search {
+    display: flex;
+    align-items: center;
+    width: 385px;
+    max-width: 40vw;
+    background: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 1.9rem;
+    padding: 0 8px 0 18px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: box-shadow 0.2s;
+}
+
+.topbar-search:focus-within {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.topbar-search input {
     width: 100%;
-    height: 100vh;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: #202124;
+    padding: 10px 0;
 }
 
-/* Custom round marker style for showing the VFR/MVFR/IFR/LIFR category on the map. */
+.topbar-search input::placeholder {
+    color: #9aa0a6;
+}
+
+.topbar-search button {
+    background: transparent;
+    border: none;
+    color: #5f6368;
+    font-size: 16px;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.15s;
+}
+
+.topbar-search button:hover {
+    background: rgba(0,0,0,0.07);
+}
+
+/* ============================================================
+   MAP
+   ============================================================ */
+#map {
+    position: fixed;
+    top: 68px;
+    left: 56px;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    transition: right 0.3s ease;
+}
+
+/* ============================================================
+   LEFT LAYER TOOLBAR
+   ============================================================ */
+.layer-toolbar {
+    position: fixed;
+    top: 68px;
+    left: 0;
+    width: 56px;
+    bottom: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 0;
+    gap: 8px;
+    z-index: 1500;
+    pointer-events: none;
+}
+
+.layer-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background: #fff;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 8px rgba(60,60,60,0.15);
+    transition: background 0.15s, color 0.15s, transform 0.15s;
+    pointer-events: auto;
+}
+
+.layer-btn:hover {
+    background: #eee;
+    color: #202124;
+    transform: translateY(-1px);
+}
+
+.layer-btn.active {
+    background: #0057a3;
+    color: #fff;
+}
+
+.layer-divider {
+    width: 32px;
+    height: 1px;
+    background: transparent;
+    margin: 2px 0;
+}
+
+/* ============================================================
+   FILTER PANEL (slides in from left over map)
+   ============================================================ */
+.filter-panel {
+    position: fixed;
+    top: 84px;
+    left: -240px;
+    width: 220px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    z-index: 1400;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 8px rgba(60,60,60,0.15);
+    transition: left 0.25s ease;
+}
+
+.filter-panel.open {
+    left: 68px;
+}
+
+.filter-panel-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #202124;
+    margin-bottom: 4px;
+}
+
+.filter-label {
+    font-size: 12px;
+    color: #5f6368;
+    margin-top: 4px;
+}
+
+.filter-panel select {
+    width: 100%;
+    padding: 7px 10px;
+    font-size: 13px;
+    border: 1px solid #dadce0;
+    border-radius: 6px;
+    background: #fff;
+    color: #202124;
+    cursor: pointer;
+    outline: none;
+}
+
+.filter-panel select:focus {
+    border-color: #1a73e8;
+}
+
+.last-updated {
+    font-size: 11px;
+    color: #9aa0a6;
+    margin-top: 4px;
+}
+
+.data-status {
+    font-size: 11px;
+    color: #5f6368;
+    margin-top: 4px;
+    line-height: 1.3;
+}
+
+.data-status.error {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+/* ============================================================
+   MARKERS
+   ============================================================ */
 .marker {
     width: 32px;
     height: 32px;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 28px;
     border-radius: 50%;
-    border: 2px solid rgba(255,255,255,0.8);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-    cursor: pointer;
-}
-
-
-/* Search panel positioned in the top-left corner above the map. */
-.search-panel {
-    position: absolute;
-    top: 16px;
-    left: 60px;
-    z-index: 1000;
-    background: white;
-    padding: 10px 12px;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    border: 2px solid #fff;
     display: flex;
-    gap: 8px;
     align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    background-clip: padding-box;
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,0.5));
+    cursor: pointer;
+    transition: transform 0.15s;
 }
 
-.search-panel label {
+.marker:hover {
+    transform: scale(1.18);
+}
+
+/* ============================================================
+   RIGHT SIDEBAR  — dark blue, like metar-taf.com
+   ============================================================ */
+.sidebar {
+    position: fixed;
+    top: 68px;
+    right: -395px;
+    width: 375px;
+    bottom: 0;
+    background: #0057a3;
+    z-index: 1600;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+}
+
+/* Header */
+.sidebar-header {
+    padding: 20px 16px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-icao {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.sidebar-name {
+    font-size: 14px;
+    color: #fff;
+    margin-top: 2px;
+}
+
+.sidebar-location {
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    margin-top: 3px;
+}
+
+.sidebar-close-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.15s;
+}
+
+.sidebar-close-btn:hover {
+    background: rgba(255,255,255,0.22);
+}
+
+/* Summary row */
+.sidebar-summary {
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-category-badge {
+    padding: 5px 14px;
+    border-radius: 6px;
     font-size: 13px;
     font-weight: bold;
-    white-space: nowrap;
+    color: #fff;
+    flex-shrink: 0;
 }
 
-.search-panel input {
-    width: 80px;
-    padding: 6px 8px;
+.sidebar-summary-details {
+    flex: 1;
     font-size: 13px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    text-transform: uppercase;
+    color: #b8d4f0;
+    line-height: 1.7;
 }
 
-.search-panel select {
-    padding: 6px 8px;
-    font-size: 13px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background: white;
+.sidebar-visib::before   { content: '● '; color: #7aaee8; }
+.sidebar-wxstring::before { content: '● '; color: #7aaee8; }
+
+.sidebar-temp {
+    font-size: 22px;
+    font-weight: 300;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+/* Wind compass */
+.sidebar-compass-wrapper {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#wind-compass {
+    width: 200px;
+    height: 200px;
+}
+
+.sidebar-wind-label {
+    margin-top: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+/* METAR link */
+.sidebar-metar-link {
+    padding: 14px 16px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
     cursor: pointer;
 }
 
-.search-panel button {
-    padding: 6px 12px;
+.sidebar-metar-link:hover {
+    color: #fff;
+}
+
+/* Raw METAR */
+.sidebar-raw {
+    padding: 16px;
+    font-family: monospace;
     font-size: 13px;
-    background: #0066ff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    color: #cde;
+    line-height: 1.7;
+    background: rgba(0,0,0,0.2);
+    flex: 1;
+    white-space: pre-wrap;
+    word-break: break-all;
 }
 
-.search-panel button:hover {
-    background: #0052cc;
-}
-
-/* Legend positioned in the bottom-right corner of the map. */
+/* ============================================================
+   LEGEND  — bottom right, white card
+   ============================================================ */
 .legend {
-    position: absolute;
-    bottom: 32px;
+    position: fixed;
+    bottom: 28px;
     right: 16px;
-    z-index: 1000;
-    background: white;
+    z-index: 1200;
+    background: #fff;
     padding: 10px 14px;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 8px rgba(60,60,60,0.15);
     font-size: 12px;
+    transition: right 0.3s ease;
 }
 
 .legend-title {
     font-weight: bold;
-    margin-bottom: 8px;
     font-size: 13px;
+    margin-bottom: 8px;
+    color: #202124;
 }
 
 .legend-item {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
+    color: #3c4043;
 }
 
 .legend-item:last-child {
     margin-bottom: 0;
 }
 
-.legend-color {
-    width: 36px;
-    height: 18px;
-    border-radius: 3px;
+.legend-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
     flex-shrink: 0;
 }
 
-/* Popup content styling for airport weather information. */
-.popup-content {
-    min-width: 240px;
-    font-size: 13px;
-    line-height: 1.4;
-}
-
-.popup-header {
-    font-size: 14px;
-    margin-bottom: 6px;
-}
-
-.popup-header span {
-    color: #555;
-    font-size: 12px;
-}
-
-.popup-content hr {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin: 8px 0;
-}
-
-.popup-section {
-    margin-bottom: 10px;
-}
-
-.popup-section:last-child {
-    margin-bottom: 0;
-}
-
-.popup-section strong {
-    display: inline-block;
-    margin-bottom: 3px;
-}
-
-.popup-section small {
-    display: block;
-    color: #333;
-    line-height: 1.35;
-}
-
-/* Small status text in the search panel. */
-.last-updated {
-    font-size: 12px;
-    color: #555;
-    white-space: nowrap;
-}
-
-.data-status {
-    font-size: 12px;
-    white-space: nowrap;
-}
-
-.data-status.error {
-    color: #cc0000;
-    font-weight: bold;
+/* ============================================================
+   LEAFLET OVERRIDES
+   ============================================================ */
+.leaflet-control-zoom {
+    display: none;
 }

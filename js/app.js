@@ -1,24 +1,15 @@
 // Initialize the Leaflet map and center it on Western Europe.
-const map = L.map('map').setView([51.5, 5.0], 6);
+const map = L.map('map', { zoomControl: false }).setView([51.5, 5.0], 6);
 
-// Create the standard OpenStreetMap tile layer.
+// Create the standard OpenStreetMap raster tile layer.
 const standardMapLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
 });
 
-// Create an extra topographic map layer for terrain-focused viewing.
-const topographicMapLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors, SRTM | © OpenTopoMap'
-});
-
-// Add the default map layer to the map.
+// Add the default map layer to the Leaflet map.
 standardMapLayer.addTo(map);
 
-// Add a Leaflet layer selector so users can switch between map styles.
-L.control.layers({
-    'OpenStreetMap': standardMapLayer,
-    'Topographic map': topographicMapLayer
-}).addTo(map);
+// The custom toolbar is used instead of the default Leaflet layer selector.
 
 // Flight category colors following standard aviation convention.
 const CATEGORY_COLORS = {
@@ -227,7 +218,7 @@ function getFlightCategoryReason(metar, fltCat) {
     return 'The flight category could not be explained with the available data.';
 }
 
-// Search for an airport by ICAO code or airport name and open its popup.
+// Search for an airport by ICAO code or airport name and open its sidebar.
 function searchAirport() {
     const searchInput = document.getElementById('airport-search');
     const searchValue = searchInput.value.trim();
@@ -249,7 +240,9 @@ function searchAirport() {
     }
 
     map.flyTo(marker.getLatLng(), 8);
-    marker.openPopup();
+    const foundIcao = markerIndex[icaoSearchValue] ? icaoSearchValue : matchingAirport.icao;
+    const airport = airportIndex[foundIcao];
+    openSidebar(airport, airport.metar, airport.taf);
 }
 
 // Connect the search input and button to the airport search function.
@@ -364,15 +357,19 @@ function updateLastUpdatedTime() {
     lastUpdatedElement.textContent = `Last updated: ${formattedTime}`;
 }
 
-// Show a short status message when data loading succeeds or fails.
+// Show a short status message when the optional status element exists.
 function updateDataStatus(message, isError = false) {
     const dataStatusElement = document.getElementById('data-status');
+
+    if (!dataStatusElement) {
+        return;
+    }
 
     dataStatusElement.textContent = message;
     dataStatusElement.classList.toggle('error', isError);
 }
 
-// Reset the search field, filters and map position to the default view.
+// Reset the search field, filters, sidebar and map position to the default view.
 function resetMapView() {
     const searchInput = document.getElementById('airport-search');
     const countryFilter = document.getElementById('country-filter');
@@ -384,8 +381,8 @@ function resetMapView() {
 
     updateCategoryFilterOptions();
     applyMarkerFilters();
+    closeSidebar();
     map.flyTo([51.5, 5.0], 6);
-    map.closePopup();
 }
 
 // Connect the reset button to the reset view function.
@@ -394,42 +391,173 @@ function setupResetView() {
     resetViewButton.addEventListener('click', resetMapView);
 }
 
-// Build clear popup HTML for airport, METAR and TAF information.
-function createAirportPopupContent(airport, metar, taf, fltCat, categoryReason) {
-    return `
-        <div class="popup-content">
-            <div class="popup-header">
-                <strong>${airport.icao}</strong> — ${airport.name}<br>
-                <span>${airport.country}</span>
-            </div>
+// Draw a simple wind compass inside the right airport sidebar.
+function drawCompass(canvas, windDirection, windSpeed) {
+    if (!canvas) {
+        return;
+    }
 
-            <hr>
+    const context = canvas.getContext('2d');
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const radius = centerX - 16;
 
-            <div class="popup-section">
-                <strong>Flight category</strong><br>
-                <span>${fltCat}</span><br>
-                <small>${categoryReason}</small>
-            </div>
+    context.clearRect(0, 0, canvas.width, canvas.height);
 
-            <div class="popup-section">
-                <strong>Weather details</strong><br>
-                Wind: ${metar?.wdir ?? '—'}° / ${metar?.wspd ?? '—'} kt<br>
-                Visibility: ${metar?.visib ?? '—'} SM<br>
-                Ceiling: ${metar?.ceiling ?? '—'} ft<br>
-                QNH: ${metar?.altim ?? '—'} hPa
-            </div>
+    context.beginPath();
+    context.arc(centerX, centerY, radius, 0, Math.PI * 2);
+    context.fillStyle = 'rgba(0,0,0,0.25)';
+    context.fill();
+    context.strokeStyle = 'rgba(255,255,255,0.15)';
+    context.lineWidth = 1;
+    context.stroke();
 
-            <div class="popup-section">
-                <strong>METAR</strong><br>
-                <small>${metar?.rawOb ?? 'No METAR data available'}</small>
-            </div>
+    const cardinalDirections = [
+        { label: 'N', angle: 0 },
+        { label: 'E', angle: 90 },
+        { label: 'S', angle: 180 },
+        { label: 'W', angle: 270 }
+    ];
 
-            <div class="popup-section">
-                <strong>TAF</strong><br>
-                <small>${taf?.rawTAF ?? 'No TAF data available'}</small>
-            </div>
-        </div>
-    `;
+    context.fillStyle = 'rgba(255,255,255,0.55)';
+    context.font = '11px sans-serif';
+    context.textAlign = 'center';
+    context.textBaseline = 'middle';
+
+    cardinalDirections.forEach(direction => {
+        const radians = (direction.angle - 90) * Math.PI / 180;
+        const x = centerX + (radius - 13) * Math.cos(radians);
+        const y = centerY + (radius - 13) * Math.sin(radians);
+        context.fillText(direction.label, x, y);
+    });
+
+    for (let degrees = 0; degrees < 360; degrees += 30) {
+        const radians = (degrees - 90) * Math.PI / 180;
+        const innerRadius = radius - 22;
+        const outerRadius = radius - 14;
+
+        context.beginPath();
+        context.moveTo(centerX + innerRadius * Math.cos(radians), centerY + innerRadius * Math.sin(radians));
+        context.lineTo(centerX + outerRadius * Math.cos(radians), centerY + outerRadius * Math.sin(radians));
+        context.strokeStyle = 'rgba(255,255,255,0.25)';
+        context.lineWidth = 1;
+        context.stroke();
+    }
+
+    if (windDirection == null || windSpeed == null) {
+        return;
+    }
+
+    const windRadians = (windDirection - 90) * Math.PI / 180;
+    const arrowRadius = radius - 28;
+    const arrowTipX = centerX + arrowRadius * Math.cos(windRadians);
+    const arrowTipY = centerY + arrowRadius * Math.sin(windRadians);
+    const arrowBaseX = centerX - arrowRadius * Math.cos(windRadians);
+    const arrowBaseY = centerY - arrowRadius * Math.sin(windRadians);
+
+    context.beginPath();
+    context.moveTo(arrowBaseX, arrowBaseY);
+    context.lineTo(arrowTipX, arrowTipY);
+    context.strokeStyle = 'white';
+    context.lineWidth = 2;
+    context.stroke();
+
+    const headSize = 9;
+    context.beginPath();
+    context.moveTo(arrowTipX, arrowTipY);
+    context.lineTo(
+        arrowTipX - headSize * Math.cos(windRadians - 0.4),
+        arrowTipY - headSize * Math.sin(windRadians - 0.4)
+    );
+    context.lineTo(
+        arrowTipX - headSize * Math.cos(windRadians + 0.4),
+        arrowTipY - headSize * Math.sin(windRadians + 0.4)
+    );
+    context.closePath();
+    context.fillStyle = 'white';
+    context.fill();
+}
+
+// Open the right sidebar with detailed airport weather information.
+function openSidebar(airport, metar, taf) {
+    if (!airport) {
+        return;
+    }
+
+    const fltCat = calculateFlightCategory(metar);
+    const color = CATEGORY_COLORS[fltCat] ?? '#999999';
+    const sidebar = document.getElementById('sidebar');
+    const legend = document.querySelector('.legend');
+
+    document.getElementById('sidebar-icao').textContent = airport.icao;
+    document.getElementById('sidebar-name').textContent = airport.name;
+    document.getElementById('sidebar-location').textContent = airport.country;
+
+    const categoryBadge = document.getElementById('sidebar-category-badge');
+    categoryBadge.textContent = fltCat;
+    categoryBadge.style.background = color;
+
+    document.getElementById('sidebar-visib').textContent = metar ? `${metar.visib} SM` : '—';
+    document.getElementById('sidebar-wxstring').textContent = metar?.wxString ?? 'None';
+    document.getElementById('sidebar-temp').textContent = metar?.temp != null ? `${metar.temp} °C` : '—';
+    document.getElementById('sidebar-wind-label').textContent = metar ? `${metar.wdir ?? '—'}° ${metar.wspd ?? '—'} kt` : '—';
+    document.getElementById('sidebar-raw-metar').textContent = `${metar?.rawOb ?? 'No METAR available'}\n\n${taf?.rawTAF ?? 'No TAF available'}`;
+
+    drawCompass(document.getElementById('wind-compass'), metar?.wdir ?? null, metar?.wspd ?? null);
+
+    sidebar.classList.add('open');
+    document.getElementById('map').style.right = '375px';
+
+    if (legend) {
+        legend.style.right = '391px';
+    }
+
+    map.invalidateSize();
+}
+
+// Close the right airport sidebar and restore the map width.
+function closeSidebar() {
+    const sidebar = document.getElementById('sidebar');
+    const legend = document.querySelector('.legend');
+
+    if (sidebar) {
+        sidebar.classList.remove('open');
+    }
+
+    document.getElementById('map').style.right = '0';
+
+    if (legend) {
+        legend.style.right = '16px';
+    }
+
+    map.invalidateSize();
+}
+
+// Connect the custom toolbar buttons to map and UI actions.
+function setupToolbarControls() {
+    const filterPanelButton = document.getElementById('layer-category-filter');
+    const zoomInButton = document.getElementById('layer-zoom-in');
+    const zoomOutButton = document.getElementById('layer-zoom-out');
+    const sidebarCloseButton = document.getElementById('sidebar-close');
+    const filterPanel = document.getElementById('filter-panel');
+
+    if (filterPanelButton && filterPanel) {
+        filterPanelButton.addEventListener('click', () => {
+            filterPanel.classList.toggle('open');
+        });
+    }
+
+    if (zoomInButton) {
+        zoomInButton.addEventListener('click', () => map.zoomIn());
+    }
+
+    if (zoomOutButton) {
+        zoomOutButton.addEventListener('click', () => map.zoomOut());
+    }
+
+    if (sidebarCloseButton) {
+        sidebarCloseButton.addEventListener('click', closeSidebar);
+    }
 }
 
 // Load airport, METAR and TAF data, then combine and place markers.
@@ -458,13 +586,17 @@ function loadAirportWeatherData() {
                 const metar = normalizeMetar(metarMap[airport.icao]);
                 const taf = tafMap[airport.icao];
                 const fltCat = calculateFlightCategory(metar);
-                const categoryReason = getFlightCategoryReason(metar, fltCat);
                 const icon = createIcon(fltCat);
-                const popupContent = createAirportPopupContent(airport, metar, taf, fltCat, categoryReason);
+
+                airport.metar = metar;
+                airport.taf = taf;
 
                 const marker = L.marker([airport.lat, airport.lon], { icon })
-                    .addTo(map)
-                    .bindPopup(popupContent);
+                    .addTo(map);
+
+                marker.on('click', () => {
+                    openSidebar(airport, metar, taf);
+                });
 
                 markerIndex[airport.icao] = marker;
                 airportIndex[airport.icao] = airport;
@@ -487,4 +619,5 @@ setupAirportSearch();
 setupMarkerFilters();
 setupWeatherRefresh();
 setupResetView();
+setupToolbarControls();
 loadAirportWeatherData();
