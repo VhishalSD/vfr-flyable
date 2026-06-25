@@ -31,3 +31,48 @@ body {
     height: 24px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
+
+
+/* Search panel positioned in the top-left corner above the map. */
+.search-panel {
+    position: absolute;
+    top: 16px;
+    left: 60px;
+    z-index: 1000;
+    background: white;
+    padding: 10px 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.search-panel label {
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.search-panel input {
+    width: 80px;
+    padding: 6px 8px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.search-panel button {
+    padding: 6px 12px;
+    font-size: 13px;
+    background: #0066ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-panel button:hover {
+    background: #0052cc;
+}

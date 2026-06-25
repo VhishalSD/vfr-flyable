@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="search-panel">
+        <label for="airport-search">Search by ICAO</label>
+        <input type="text" id="airport-search" placeholder="Example: EHAM" maxlength="4">
+        <button id="search-button" type="button">Search</button>
+    </div>
+
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

@@ -14,6 +14,9 @@ const CATEGORY_COLORS = {
     LIFR: '#990099'
 };
 
+// Store markers by ICAO code for the search function.
+const markerIndex = {};
+
 // Return a colored div icon for a given flight category.
 function createIcon(fltCat) {
     const color = CATEGORY_COLORS[fltCat] ?? '#999999';
@@ -121,6 +124,40 @@ function getFlightCategoryReason(metar, fltCat) {
     return 'The flight category could not be explained with the available data.';
 }
 
+// Search for an airport by ICAO code and open its popup.
+function searchAirportByIcao() {
+    const searchInput = document.getElementById('airport-search');
+    const searchValue = searchInput.value.trim().toUpperCase();
+
+    if (!searchValue) {
+        return;
+    }
+
+    const marker = markerIndex[searchValue];
+
+    if (!marker) {
+        alert(`No airport found for ICAO code: ${searchValue}`);
+        return;
+    }
+
+    map.flyTo(marker.getLatLng(), 8);
+    marker.openPopup();
+}
+
+// Connect the search input and button to the ICAO search function.
+function setupAirportSearch() {
+    const searchInput = document.getElementById('airport-search');
+    const searchButton = document.getElementById('search-button');
+
+    searchButton.addEventListener('click', searchAirportByIcao);
+
+    searchInput.addEventListener('keydown', event => {
+        if (event.key === 'Enter') {
+            searchAirportByIcao();
+        }
+    });
+}
+
 // Load airport, METAR and TAF data, then combine and place markers.
 Promise.all([
     fetch('data/airports.json').then(r => r.json()),
@@ -147,7 +184,7 @@ Promise.all([
             const categoryReason = getFlightCategoryReason(metar, fltCat);
             const icon = createIcon(fltCat);
 
-            L.marker([airport.lat, airport.lon], { icon })
+            const marker = L.marker([airport.lat, airport.lon], { icon })
                 .addTo(map)
                 .bindPopup(`
                     <strong>${airport.icao}</strong><br>
@@ -164,7 +201,10 @@ Promise.all([
                     <strong>TAF:</strong><br>
                     <small>${taf?.rawTAF ?? 'No TAF data available'}</small>
                 `);
+
+            markerIndex[airport.icao] = marker;
         });
+        setupAirportSearch();
     })
     .catch(error => {
         console.error('Kon data niet laden:', error);
