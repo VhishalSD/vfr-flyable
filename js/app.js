@@ -281,6 +281,28 @@ function setupWeatherRefresh() {
     });
 }
 
+// Reset the search field, filters and map position to the default view.
+function resetMapView() {
+    const searchInput = document.getElementById('airport-search');
+    const countryFilter = document.getElementById('country-filter');
+    const categoryFilter = document.getElementById('category-filter');
+
+    searchInput.value = '';
+    countryFilter.value = 'ALL';
+    categoryFilter.value = 'ALL';
+
+    updateCategoryFilterOptions();
+    applyMarkerFilters();
+    map.flyTo([51.5, 5.0], 6);
+    map.closePopup();
+}
+
+// Connect the reset button to the reset view function.
+function setupResetView() {
+    const resetViewButton = document.getElementById('reset-view-button');
+    resetViewButton.addEventListener('click', resetMapView);
+}
+
 // Build clear popup HTML for airport, METAR and TAF information.
 function createAirportPopupContent(airport, metar, taf, fltCat, categoryReason) {
     return `
@@ -370,4 +392,5 @@ function loadAirportWeatherData() {
 setupAirportSearch();
 setupMarkerFilters();
 setupWeatherRefresh();
+setupResetView();
 loadAirportWeatherData();
