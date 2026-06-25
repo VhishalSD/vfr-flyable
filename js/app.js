@@ -28,6 +28,14 @@ const CATEGORY_COLORS = {
     LIFR: '#990099'
 };
 
+// Short marker labels, closer to the visual style of metar-taf.com.
+const CATEGORY_LABELS = {
+    VFR: 'V',
+    MVFR: 'M',
+    IFR: 'I',
+    LIFR: 'L'
+};
+
 // Store markers by ICAO code for the search function.
 const markerIndex = {};
 // Store airport metadata by ICAO code for filtering.
@@ -53,13 +61,13 @@ function clearAirportData() {
 // Return a colored div icon for a given flight category.
 function createIcon(fltCat) {
     const color = CATEGORY_COLORS[fltCat] ?? '#999999';
-    const label = fltCat ?? '?';
+    const label = CATEGORY_LABELS[fltCat] ?? '?';
 
     return L.divIcon({
         className: '',
         html: `<div class="marker" style="background:${color}">${label}</div>`,
-        iconSize: [48, 24],
-        iconAnchor: [24, 12]
+        iconSize: [32, 32],
+        iconAnchor: [16, 16]
     });
 }
 

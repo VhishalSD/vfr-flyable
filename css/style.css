@@ -19,17 +19,19 @@ body {
     height: 100vh;
 }
 
-/* Custom marker style for showing the VFR/MVFR/IFR/LIFR category on the map. */
+/* Custom round marker style for showing the VFR/MVFR/IFR/LIFR category on the map. */
 .marker {
+    width: 32px;
+    height: 32px;
     color: white;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: bold;
     text-align: center;
-    line-height: 24px;
-    border-radius: 4px;
-    width: 48px;
-    height: 24px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    line-height: 28px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.8);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    cursor: pointer;
 }
 
 
