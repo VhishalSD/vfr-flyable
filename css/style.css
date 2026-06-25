@@ -85,3 +85,40 @@ body {
 .search-panel button:hover {
     background: #0052cc;
 }
+
+/* Legend positioned in the bottom-right corner of the map. */
+.legend {
+    position: absolute;
+    bottom: 32px;
+    right: 16px;
+    z-index: 1000;
+    background: white;
+    padding: 10px 14px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    font-size: 12px;
+}
+
+.legend-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.legend-item:last-child {
+    margin-bottom: 0;
+}
+
+.legend-color {
+    width: 36px;
+    height: 18px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
