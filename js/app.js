@@ -27,6 +27,35 @@ function createIcon(fltCat) {
     });
 }
 
+// Calculate the flight category from visibility and ceiling.
+function calculateFlightCategory(metar) {
+    if (!metar) {
+        return 'UNKNOWN';
+    }
+
+    const visibility = parseFloat(String(metar.visib).replace('+', ''));
+    const ceiling = Number(metar.ceiling);
+
+    if (Number.isNaN(visibility) || Number.isNaN(ceiling)) {
+        return metar.fltCat ?? 'UNKNOWN';
+    }
+
+    // The lowest condition wins: poor visibility or low ceiling makes the category worse.
+    if (visibility < 1 || ceiling < 500) {
+        return 'LIFR';
+    }
+
+    if (visibility < 3 || ceiling < 1000) {
+        return 'IFR';
+    }
+
+    if (visibility <= 5 || ceiling <= 3000) {
+        return 'MVFR';
+    }
+
+    return 'VFR';
+}
+
 // Load airport, METAR and TAF data, then combine and place markers.
 Promise.all([
     fetch('data/airports.json').then(r => r.json()),
@@ -49,7 +78,7 @@ Promise.all([
         airports.forEach(airport => {
             const metar = metarMap[airport.icao];
             const taf = tafMap[airport.icao];
-            const fltCat = metar?.fltCat ?? 'UNKNOWN';
+            const fltCat = calculateFlightCategory(metar);
             const icon = createIcon(fltCat);
 
             L.marker([airport.lat, airport.lon], { icon })
