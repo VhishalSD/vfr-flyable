@@ -1,9 +1,23 @@
 // Initialize the Leaflet map and center it on Western Europe.
 const map = L.map('map').setView([51.5, 5.0], 6);
 
-// Add the OpenStreetMap tile layer to the map.
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+// Create the standard OpenStreetMap tile layer.
+const standardMapLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap contributors'
+});
+
+// Create an extra topographic map layer for terrain-focused viewing.
+const topographicMapLayer = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors, SRTM | © OpenTopoMap'
+});
+
+// Add the default map layer to the map.
+standardMapLayer.addTo(map);
+
+// Add a Leaflet layer selector so users can switch between map styles.
+L.control.layers({
+    'OpenStreetMap': standardMapLayer,
+    'Topographic map': topographicMapLayer
 }).addTo(map);
 
 // Flight category colors following standard aviation convention.
