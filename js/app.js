@@ -17,6 +17,9 @@ const CATEGORY_COLORS = {
 // Store markers by ICAO code for the search function.
 const markerIndex = {};
 
+// Store airports for partial name-based search.
+const airportSearchIndex = [];
+
 // Return a colored div icon for a given flight category.
 function createIcon(fltCat) {
     const color = CATEGORY_COLORS[fltCat] ?? '#999999';
@@ -124,19 +127,24 @@ function getFlightCategoryReason(metar, fltCat) {
     return 'The flight category could not be explained with the available data.';
 }
 
-// Search for an airport by ICAO code and open its popup.
-function searchAirportByIcao() {
+// Search for an airport by ICAO code or airport name and open its popup.
+function searchAirport() {
     const searchInput = document.getElementById('airport-search');
-    const searchValue = searchInput.value.trim().toUpperCase();
+    const searchValue = searchInput.value.trim();
 
     if (!searchValue) {
         return;
     }
 
-    const marker = markerIndex[searchValue];
+    const icaoSearchValue = searchValue.toUpperCase();
+    const nameSearchValue = searchValue.toLowerCase();
+    const matchingAirport = airportSearchIndex.find(airport =>
+        airport.name.toLowerCase().includes(nameSearchValue)
+    );
+    const marker = markerIndex[icaoSearchValue] ?? markerIndex[matchingAirport?.icao];
 
     if (!marker) {
-        alert(`No airport found for ICAO code: ${searchValue}`);
+        alert(`No airport found for: ${searchValue}`);
         return;
     }
 
@@ -144,16 +152,16 @@ function searchAirportByIcao() {
     marker.openPopup();
 }
 
-// Connect the search input and button to the ICAO search function.
+// Connect the search input and button to the airport search function.
 function setupAirportSearch() {
     const searchInput = document.getElementById('airport-search');
     const searchButton = document.getElementById('search-button');
 
-    searchButton.addEventListener('click', searchAirportByIcao);
+    searchButton.addEventListener('click', searchAirport);
 
     searchInput.addEventListener('keydown', event => {
         if (event.key === 'Enter') {
-            searchAirportByIcao();
+            searchAirport();
         }
     });
 }
@@ -203,6 +211,7 @@ Promise.all([
                 `);
 
             markerIndex[airport.icao] = marker;
+            airportSearchIndex.push(airport);
         });
         setupAirportSearch();
     })
