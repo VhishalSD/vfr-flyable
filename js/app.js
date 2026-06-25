@@ -24,6 +24,18 @@ const categoryIndex = {};
 // Store airports for partial name-based search.
 const airportSearchIndex = [];
 
+// Remove existing markers and clear lookup indexes before weather data is loaded again.
+function clearAirportData() {
+    Object.values(markerIndex).forEach(marker => {
+        marker.removeFrom(map);
+    });
+
+    Object.keys(markerIndex).forEach(icao => delete markerIndex[icao]);
+    Object.keys(airportIndex).forEach(icao => delete airportIndex[icao]);
+    Object.keys(categoryIndex).forEach(icao => delete categoryIndex[icao]);
+    airportSearchIndex.length = 0;
+}
+
 // Return a colored div icon for a given flight category.
 function createIcon(fltCat) {
     const color = CATEGORY_COLORS[fltCat] ?? '#999999';
@@ -246,58 +258,77 @@ function setupMarkerFilters() {
     applyMarkerFilters();
 }
 
-// Load airport, METAR and TAF data, then combine and place markers.
-Promise.all([
-    fetch('data/airports.json').then(r => r.json()),
-    fetch('data/metar-test.json').then(r => r.json()),
-    fetch('data/taf-test.json').then(r => r.json())
-])
-    .then(([airports, metarList, tafList]) => {
-        // Build a lookup map: icaoId -> metar object.
-        const metarMap = {};
-        metarList.forEach(metar => {
-            metarMap[metar.icaoId] = metar;
-        });
+// Connect the refresh button to reload the local weather test data.
+function setupWeatherRefresh() {
+    const refreshWeatherButton = document.getElementById('refresh-weather-button');
 
-        // Build a lookup map: icaoId -> taf object.
-        const tafMap = {};
-        tafList.forEach(taf => {
-            tafMap[taf.icaoId] = taf;
-        });
-
-        airports.forEach(airport => {
-            const metar = metarMap[airport.icao];
-            const taf = tafMap[airport.icao];
-            const fltCat = calculateFlightCategory(metar);
-            const categoryReason = getFlightCategoryReason(metar, fltCat);
-            const icon = createIcon(fltCat);
-
-            const marker = L.marker([airport.lat, airport.lon], { icon })
-                .addTo(map)
-                .bindPopup(`
-                    <strong>${airport.icao}</strong><br>
-                    ${airport.name}<br>
-                    ${airport.country}<br><br>
-                    <strong>Category:</strong> ${fltCat}<br>
-                    <strong>Wind:</strong> ${metar?.wdir ?? '—'}° / ${metar?.wspd ?? '—'} kt<br>
-                    <strong>Visibility:</strong> ${metar?.visib ?? '—'} SM<br>
-                    <strong>Ceiling:</strong> ${metar?.ceiling ?? '—'} ft<br>
-                    <strong>QNH:</strong> ${metar?.altim ?? '—'} hPa<br>
-                    <strong>Reason:</strong> ${categoryReason}<br><br>
-                    <strong>METAR:</strong><br>
-                    <small>${metar?.rawOb ?? 'No METAR data available'}</small><br><br>
-                    <strong>TAF:</strong><br>
-                    <small>${taf?.rawTAF ?? 'No TAF data available'}</small>
-                `);
-
-            markerIndex[airport.icao] = marker;
-            airportIndex[airport.icao] = airport;
-            categoryIndex[airport.icao] = fltCat;
-            airportSearchIndex.push(airport);
-        });
-        setupAirportSearch();
-        setupMarkerFilters();
-    })
-    .catch(error => {
-        console.error('Kon data niet laden:', error);
+    refreshWeatherButton.addEventListener('click', () => {
+        loadAirportWeatherData();
     });
+}
+
+// Load airport, METAR and TAF data, then combine and place markers.
+function loadAirportWeatherData() {
+    clearAirportData();
+
+    Promise.all([
+        fetch('data/airports.json').then(r => r.json()),
+        fetch('data/metar-test.json').then(r => r.json()),
+        fetch('data/taf-test.json').then(r => r.json())
+    ])
+        .then(([airports, metarList, tafList]) => {
+            // Build a lookup map: icaoId -> metar object.
+            const metarMap = {};
+            metarList.forEach(metar => {
+                metarMap[metar.icaoId] = metar;
+            });
+
+            // Build a lookup map: icaoId -> taf object.
+            const tafMap = {};
+            tafList.forEach(taf => {
+                tafMap[taf.icaoId] = taf;
+            });
+
+            airports.forEach(airport => {
+                const metar = metarMap[airport.icao];
+                const taf = tafMap[airport.icao];
+                const fltCat = calculateFlightCategory(metar);
+                const categoryReason = getFlightCategoryReason(metar, fltCat);
+                const icon = createIcon(fltCat);
+
+                const marker = L.marker([airport.lat, airport.lon], { icon })
+                    .addTo(map)
+                    .bindPopup(`
+                        <strong>${airport.icao}</strong><br>
+                        ${airport.name}<br>
+                        ${airport.country}<br><br>
+                        <strong>Category:</strong> ${fltCat}<br>
+                        <strong>Wind:</strong> ${metar?.wdir ?? '—'}° / ${metar?.wspd ?? '—'} kt<br>
+                        <strong>Visibility:</strong> ${metar?.visib ?? '—'} SM<br>
+                        <strong>Ceiling:</strong> ${metar?.ceiling ?? '—'} ft<br>
+                        <strong>QNH:</strong> ${metar?.altim ?? '—'} hPa<br>
+                        <strong>Reason:</strong> ${categoryReason}<br><br>
+                        <strong>METAR:</strong><br>
+                        <small>${metar?.rawOb ?? 'No METAR data available'}</small><br><br>
+                        <strong>TAF:</strong><br>
+                        <small>${taf?.rawTAF ?? 'No TAF data available'}</small>
+                    `);
+
+                markerIndex[airport.icao] = marker;
+                airportIndex[airport.icao] = airport;
+                categoryIndex[airport.icao] = fltCat;
+                airportSearchIndex.push(airport);
+            });
+
+            updateCategoryFilterOptions();
+            applyMarkerFilters();
+        })
+        .catch(error => {
+            console.error('Could not load airport or weather data:', error);
+        });
+}
+
+setupAirportSearch();
+setupMarkerFilters();
+setupWeatherRefresh();
+loadAirportWeatherData();
