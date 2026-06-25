@@ -18,6 +18,8 @@ const CATEGORY_COLORS = {
 const markerIndex = {};
 // Store airport metadata by ICAO code for filtering.
 const airportIndex = {};
+// Store calculated flight categories by ICAO code for category filtering.
+const categoryIndex = {};
 
 // Store airports for partial name-based search.
 const airportSearchIndex = [];
@@ -168,15 +170,57 @@ function setupAirportSearch() {
     });
 }
 
-// Show or hide markers based on the selected country.
-function filterMarkersByCountry() {
+// Update the category dropdown so it only shows categories available for the selected country.
+function updateCategoryFilterOptions() {
     const countryFilter = document.getElementById('country-filter');
+    const categoryFilter = document.getElementById('category-filter');
     const selectedCountry = countryFilter.value;
+    const previousCategory = categoryFilter.value;
+    const availableCategories = new Set();
+
+    Object.keys(airportIndex).forEach(icao => {
+        const airport = airportIndex[icao];
+        const category = categoryIndex[icao];
+        const countryMatches = selectedCountry === 'ALL' || airport.country === selectedCountry;
+
+        if (countryMatches && category) {
+            availableCategories.add(category);
+        }
+    });
+
+    categoryFilter.innerHTML = '<option value="ALL">All categories</option>';
+
+    Object.keys(CATEGORY_COLORS).forEach(category => {
+        if (availableCategories.has(category)) {
+            const option = document.createElement('option');
+            option.value = category;
+            option.textContent = category;
+            categoryFilter.appendChild(option);
+        }
+    });
+
+    if (previousCategory !== 'ALL' && availableCategories.has(previousCategory)) {
+        categoryFilter.value = previousCategory;
+    } else {
+        categoryFilter.value = 'ALL';
+    }
+}
+
+// Show or hide markers based on the selected country and flight category.
+function applyMarkerFilters() {
+    const countryFilter = document.getElementById('country-filter');
+    const categoryFilter = document.getElementById('category-filter');
+    const selectedCountry = countryFilter.value;
+    const selectedCategory = categoryFilter.value;
 
     Object.keys(markerIndex).forEach(icao => {
         const marker = markerIndex[icao];
         const airport = airportIndex[icao];
-        const shouldShowMarker = selectedCountry === 'ALL' || airport.country === selectedCountry;
+        const category = categoryIndex[icao];
+
+        const countryMatches = selectedCountry === 'ALL' || airport.country === selectedCountry;
+        const categoryMatches = selectedCategory === 'ALL' || category === selectedCategory;
+        const shouldShowMarker = countryMatches && categoryMatches;
 
         if (shouldShowMarker) {
             marker.addTo(map);
@@ -186,10 +230,20 @@ function filterMarkersByCountry() {
     });
 }
 
-// Connect the country dropdown to the marker filter function.
-function setupCountryFilter() {
+// Connect the filter dropdowns to the marker filter function.
+function setupMarkerFilters() {
     const countryFilter = document.getElementById('country-filter');
-    countryFilter.addEventListener('change', filterMarkersByCountry);
+    const categoryFilter = document.getElementById('category-filter');
+
+    countryFilter.addEventListener('change', () => {
+        updateCategoryFilterOptions();
+        applyMarkerFilters();
+    });
+
+    categoryFilter.addEventListener('change', applyMarkerFilters);
+
+    updateCategoryFilterOptions();
+    applyMarkerFilters();
 }
 
 // Load airport, METAR and TAF data, then combine and place markers.
@@ -238,10 +292,11 @@ Promise.all([
 
             markerIndex[airport.icao] = marker;
             airportIndex[airport.icao] = airport;
+            categoryIndex[airport.icao] = fltCat;
             airportSearchIndex.push(airport);
         });
         setupAirportSearch();
-        setupCountryFilter();
+        setupMarkerFilters();
     })
     .catch(error => {
         console.error('Kon data niet laden:', error);
