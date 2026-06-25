@@ -18,3 +18,16 @@ body {
     width: 100%;
     height: 100vh;
 }
+
+/* Custom marker style for showing the VFR/MVFR/IFR/LIFR category on the map. */
+.marker {
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 4px;
+    width: 48px;
+    height: 24px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}

@@ -1,0 +1,46 @@
+
+
+[
+  {
+    "icao": "EHAM",
+    "name": "Amsterdam Schiphol",
+    "country": "Netherlands",
+    "lat": 52.308,
+    "lon": 4.764
+  },
+  {
+    "icao": "EHRD",
+    "name": "Rotterdam The Hague",
+    "country": "Netherlands",
+    "lat": 51.957,
+    "lon": 4.437
+  },
+  {
+    "icao": "EBOS",
+    "name": "Oostende-Brugge",
+    "country": "Belgium",
+    "lat": 51.199,
+    "lon": 2.862
+  },
+  {
+    "icao": "LFPG",
+    "name": "Paris Charles de Gaulle",
+    "country": "France",
+    "lat": 49.013,
+    "lon": 2.55
+  },
+  {
+    "icao": "EDDM",
+    "name": "Munich",
+    "country": "Germany",
+    "lat": 48.354,
+    "lon": 11.786
+  },
+  {
+    "icao": "EGLL",
+    "name": "London Heathrow",
+    "country": "United Kingdom",
+    "lat": 51.477,
+    "lon": -0.461
+  }
+]
