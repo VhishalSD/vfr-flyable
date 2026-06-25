@@ -281,6 +281,19 @@ function setupWeatherRefresh() {
     });
 }
 
+// Show the latest time at which the weather data was loaded.
+function updateLastUpdatedTime() {
+    const lastUpdatedElement = document.getElementById('last-updated');
+    const now = new Date();
+    const formattedTime = now.toLocaleTimeString('en-GB', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    });
+
+    lastUpdatedElement.textContent = `Last updated: ${formattedTime}`;
+}
+
 // Reset the search field, filters and map position to the default view.
 function resetMapView() {
     const searchInput = document.getElementById('airport-search');
@@ -383,6 +396,7 @@ function loadAirportWeatherData() {
 
             updateCategoryFilterOptions();
             applyMarkerFilters();
+            updateLastUpdatedTime();
         })
         .catch(error => {
             console.error('Could not load airport or weather data:', error);
