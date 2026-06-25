@@ -63,6 +63,15 @@ body {
     text-transform: uppercase;
 }
 
+.search-panel select {
+    padding: 6px 8px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: white;
+    cursor: pointer;
+}
+
 .search-panel button {
     padding: 6px 12px;
     font-size: 13px;

@@ -16,6 +16,8 @@ const CATEGORY_COLORS = {
 
 // Store markers by ICAO code for the search function.
 const markerIndex = {};
+// Store airport metadata by ICAO code for filtering.
+const airportIndex = {};
 
 // Store airports for partial name-based search.
 const airportSearchIndex = [];
@@ -166,6 +168,30 @@ function setupAirportSearch() {
     });
 }
 
+// Show or hide markers based on the selected country.
+function filterMarkersByCountry() {
+    const countryFilter = document.getElementById('country-filter');
+    const selectedCountry = countryFilter.value;
+
+    Object.keys(markerIndex).forEach(icao => {
+        const marker = markerIndex[icao];
+        const airport = airportIndex[icao];
+        const shouldShowMarker = selectedCountry === 'ALL' || airport.country === selectedCountry;
+
+        if (shouldShowMarker) {
+            marker.addTo(map);
+        } else {
+            marker.removeFrom(map);
+        }
+    });
+}
+
+// Connect the country dropdown to the marker filter function.
+function setupCountryFilter() {
+    const countryFilter = document.getElementById('country-filter');
+    countryFilter.addEventListener('change', filterMarkersByCountry);
+}
+
 // Load airport, METAR and TAF data, then combine and place markers.
 Promise.all([
     fetch('data/airports.json').then(r => r.json()),
@@ -211,9 +237,11 @@ Promise.all([
                 `);
 
             markerIndex[airport.icao] = marker;
+            airportIndex[airport.icao] = airport;
             airportSearchIndex.push(airport);
         });
         setupAirportSearch();
+        setupCountryFilter();
     })
     .catch(error => {
         console.error('Kon data niet laden:', error);
