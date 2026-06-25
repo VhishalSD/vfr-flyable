@@ -63,6 +63,68 @@ function createIcon(fltCat) {
     });
 }
 
+// Convert visibility in meters to statute miles for flight category calculation.
+function metersToStatuteMiles(meters) {
+    return Number((meters / 1609.344).toFixed(1));
+}
+
+// Parse useful weather values from a raw METAR string.
+function parseMetar(rawMetar) {
+    if (!rawMetar) {
+        return {};
+    }
+
+    const windMatch = rawMetar.match(/\b(\d{3})(\d{2})(G\d{2})?KT\b/);
+    const visibilityMetersMatch = rawMetar.match(/\b(\d{4})\b/);
+    const ceilingMatch = rawMetar.match(/\b(?:BKN|OVC|VV)(\d{3})\b/);
+    const qnhMatch = rawMetar.match(/\bQ(\d{4})\b/);
+    const weatherMatch = rawMetar.match(/\b(-|\+)?(RA|SN|BR|FG|HZ|DZ|TS|SH|GR)\b/);
+
+    const parsedMetar = {};
+
+    if (windMatch) {
+        parsedMetar.wdir = Number(windMatch[1]);
+        parsedMetar.wspd = Number(windMatch[2]);
+
+        if (windMatch[3]) {
+            parsedMetar.wgst = Number(windMatch[3].replace('G', ''));
+        }
+    }
+
+    if (visibilityMetersMatch) {
+        const visibilityMeters = Number(visibilityMetersMatch[1]);
+        parsedMetar.visib = metersToStatuteMiles(visibilityMeters).toString();
+    }
+
+    if (ceilingMatch) {
+        parsedMetar.ceiling = Number(ceilingMatch[1]) * 100;
+    }
+
+    if (qnhMatch) {
+        parsedMetar.altim = Number(qnhMatch[1]);
+    }
+
+    if (weatherMatch) {
+        parsedMetar.wxString = weatherMatch[0];
+    }
+
+    return parsedMetar;
+}
+
+// Combine existing METAR object fields with values parsed from the raw METAR text.
+function normalizeMetar(metar) {
+    if (!metar) {
+        return null;
+    }
+
+    const parsedMetar = parseMetar(metar.rawOb);
+
+    return {
+        ...parsedMetar,
+        ...metar
+    };
+}
+
 // Calculate the flight category from visibility and ceiling.
 function calculateFlightCategory(metar) {
     if (!metar) {
@@ -385,7 +447,7 @@ function loadAirportWeatherData() {
             });
 
             airports.forEach(airport => {
-                const metar = metarMap[airport.icao];
+                const metar = normalizeMetar(metarMap[airport.icao]);
                 const taf = tafMap[airport.icao];
                 const fltCat = calculateFlightCategory(metar);
                 const categoryReason = getFlightCategoryReason(metar, fltCat);
