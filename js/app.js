@@ -56,6 +56,71 @@ function calculateFlightCategory(metar) {
     return 'VFR';
 }
 
+// Explain which visibility or ceiling value caused the chosen flight category.
+function getFlightCategoryReason(metar, fltCat) {
+    if (!metar) {
+        return 'No METAR data is available, so the category is unknown.';
+    }
+
+    const visibility = parseFloat(String(metar.visib).replace('+', ''));
+    const ceiling = Number(metar.ceiling);
+
+    if (Number.isNaN(visibility) || Number.isNaN(ceiling)) {
+        return 'The category is based on the reported METAR flight category because visibility or ceiling data is missing.';
+    }
+
+    const visibilityReason = `visibility ${metar.visib} SM`;
+    const ceilingReason = `ceiling ${ceiling} ft`;
+
+    if (fltCat === 'LIFR') {
+        const triggers = [];
+
+        if (visibility < 1) {
+            triggers.push(visibilityReason);
+        }
+
+        if (ceiling < 500) {
+            triggers.push(ceilingReason);
+        }
+
+        return `LIFR because of ${triggers.join(' and ')}.`;
+    }
+
+    if (fltCat === 'IFR') {
+        const triggers = [];
+
+        if (visibility < 3) {
+            triggers.push(visibilityReason);
+        }
+
+        if (ceiling < 1000) {
+            triggers.push(ceilingReason);
+        }
+
+        return `IFR because of ${triggers.join(' and ')}.`;
+    }
+
+    if (fltCat === 'MVFR') {
+        const triggers = [];
+
+        if (visibility <= 5) {
+            triggers.push(visibilityReason);
+        }
+
+        if (ceiling <= 3000) {
+            triggers.push(ceilingReason);
+        }
+
+        return `MVFR because of ${triggers.join(' and ')}.`;
+    }
+
+    if (fltCat === 'VFR') {
+        return `VFR because visibility ${metar.visib} SM and ceiling ${ceiling} ft are both within VFR limits.`;
+    }
+
+    return 'The flight category could not be explained with the available data.';
+}
+
 // Load airport, METAR and TAF data, then combine and place markers.
 Promise.all([
     fetch('data/airports.json').then(r => r.json()),
@@ -79,6 +144,7 @@ Promise.all([
             const metar = metarMap[airport.icao];
             const taf = tafMap[airport.icao];
             const fltCat = calculateFlightCategory(metar);
+            const categoryReason = getFlightCategoryReason(metar, fltCat);
             const icon = createIcon(fltCat);
 
             L.marker([airport.lat, airport.lon], { icon })
@@ -91,7 +157,8 @@ Promise.all([
                     <strong>Wind:</strong> ${metar?.wdir ?? '—'}° / ${metar?.wspd ?? '—'} kt<br>
                     <strong>Visibility:</strong> ${metar?.visib ?? '—'} SM<br>
                     <strong>Ceiling:</strong> ${metar?.ceiling ?? '—'} ft<br>
-                    <strong>QNH:</strong> ${metar?.altim ?? '—'} hPa<br><br>
+                    <strong>QNH:</strong> ${metar?.altim ?? '—'} hPa<br>
+                    <strong>Reason:</strong> ${categoryReason}<br><br>
                     <strong>METAR:</strong><br>
                     <small>${metar?.rawOb ?? 'No METAR data available'}</small><br><br>
                     <strong>TAF:</strong><br>
