@@ -27,20 +27,28 @@ function createIcon(fltCat) {
     });
 }
 
-// Load airport data and METAR data, then combine and place markers.
+// Load airport, METAR and TAF data, then combine and place markers.
 Promise.all([
     fetch('data/airports.json').then(r => r.json()),
-    fetch('data/metar-test.json').then(r => r.json())
+    fetch('data/metar-test.json').then(r => r.json()),
+    fetch('data/taf-test.json').then(r => r.json())
 ])
-    .then(([airports, metarList]) => {
+    .then(([airports, metarList, tafList]) => {
         // Build a lookup map: icaoId -> metar object.
         const metarMap = {};
         metarList.forEach(metar => {
             metarMap[metar.icaoId] = metar;
         });
 
+        // Build a lookup map: icaoId -> taf object.
+        const tafMap = {};
+        tafList.forEach(taf => {
+            tafMap[taf.icaoId] = taf;
+        });
+
         airports.forEach(airport => {
             const metar = metarMap[airport.icao];
+            const taf = tafMap[airport.icao];
             const fltCat = metar?.fltCat ?? 'UNKNOWN';
             const icon = createIcon(fltCat);
 
@@ -56,7 +64,9 @@ Promise.all([
                     <strong>Ceiling:</strong> ${metar?.ceiling ?? '—'} ft<br>
                     <strong>QNH:</strong> ${metar?.altim ?? '—'} hPa<br><br>
                     <strong>METAR:</strong><br>
-                    <small>${metar?.rawOb ?? 'No METAR data available'}</small>
+                    <small>${metar?.rawOb ?? 'No METAR data available'}</small><br><br>
+                    <strong>TAF:</strong><br>
+                    <small>${taf?.rawTAF ?? 'No TAF data available'}</small>
                 `);
         });
     })
