@@ -18,3 +18,9 @@ yarn-debug.log*
 # Build folders
 dist/
 build/
+# Generated local weather archive
+data/metar-archive/
+
+# Local IDE / macOS files
+.idea/
+.DS_Store

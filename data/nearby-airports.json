@@ -1,0 +1,365 @@
+[
+  {
+    "id": "EHAM",
+    "name": "Amsterdam Schiphol",
+    "lat": 52.308,
+    "lon": 4.764,
+    "type": "airport",
+    "country": "Netherlands"
+  },
+  {
+    "id": "EHRD",
+    "name": "Rotterdam The Hague",
+    "lat": 51.957,
+    "lon": 4.437,
+    "type": "airport",
+    "country": "Netherlands"
+  },
+  {
+    "id": "EBOS",
+    "name": "Oostende-Brugge",
+    "lat": 51.199,
+    "lon": 2.862,
+    "type": "airport",
+    "country": "Belgium"
+  },
+  {
+    "id": "LFPG",
+    "name": "Paris Charles de Gaulle",
+    "lat": 49.013,
+    "lon": 2.55,
+    "type": "airport",
+    "country": "France"
+  },
+  {
+    "id": "EDDM",
+    "name": "Munich",
+    "lat": 48.354,
+    "lon": 11.786,
+    "type": "airport",
+    "country": "Germany"
+  },
+  {
+    "id": "EGLL",
+    "name": "London Heathrow",
+    "lat": 51.477,
+    "lon": -0.461,
+    "type": "airport",
+    "country": "United Kingdom"
+  },
+  {
+    "id": "GCLP",
+    "name": "Gran Canaria Airport",
+    "lat": 27.9319,
+    "lon": -15.3866,
+    "type": "airport"
+  },
+  {
+    "id": "SPQU",
+    "name": "Rodríguez Ballón International Airport",
+    "lat": -16.3408,
+    "lon": -71.5695,
+    "type": "airport"
+  },
+  {
+    "id": "TTPP",
+    "name": "Piarco International Airport",
+    "lat": 10.5954,
+    "lon": -61.3376,
+    "type": "airport"
+  },
+  {
+    "id": "VTBS",
+    "name": "Suvarnabhumi Airport",
+    "lat": 13.6811,
+    "lon": 100.747,
+    "type": "airport"
+  },
+  {
+    "id": "VOGA",
+    "name": "Manohar International Airport",
+    "lat": 15.7443,
+    "lon": 73.8606,
+    "type": "airport"
+  },
+  {
+    "id": "DAOI",
+    "name": "Chlef Aboubakr Belkaid International Airport",
+    "lat": 36.2166,
+    "lon": 1.3411,
+    "type": "airport"
+  },
+  {
+    "id": "CYHZ",
+    "name": "Halifax / Stanfield International Airport",
+    "lat": 44.8808,
+    "lon": -63.5086,
+    "type": "airport"
+  },
+  {
+    "id": "ZWWW",
+    "name": "Ürümqi Tianshan International Airport",
+    "lat": 43.9136,
+    "lon": 87.4794,
+    "type": "airport"
+  },
+  {
+    "id": "VRMG",
+    "name": "Gan International Airport",
+    "lat": -0.693,
+    "lon": 73.1526,
+    "type": "airport"
+  },
+  {
+    "id": "SBBE",
+    "name": "Val de Cans/Júlio Cezar Ribeiro International Airport",
+    "lat": -1.3793,
+    "lon": -48.4762,
+    "type": "airport"
+  },
+  {
+    "id": "LFBD",
+    "name": "Bordeaux–Mérignac Airport",
+    "lat": 44.8287,
+    "lon": -0.7154,
+    "type": "airport"
+  },
+  {
+    "id": "TNCB",
+    "name": "Flamingo International Airport",
+    "lat": 12.131,
+    "lon": -68.2685,
+    "type": "airport"
+  },
+  {
+    "id": "MYGF",
+    "name": "Grand Bahama International Airport",
+    "lat": 26.558,
+    "lon": -78.6956,
+    "type": "airport"
+  },
+  {
+    "id": "SKBQ",
+    "name": "Ernesto Cortissoz International Airport",
+    "lat": 10.8896,
+    "lon": -74.7808,
+    "type": "airport"
+  },
+  {
+    "id": "FKKD",
+    "name": "Douala International Airport",
+    "lat": 4.00608,
+    "lon": 9.71948,
+    "type": "airport"
+  },
+  {
+    "id": "SOCA",
+    "name": "Cayenne – Félix Eboué Airport",
+    "lat": 4.81996,
+    "lon": -52.36133,
+    "type": "airport"
+  },
+  {
+    "id": "GVSV",
+    "name": "Cesaria Evora International Airport",
+    "lat": 16.8334,
+    "lon": -25.0553,
+    "type": "airport"
+  },
+  {
+    "id": "GFLL",
+    "name": "Lungi International Airport",
+    "lat": 8.61644,
+    "lon": -13.1955,
+    "type": "airport"
+  },
+  {
+    "id": "LRTR",
+    "name": "Timișoara Traian Vuia International Airport",
+    "lat": 45.8099,
+    "lon": 21.3379,
+    "type": "airport"
+  },
+  {
+    "id": "VCRI",
+    "name": "Mattala Rajapaksa International Airport",
+    "lat": 6.2839,
+    "lon": 81.1242,
+    "type": "airport"
+  },
+  {
+    "id": "VTCC",
+    "name": "Chiang Mai International Airport",
+    "lat": 18.7668,
+    "lon": 98.9626,
+    "type": "airport"
+  },
+  {
+    "id": "UZTT",
+    "name": "Tashkent International Airport",
+    "lat": 41.2579,
+    "lon": 69.2812,
+    "type": "airport"
+  },
+  {
+    "id": "OENN",
+    "name": "Neom Bay Airport",
+    "lat": 27.9243,
+    "lon": 35.2936,
+    "type": "airport"
+  },
+  {
+    "id": "EKYT",
+    "name": "Aalborg Airport",
+    "lat": 57.0948,
+    "lon": 9.8499,
+    "type": "airport"
+  },
+  {
+    "id": "FALA",
+    "name": "Lanseria International Airport",
+    "lat": -25.939,
+    "lon": 27.9266,
+    "type": "airport"
+  },
+  {
+    "id": "UZNU",
+    "name": "Urgench International Airport",
+    "lat": 41.5827,
+    "lon": 60.6434,
+    "type": "airport"
+  },
+  {
+    "id": "LIBD",
+    "name": "Bari Karol Wojtyła International Airport",
+    "lat": 41.1389,
+    "lon": 16.7606,
+    "type": "airport"
+  },
+  {
+    "id": "OPST",
+    "name": "Sialkot International Airport",
+    "lat": 32.5359,
+    "lon": 74.3646,
+    "type": "airport"
+  },
+  {
+    "id": "MMAA",
+    "name": "General Juan N. Álvarez International Airport",
+    "lat": 16.7571,
+    "lon": -99.7531,
+    "type": "airport"
+  },
+  {
+    "id": "VEBD",
+    "name": "Bagdogra Airport",
+    "lat": 26.6812,
+    "lon": 88.3286,
+    "type": "airport"
+  },
+  {
+    "id": "UACP",
+    "name": "Petropavl International Airport",
+    "lat": 54.7756,
+    "lon": 69.1874,
+    "type": "airport"
+  },
+  {
+    "id": "HKKI",
+    "name": "Kisumu International Airport",
+    "lat": -0.0861,
+    "lon": 34.7289,
+    "type": "airport"
+  },
+  {
+    "id": "FVJN",
+    "name": "Joshua Mqabuko Nkomo International Airport",
+    "lat": -20.0163,
+    "lon": 28.6229,
+    "type": "airport"
+  },
+  {
+    "id": "EGNX",
+    "name": "East Midlands Airport",
+    "lat": 52.8311,
+    "lon": -1.32806,
+    "type": "airport"
+  },
+  {
+    "id": "SBSG",
+    "name": "Rio Grande do Norte/São Gonçalo do Amarante–Governador Aluízio Alves International Airport",
+    "lat": -5.7698,
+    "lon": -35.3666,
+    "type": "airport"
+  },
+  {
+    "id": "UWWW",
+    "name": "Kurumoch International Airport",
+    "lat": 53.5049,
+    "lon": 50.1643,
+    "type": "airport"
+  },
+  {
+    "id": "LTCS",
+    "name": "Şanlıurfa GAP Airport",
+    "lat": 37.4457,
+    "lon": 38.8956,
+    "type": "airport"
+  },
+  {
+    "id": "LGRP",
+    "name": "Rhodes International Airport \"Diagoras\"",
+    "lat": 36.4054,
+    "lon": 28.0862,
+    "type": "airport"
+  },
+  {
+    "id": "SBCY",
+    "name": "Várzea Grande–Marechal Rondon International Airport",
+    "lat": -15.6529,
+    "lon": -56.1167,
+    "type": "airport"
+  },
+  {
+    "id": "GMTT",
+    "name": "Tangier Ibn Battuta Airport",
+    "lat": 35.7317,
+    "lon": -5.9215,
+    "type": "airport"
+  },
+  {
+    "id": "CYYT",
+    "name": "St. John's International Airport",
+    "lat": 47.6186,
+    "lon": -52.7519,
+    "type": "airport"
+  },
+  {
+    "id": "EDVK",
+    "name": "Kassel Airport",
+    "lat": 51.4184,
+    "lon": 9.3916,
+    "type": "airport"
+  },
+  {
+    "id": "WMKI",
+    "name": "Sultan Azlan Shah Airport",
+    "lat": 4.5673,
+    "lon": 101.0916,
+    "type": "airport"
+  },
+  {
+    "id": "VAAH",
+    "name": "Sardar Vallabh Patel International Airport",
+    "lat": 23.0772,
+    "lon": 72.6347,
+    "type": "airport"
+  },
+  {
+    "id": "OMFJ",
+    "name": "Fujairah International Airport",
+    "lat": 25.1084,
+    "lon": 56.3281,
+    "type": "airport"
+  }
+]

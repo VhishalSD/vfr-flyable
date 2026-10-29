@@ -1,623 +1,290 @@
-// Initialize the Leaflet map and center it on Western Europe.
-const map = L.map('map', { zoomControl: false }).setView([51.5, 5.0], 6);
+'use strict';
 
-// Create the standard OpenStreetMap raster tile layer.
-const standardMapLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
+const COLORS={VFR:'#25b84b',MVFR:'#1976db',IFR:'#d92525',LIFR:'#a521a8'};
+
+const SHORT={VFR:'V',MVFR:'M',IFR:'I',LIFR:'L',UNKNOWN:'?'};
+
+const map=L.map('map',{zoomControl:false,worldCopyJump:true,minZoom:2}).setView([52.3,4.8],6);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap contributors'}).addTo(map);
+
+const codeLayer=L.layerGroup().addTo(map),weatherLayer=L.layerGroup(),rainLayer=L.layerGroup();
+
+let airports=[],nearbyDataset=[],runwaysByAirport={},mode='code',rainActive=false,current=null,routeMode=false,pointerMode=false,routePoints=[],routeLine=null,locationRequest=0,localTimeTimer=null;
+
+async function loadAirportMetadata(){
+try{const response=await fetch('data/airport-metadata.json');
+if(!response.ok)return{};
+const document=await response.json();
+return document&&typeof document==='object'&&!Array.isArray(document)&&document.airports&&typeof document.airports==='object'&&!Array.isArray(document.airports)?document.airports:{}}
+catch{return{}}}
+
+async function loadTafData(){
+try{const response=await fetch('data/taf-live.json');
+if(!response.ok)return{};
+const document=await response.json();
+return document&&typeof document==='object'&&!Array.isArray(document)&&document.airports&&typeof document.airports==='object'&&!Array.isArray(document.airports)?document.airports:{}}
+catch{return{}}}
+
+function stopLocalTimeClock(){if(localTimeTimer!==null){window.clearInterval(localTimeTimer);localTimeTimer=null}}
+function startLocalTimeClock(timezone,metadata){
+stopLocalTimeClock();
+const timeElement=document.getElementById('panel-local-time'),timezoneElement=document.getElementById('panel-timezone'),daylightStatusElement=document.getElementById('panel-daylight-status');
+timeElement.textContent='—';timezoneElement.textContent='—';daylightStatusElement.textContent='—';
+if(typeof timezone!=='string'||!timezone.trim())return;
+try{const timezoneName=timezone.trim(),formatter=new Intl.DateTimeFormat('nl-NL',{timeZone:timezoneName,hour:'2-digit',minute:'2-digit',hourCycle:'h23'}),update=()=>{const now=new Date(Date.now());timeElement.textContent=formatter.format(now);renderDaylightStatus(metadata,now)};
+update();timezoneElement.textContent=timezoneName;localTimeTimer=window.setInterval(update,60*1000)}catch{timeElement.textContent='—';timezoneElement.textContent='—';daylightStatusElement.textContent='—'}}
+
+function renderDaylightStatus(metadata,now=new Date(Date.now())){
+const statusElement=document.getElementById('panel-daylight-status');
+statusElement.textContent='—';
+const timezone=metadata?.timezone,daylight=metadata?.daylight;
+if(typeof timezone!=='string'||!timezone.trim()||!daylight||typeof daylight!=='object'||!Number.isFinite(now.getTime()))return;
+try{const timezoneName=timezone.trim(),dateParts=Object.fromEntries(new Intl.DateTimeFormat('en',{timeZone:timezoneName,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(now).filter(part=>part.type!=='literal').map(part=>[part.type,part.value])),localDate=`${dateParts.year}-${dateParts.month}-${dateParts.day}`;
+if(daylight.state==='polar_day'||daylight.state==='polarDay'){statusElement.textContent='Polar day';return}
+if(daylight.state==='polar_night'||daylight.state==='polarNight'){statusElement.textContent='Polar night';return}
+if(daylight.state!=='normal'||typeof daylight.date!=='string'||daylight.date!==localDate)return;
+const parseEvent=value=>{if(typeof value!=='string')return null;const timestamp=value.trim();if(!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?(?:Z|[+-]\d{2}:\d{2})$/.test(timestamp))return null;const event=new Date(timestamp);return Number.isFinite(event.getTime())?event:null},sunrise=parseEvent(daylight.sunriseUtc),sunset=parseEvent(daylight.sunsetUtc);
+if(!sunrise||!sunset||sunrise>=sunset)return;
+statusElement.textContent=now>=sunrise&&now<sunset?'Day':'Night'}catch{statusElement.textContent='—'}}
+
+function renderDaylightTimes(metadata,now=new Date()){
+const sunriseElement=document.getElementById('panel-sunrise'),sunsetElement=document.getElementById('panel-sunset'),solarNoonElement=document.getElementById('panel-solar-noon'),dayLengthElement=document.getElementById('panel-day-length');
+sunriseElement.textContent='—';sunsetElement.textContent='—';solarNoonElement.textContent='—';dayLengthElement.textContent='—';
+const timezone=metadata?.timezone,daylight=metadata?.daylight;
+if(typeof timezone!=='string'||!timezone.trim()||!daylight||typeof daylight!=='object'||typeof daylight.date!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(daylight.date))return;
+try{const timezoneName=timezone.trim(),dateParts=Object.fromEntries(new Intl.DateTimeFormat('en',{timeZone:timezoneName,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(now).filter(part=>part.type!=='literal').map(part=>[part.type,part.value])),localDate=`${dateParts.year}-${dateParts.month}-${dateParts.day}`;
+if(daylight.date!==localDate)return;
+const formatter=new Intl.DateTimeFormat('nl-NL',{timeZone:timezoneName,hour:'2-digit',minute:'2-digit',hourCycle:'h23'}),formatEvent=value=>{if(typeof value!=='string')return'—';const timestamp=value.trim();if(!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?(?:Z|[+-]\d{2}:\d{2})$/.test(timestamp))return'—';const event=new Date(timestamp);return Number.isFinite(event.getTime())?formatter.format(event):'—'};
+sunriseElement.textContent=formatEvent(daylight.sunriseUtc);sunsetElement.textContent=formatEvent(daylight.sunsetUtc);solarNoonElement.textContent=formatEvent(daylight.solarNoonUtc);
+const seconds=daylight.dayLengthSeconds;if(typeof seconds==='number'&&Number.isFinite(seconds)&&seconds>=0){const minutes=Math.round(seconds/60);dayLengthElement.textContent=`${Math.floor(minutes/60)} h ${minutes%60} min`}}catch{sunriseElement.textContent='—';sunsetElement.textContent='—';solarNoonElement.textContent='—';dayLengthElement.textContent='—'}}
+
+
+function symbol(m){const raw=m?.rawOb||'';
+if(/TS/.test(raw))return'⛈️';
+if(/RA|DZ|SH/.test(raw))return'🌧️';
+if(/FG|BR|HZ/.test(raw))return'🌫️';
+if(/OVC/.test(raw))return'☁️';
+if(/BKN|SCT/.test(raw))return'🌤️';
+return'☀️'}
+function category(m){if(!m)return'UNKNOWN';
+if(m.fltCat)return m.fltCat;
+const v=parseFloat(m?.visib),c=Number(m?.ceiling);
+if(v<1||c<500)return'LIFR';
+if(v<3||c<1000)return'IFR';
+if(v<=5||c<=3000)return'MVFR';
+return'VFR'}
+function variableWindRange(raw){const match=(raw||'').match(/(?:^|\s)(\d{3})V(\d{3})(?=\s|$)/);
+return match?[Number(match[1]),Number(match[2])]:null}
+function angularDifference(a,b){return Math.abs(((a-b+540)%360)-180)}
+function runwayForWind(icao,wdir){const wind=Number(wdir);
+if(!Number.isFinite(wind))return null;
+return(runwaysByAirport[icao]||[]).filter(runway=>!runway.closed&&runway.le_ident&&runway.he_ident).flatMap(runway=>[
+  {heading:runway.le_heading_degT,primary:runway.le_ident,opposite:runway.he_ident,length:runway.length_ft||0},
+  {heading:runway.he_heading_degT,primary:runway.he_ident,opposite:runway.le_ident,length:runway.length_ft||0}
+]).filter(end=>end.heading!=null&&Number.isFinite(Number(end.heading))).map(end=>({...end,heading:Number(end.heading)})).map(end=>({...end,difference:angularDifference(end.heading,wind)})).sort((a,b)=>a.difference-b.difference||b.length-a.length||a.primary.localeCompare(b.primary))[0]||null}
+function codeIcon(cat){return L.divIcon({className:'',html:`<span class="code-icon" style="--marker-color:${COLORS[cat]||'#7b8790'}">${SHORT[cat]}</span>`,iconSize:[26,26],iconAnchor:[13,13]})}
+function weatherIcon(m){return L.divIcon({className:'',html:`<span class="weather-icon">${symbol(m)}</span>`,iconSize:[29,29],iconAnchor:[15,15]})}
+function popup(a){return `<div class="airport-popup"><b>${a.icao}</b><br>${a.name}<br><small>${a.country}</small></div>`}
+
+function rebuildMarkers(){codeLayer.clearLayers();
+weatherLayer.clearLayers();
+const visibleAirports=airports.filter(a=>map.getBounds().contains([a.lat,a.lon]));
+const metarAirports=visibleAirports.filter(a=>a.metar);
+const minimumDistance=32,minimumDistanceSquared=minimumDistance*minimumDistance;
+const selectedPoints=[];
+const selectedAirports=metarAirports.slice().sort((a,b)=>a.icao<b.icao?-1:a.icao>b.icao?1:0).filter(a=>{
+  const point=map.latLngToContainerPoint([a.lat,a.lon]);
+  if(selectedPoints.some(chosen=>{const dx=point.x-chosen.x,dy=point.y-chosen.y;return dx*dx+dy*dy<minimumDistanceSquared}))return false;
+  selectedPoints.push(point);return true;
+});
+Object.assign(map.getContainer().dataset,{markerCandidates:metarAirports.length,markerShown:selectedAirports.length,markerHidden:metarAirports.length-selectedAirports.length});
+selectedAirports.forEach(a=>{const cat=category(a.metar);
+const attach=marker=>marker.bindPopup(popup(a)).on('click',event=>{
+  if(routeMode){
+    if(event.originalEvent)L.DomEvent.stopPropagation(event.originalEvent);
+    marker.closePopup();map.closePopup();addRouteAirport(a);return;
+  }
+  if(pointerMode){
+    if(event.originalEvent)L.DomEvent.stopPropagation(event.originalEvent);
+    marker.closePopup();map.closePopup();showLocation(L.latLng(a.lat,a.lon));return;
+  }
+  selectAirport(a);marker.openPopup();
+});
+L.marker([a.lat,a.lon],{icon:codeIcon(cat)}).addTo(codeLayer);
+attach(codeLayer.getLayers().at(-1));
+L.marker([a.lat,a.lon],{icon:weatherIcon(a.metar)}).addTo(weatherLayer);
+attach(weatherLayer.getLayers().at(-1))})}
+function setMode(next){mode=next;
+const code=next==='code';
+document.getElementById('layer-code').classList.toggle('active',code);
+document.getElementById('layer-weather').classList.toggle('active',!code);
+document.getElementById('layer-code').setAttribute('aria-pressed',code);
+document.getElementById('layer-weather').setAttribute('aria-pressed',!code);
+if(code){if(map.hasLayer(weatherLayer))map.removeLayer(weatherLayer);
+if(!map.hasLayer(codeLayer))map.addLayer(codeLayer)}else{if(map.hasLayer(codeLayer))map.removeLayer(codeLayer);
+if(!map.hasLayer(weatherLayer))map.addLayer(weatherLayer)}}
+function buildRain(){if(rainLayer.getLayers().length)return;
+[
+[[58,-13],[55,-7],[52,-4],[50,-8],[53,-15]],[[53,2],[51,7],[48,9],[47,3],[50,0]],[[45,-3],[43,3],[39,2],[40,-5]],[[8,-70],[3,-64],[-4,-61],[-1,-70]]
+].forEach((p,i)=>L.polygon(p,{color:i%2?'#6f4ad1':'#2589df',weight:1,fillColor:i%2?'#7751d5':'#32b8dd',fillOpacity:.32,interactive:false}).addTo(rainLayer))}
+function toggleRain(){rainActive=!rainActive;
+const b=document.getElementById('layer-rain');
+b.classList.toggle('active',rainActive);
+b.setAttribute('aria-pressed',rainActive);
+document.getElementById('rain-label').classList.toggle('show',rainActive);
+if(rainActive){buildRain();
+if(!map.hasLayer(rainLayer))map.addLayer(rainLayer)}else if(map.hasLayer(rainLayer))map.removeLayer(rainLayer)}
+
+function selectAirport(a){
+if(routeMode||pointerMode)setToolMode(null);
+stopLocalTimeClock();
+document.body.classList.remove('panel-closed');
+document.getElementById('airport-panel').classList.remove('closed');
+document.getElementById('airport-panel').setAttribute('aria-hidden','false');
+window.setTimeout(()=>map.invalidateSize(),260);
+current=a;
+const m=a.metar||{},cat=category(m);
+document.getElementById('panel-icao').textContent=a.icao;
+document.getElementById('panel-name').textContent=a.name;
+const municipality=typeof a.metadata?.municipality==='string'&&a.metadata.municipality.trim()?a.metadata.municipality.trim():null;
+document.getElementById('panel-location').textContent=[municipality,a.country].filter(Boolean).join(', ')||'—';
+const fir=a.metadata?.fir;document.getElementById('panel-fir').textContent=typeof fir==='string'&&fir.trim()?fir:'—';
+const badge=document.getElementById('panel-category');
+badge.textContent=cat;
+badge.style.background=COLORS[cat];
+document.getElementById('panel-visibility').textContent=m.visib!=null?`${m.visib} SM`:'—';
+const noCeiling=Array.isArray(m.clouds)&&m.clouds.some(layer=>['CAVOK','CLR','SKC','NSC','NCD','FEW','SCT'].includes(String(layer?.cover||'').toUpperCase()));
+document.getElementById('panel-ceiling').textContent=m.ceiling!=null?`${Number(m.ceiling).toLocaleString('nl-NL')} ft`:noCeiling?'None':'—';
+document.getElementById('panel-symbol').textContent=symbol(m);
+document.getElementById('panel-temp').textContent=m.temp!=null?`${m.temp} °C`:'—';
+document.getElementById('panel-wind').textContent=`${m.wdir??'—'}° · ${m.wspd??'—'} kt`;
+const windArrow=document.getElementById('wind-arrow'),windMin=document.getElementById('wind-min'),windMax=document.getElementById('wind-max');
+const hasWindDirection=m.wdir!=null&&Number.isFinite(Number(m.wdir));
+windArrow.hidden=!hasWindDirection;
+if(hasWindDirection)windArrow.style.transform=`rotate(${Number(m.wdir)}deg)`;
+const variableRange=variableWindRange(m.rawOb);
+windMin.hidden=!variableRange;windMax.hidden=!variableRange;
+if(variableRange){windMin.style.transform=`rotate(${variableRange[0]}deg)`;windMax.style.transform=`rotate(${variableRange[1]}deg)`}
+const runwayLayer=document.getElementById('compass-runway'),selectedRunway=runwayForWind(a.icao,m.wdir);
+runwayLayer.toggleAttribute('hidden',!selectedRunway);
+runwayLayer.style.transform=selectedRunway?`rotate(${selectedRunway.heading}deg)`:'';
+document.getElementById('runway-primary').textContent=selectedRunway?.primary||'—';
+document.getElementById('runway-opposite').textContent=selectedRunway?.opposite||'—';
+if(selectedRunway)Object.assign(runwayLayer.dataset,{airport:a.icao,primary:selectedRunway.primary,opposite:selectedRunway.opposite,heading:selectedRunway.heading,windDifference:selectedRunway.difference});
+else Object.keys(runwayLayer.dataset).forEach(key=>delete runwayLayer.dataset[key]);
+document.getElementById('panel-raw').textContent=m.rawOb||'Geen METAR beschikbaar';
+document.querySelector('.drawer-weather').href=`metar/index.html?icao=${encodeURIComponent(a.icao)}`;
+document.getElementById('airport-panel').classList.add('open')}
+function renderFavorites(){const root=document.getElementById('favorites');
+root.innerHTML='';
+['EGLL','EHAM','EHRD','EBOS','LFPG'].forEach(id=>{const a=airports.find(x=>x.icao===id);
+if(!a)return;
+const b=document.createElement('button');
+b.innerHTML=`<span class="fav-v">${SHORT[category(a.metar)]}</span>${id}`;
+b.onclick=()=>{selectAirport(a);
+map.flyTo([a.lat,a.lon],6)};
+root.appendChild(b)})}
+
+async function loadData(){try{const metadataRequest=loadAirportMetadata(),tafRequest=loadTafData();
+const [ap,ms,nearby,runways,metadataByIcao,tafByIcao]=await Promise.all([...['data/airports-full.json','data/metar-live.json','data/nearby-airports.json','data/runways.json'].map(u=>fetch(u).then(r=>{if(!r.ok)throw Error(u);
+return r.json()})),metadataRequest,tafRequest]);
+const mm=Object.fromEntries(ms.map(x=>[x.icaoId,x]));
+airports=ap.map(sourceAirport=>{const airport={...sourceAirport,metar:mm[sourceAirport.icao],taf:tafByIcao[sourceAirport.icao]||null};airport.metadata=metadataByIcao[airport.icao]||null;return airport});
+nearbyDataset=nearby;
+runwaysByAirport=runways.reduce((groups,runway)=>{(groups[runway.airport_ident]??=[]).push(runway);return groups},{});
+rebuildMarkers();
+renderFavorites()}catch(e){console.error('Lokale weerdata kon niet worden geladen.',e)}}
+function search(){const q=document.getElementById('airport-search').value.trim().toLowerCase();
+if(!q)return;
+const a=airports.find(x=>x.icao.toLowerCase()===q)||airports.find(x=>`${x.name} ${x.country}`.toLowerCase().includes(q));
+if(a){selectAirport(a);
+map.flyTo([a.lat,a.lon],7)}else alert(`Geen vliegveld gevonden voor: ${q}`)}
+document.getElementById('search-form').addEventListener('submit',e=>{e.preventDefault();
+search()});
+
+document.getElementById('layer-code').onclick=()=>setMode('code');
+document.getElementById('layer-weather').onclick=()=>setMode('weather');
+document.getElementById('layer-rain').onclick=toggleRain;
+document.getElementById('zoom-in').onclick=()=>map.zoomIn();
+document.getElementById('zoom-out').onclick=()=>map.zoomOut();
+document.getElementById('locate-btn').onclick=()=>navigator.geolocation?.getCurrentPosition(p=>map.flyTo([p.coords.latitude,p.coords.longitude],8),()=>map.flyTo([52.1,5.2],6));
+document.getElementById('panel-close').onclick=()=>{
+  current=null;
+  stopLocalTimeClock();
+  map.closePopup();
+  document.getElementById('airport-panel').classList.remove('open');
+  document.getElementById('airport-panel').classList.add('closed');
+  document.getElementById('airport-panel').setAttribute('aria-hidden','true');
+  document.body.classList.add('panel-closed');
+  window.setTimeout(()=>map.invalidateSize(),260);
+}
+function bearing(a,b){const r=Math.PI/180,p1=a.lat*r,p2=b.lat*r,d=(b.lng-a.lng)*r;return(Math.atan2(Math.sin(d)*Math.cos(p2),Math.cos(p1)*Math.sin(p2)-Math.sin(p1)*Math.cos(p2)*Math.cos(d))/r+360)%360}
+function renderRoute(){
+  const root=document.getElementById('route-stops');root.innerHTML='';let total=0;
+  routePoints.forEach((stop,index)=>{
+    if(index){const meters=stop.latlng.distanceTo(routePoints[index-1].latlng);total+=meters;const segment=document.createElement('div');segment.className='route-segment';segment.textContent=`${bearing(routePoints[index-1].latlng,stop.latlng).toFixed(0)}° · ${(meters/1852).toFixed(1)} NM`;root.appendChild(segment)}
+    const card=document.createElement('div');card.className='stop-card';card.innerHTML=`<span class="stop-index">${index+1}</span><div><b>${stop.airport?.icao||`Punt ${index+1}`}</b><small>${stop.airport?.name||`${stop.latlng.lat.toFixed(4)}°, ${stop.latlng.lng.toFixed(4)}°`}</small></div><button class="stop-remove" aria-label="Stop verwijderen">×</button>`;card.querySelector('button').onclick=()=>{routePoints.splice(index,1);updateRoute()};root.appendChild(card)
+  });
+  const summary=document.getElementById('route-summary');summary.hidden=routePoints.length<2;
+  document.getElementById('route-total-nm').textContent=`${(total/1852).toFixed(1)} NM`;
+  document.getElementById('route-total-km').textContent=`${(total/1000).toFixed(1)} km`;
+  document.getElementById('route-total-mi').textContent=`${(total/1609.344).toFixed(1)} mijl`;
+}
+function updateRoute(){if(routeLine){map.removeLayer(routeLine);routeLine=null}if(routePoints.length>1)routeLine=L.polyline(routePoints.map(s=>s.latlng),{color:'#e33',weight:3}).addTo(map);renderRoute()}
+function clearRoute(){routePoints=[];updateRoute()}
+function addRouteAirport(airport){routePoints.push({latlng:L.latLng(airport.lat,airport.lon),airport});updateRoute()}
+async function showLocation(latlng){
+  const request=++locationRequest;
+  const nearby=(nearbyDataset.length?nearbyDataset:airports.map(a=>({id:a.icao,...a}))).map(a=>({a,distance:latlng.distanceTo(L.latLng(a.lat,a.lon))})).sort((a,b)=>a.distance-b.distance);
+  const nearest=nearby[0];
+  const panel=document.getElementById('location-panel');panel.classList.add('open');panel.setAttribute('aria-hidden','false');document.body.classList.add('location-open');
+  document.getElementById('location-name').textContent='Locatie laden…';
+  document.getElementById('location-coordinates').textContent=`${latlng.lat.toFixed(5)}, ${latlng.lng.toFixed(5)}`;
+  const list=document.getElementById('nearby-airports');list.innerHTML='';nearby.slice(0,5).forEach(item=>{const row=document.createElement('div');row.className='nearby-airport';row.innerHTML=`<div><b>${item.a.id||item.a.icao||'—'}</b><small>${item.a.name}</small></div><span>${Math.round(item.distance/1852)} NM</span>`;list.appendChild(row)});
+  const firByCountry={NL:'Amsterdam FIR (EHAA)',BE:'Brussels FIR (EBBU)',FR:'Paris FIR (LFFF)',DE:'Langen FIR (EDGG)',GB:'London FIR (EGTT)',ES:'Madrid FIR (LECM)',IT:'Milano FIR (LIMM)',US:'Lokale Amerikaanse FIR',CA:'Canadian Domestic FIR'};
+  let place=nearest?`Nabij ${nearest.a.name}`:`${latlng.lat.toFixed(3)}, ${latlng.lng.toFixed(3)}`,region=nearest?.a.country||'Niet beschikbaar',country=nearest?.a.country||'Niet beschikbaar',countryCode='';
+  try{
+    const response=await fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${encodeURIComponent(latlng.lat)}&lon=${encodeURIComponent(latlng.lng)}&zoom=10&addressdetails=1`,{headers:{Accept:'application/json'}});
+    if(!response.ok)throw Error(`reverse geocoding ${response.status}`);
+    const data=await response.json();if(request!==locationRequest||!pointerMode)return;
+    const a=data.address||{};place=a.city||a.town||a.village||a.municipality||a.hamlet||a.county||data.name||data.display_name?.split(',')[0]||place;
+    region=a.state||a.province||a.region||a.county||region;country=a.country||country;countryCode=(a.country_code||'').toUpperCase();
+  }catch(error){if(request!==locationRequest||!pointerMode)return;console.info('Reverse-geocoding niet bereikbaar; lokale locatiebenadering gebruikt.',error)}
+  document.getElementById('location-name').textContent=place;
+  document.getElementById('location-region').textContent=region;
+  document.getElementById('location-country').textContent=country;
+  document.getElementById('location-fir').textContent=firByCountry[countryCode]||`${country} FIR · lokale benadering`;
+  window.setTimeout(()=>map.invalidateSize(),260);
+}
+function setToolMode(next){
+  routeMode=next==='route';pointerMode=next==='pointer';
+  const routeButton=document.getElementById('route-btn'),pointerButton=document.getElementById('pointer-btn');
+  routeButton.classList.toggle('active',routeMode);pointerButton.classList.toggle('active',pointerMode);
+  routeButton.setAttribute('aria-pressed',String(routeMode));pointerButton.setAttribute('aria-pressed',String(pointerMode));
+  map.getContainer().style.cursor=(routeMode||pointerMode)?'crosshair':'';
+  const panel=document.getElementById('route-panel');panel.classList.toggle('open',routeMode);panel.setAttribute('aria-hidden',String(!routeMode));document.body.classList.toggle('route-open',routeMode);
+  const locationPanel=document.getElementById('location-panel');
+  if(!pointerMode){locationPanel.classList.remove('open');locationPanel.setAttribute('aria-hidden','true');document.body.classList.remove('location-open')}
+  if(routeMode||pointerMode){current=null;stopLocalTimeClock();map.closePopup();document.getElementById('airport-panel').classList.add('closed');document.getElementById('airport-panel').setAttribute('aria-hidden','true');document.body.classList.add('panel-closed')}
+  if(!routeMode)clearRoute();
+  window.setTimeout(()=>map.invalidateSize(),260);
+}
+document.getElementById('route-btn').onclick=()=>setToolMode(routeMode?null:'route');
+document.getElementById('pointer-btn').onclick=()=>setToolMode(pointerMode?null:'pointer');
+document.getElementById('route-close').onclick=()=>setToolMode(null);
+document.getElementById('route-reset').onclick=clearRoute;
+document.getElementById('location-close').onclick=()=>setToolMode(null);
+
+map.on('moveend',rebuildMarkers);
+map.on('click',e=>{
+  if(routeMode){
+    routePoints.push({latlng:e.latlng,airport:null});updateRoute();
+    return;
+  }
+  if(pointerMode){
+    showLocation(e.latlng);
+  }
 });
 
-// Add the default map layer to the Leaflet map.
-standardMapLayer.addTo(map);
-
-// The custom toolbar is used instead of the default Leaflet layer selector.
-
-// Flight category colors following standard aviation convention.
-const CATEGORY_COLORS = {
-    VFR:  '#00b300',
-    MVFR: '#0066ff',
-    IFR:  '#cc0000',
-    LIFR: '#990099'
-};
-
-// Short marker labels, closer to the visual style of metar-taf.com.
-const CATEGORY_LABELS = {
-    VFR: 'V',
-    MVFR: 'M',
-    IFR: 'I',
-    LIFR: 'L'
-};
-
-// Store markers by ICAO code for the search function.
-const markerIndex = {};
-// Store airport metadata by ICAO code for filtering.
-const airportIndex = {};
-// Store calculated flight categories by ICAO code for category filtering.
-const categoryIndex = {};
-
-// Store airports for partial name-based search.
-const airportSearchIndex = [];
-
-// Remove existing markers and clear lookup indexes before weather data is loaded again.
-function clearAirportData() {
-    Object.values(markerIndex).forEach(marker => {
-        marker.removeFrom(map);
-    });
-
-    Object.keys(markerIndex).forEach(icao => delete markerIndex[icao]);
-    Object.keys(airportIndex).forEach(icao => delete airportIndex[icao]);
-    Object.keys(categoryIndex).forEach(icao => delete categoryIndex[icao]);
-    airportSearchIndex.length = 0;
-}
-
-// Return a colored div icon for a given flight category.
-function createIcon(fltCat) {
-    const color = CATEGORY_COLORS[fltCat] ?? '#999999';
-    const label = CATEGORY_LABELS[fltCat] ?? '?';
-
-    return L.divIcon({
-        className: '',
-        html: `<div class="marker" style="background:${color}">${label}</div>`,
-        iconSize: [32, 32],
-        iconAnchor: [16, 16]
-    });
-}
-
-// Convert visibility in meters to statute miles for flight category calculation.
-function metersToStatuteMiles(meters) {
-    return Number((meters / 1609.344).toFixed(1));
-}
-
-// Parse useful weather values from a raw METAR string.
-function parseMetar(rawMetar) {
-    if (!rawMetar) {
-        return {};
-    }
-
-    const windMatch = rawMetar.match(/\b(\d{3})(\d{2})(G\d{2})?KT\b/);
-    const visibilityMetersMatch = rawMetar.match(/\b(\d{4})\b/);
-    const ceilingMatch = rawMetar.match(/\b(?:BKN|OVC|VV)(\d{3})\b/);
-    const qnhMatch = rawMetar.match(/\bQ(\d{4})\b/);
-    const weatherMatch = rawMetar.match(/\b(-|\+)?(RA|SN|BR|FG|HZ|DZ|TS|SH|GR)\b/);
-
-    const parsedMetar = {};
-
-    if (windMatch) {
-        parsedMetar.wdir = Number(windMatch[1]);
-        parsedMetar.wspd = Number(windMatch[2]);
-
-        if (windMatch[3]) {
-            parsedMetar.wgst = Number(windMatch[3].replace('G', ''));
-        }
-    }
-
-    if (visibilityMetersMatch) {
-        const visibilityMeters = Number(visibilityMetersMatch[1]);
-        parsedMetar.visib = metersToStatuteMiles(visibilityMeters).toString();
-    }
-
-    if (ceilingMatch) {
-        parsedMetar.ceiling = Number(ceilingMatch[1]) * 100;
-    }
-
-    if (qnhMatch) {
-        parsedMetar.altim = Number(qnhMatch[1]);
-    }
-
-    if (weatherMatch) {
-        parsedMetar.wxString = weatherMatch[0];
-    }
-
-    return parsedMetar;
-}
-
-// Combine existing METAR object fields with values parsed from the raw METAR text.
-function normalizeMetar(metar) {
-    if (!metar) {
-        return null;
-    }
-
-    const parsedMetar = parseMetar(metar.rawOb);
-
-    return {
-        ...parsedMetar,
-        ...metar
-    };
-}
-
-// Calculate the flight category from visibility and ceiling.
-function calculateFlightCategory(metar) {
-    if (!metar) {
-        return 'UNKNOWN';
-    }
-
-    const visibility = parseFloat(String(metar.visib).replace('+', ''));
-    const ceiling = Number(metar.ceiling);
-
-    if (Number.isNaN(visibility) || Number.isNaN(ceiling)) {
-        return metar.fltCat ?? 'UNKNOWN';
-    }
-
-    // The lowest condition wins: poor visibility or low ceiling makes the category worse.
-    if (visibility < 1 || ceiling < 500) {
-        return 'LIFR';
-    }
-
-    if (visibility < 3 || ceiling < 1000) {
-        return 'IFR';
-    }
-
-    if (visibility <= 5 || ceiling <= 3000) {
-        return 'MVFR';
-    }
-
-    return 'VFR';
-}
-
-// Explain which visibility or ceiling value caused the chosen flight category.
-function getFlightCategoryReason(metar, fltCat) {
-    if (!metar) {
-        return 'No METAR data is available, so the category is unknown.';
-    }
-
-    const visibility = parseFloat(String(metar.visib).replace('+', ''));
-    const ceiling = Number(metar.ceiling);
-
-    if (Number.isNaN(visibility) || Number.isNaN(ceiling)) {
-        return 'The category is based on the reported METAR flight category because visibility or ceiling data is missing.';
-    }
-
-    const visibilityReason = `visibility ${metar.visib} SM`;
-    const ceilingReason = `ceiling ${ceiling} ft`;
-
-    if (fltCat === 'LIFR') {
-        const triggers = [];
-
-        if (visibility < 1) {
-            triggers.push(visibilityReason);
-        }
-
-        if (ceiling < 500) {
-            triggers.push(ceilingReason);
-        }
-
-        return `LIFR because of ${triggers.join(' and ')}.`;
-    }
-
-    if (fltCat === 'IFR') {
-        const triggers = [];
-
-        if (visibility < 3) {
-            triggers.push(visibilityReason);
-        }
-
-        if (ceiling < 1000) {
-            triggers.push(ceilingReason);
-        }
-
-        return `IFR because of ${triggers.join(' and ')}.`;
-    }
-
-    if (fltCat === 'MVFR') {
-        const triggers = [];
-
-        if (visibility <= 5) {
-            triggers.push(visibilityReason);
-        }
-
-        if (ceiling <= 3000) {
-            triggers.push(ceilingReason);
-        }
-
-        return `MVFR because of ${triggers.join(' and ')}.`;
-    }
-
-    if (fltCat === 'VFR') {
-        return `VFR because visibility ${metar.visib} SM and ceiling ${ceiling} ft are both within VFR limits.`;
-    }
-
-    return 'The flight category could not be explained with the available data.';
-}
-
-// Search for an airport by ICAO code or airport name and open its sidebar.
-function searchAirport() {
-    const searchInput = document.getElementById('airport-search');
-    const searchValue = searchInput.value.trim();
-
-    if (!searchValue) {
-        return;
-    }
-
-    const icaoSearchValue = searchValue.toUpperCase();
-    const nameSearchValue = searchValue.toLowerCase();
-    const matchingAirport = airportSearchIndex.find(airport =>
-        airport.name.toLowerCase().includes(nameSearchValue)
-    );
-    const marker = markerIndex[icaoSearchValue] ?? markerIndex[matchingAirport?.icao];
-
-    if (!marker) {
-        alert(`No airport found for: ${searchValue}`);
-        return;
-    }
-
-    map.flyTo(marker.getLatLng(), 8);
-    const foundIcao = markerIndex[icaoSearchValue] ? icaoSearchValue : matchingAirport.icao;
-    const airport = airportIndex[foundIcao];
-    openSidebar(airport, airport.metar, airport.taf);
-}
-
-// Connect the search input and button to the airport search function.
-function setupAirportSearch() {
-    const searchInput = document.getElementById('airport-search');
-    const searchButton = document.getElementById('search-button');
-
-    searchButton.addEventListener('click', searchAirport);
-
-    searchInput.addEventListener('keydown', event => {
-        if (event.key === 'Enter') {
-            searchAirport();
-        }
-    });
-}
-
-// Update the category dropdown so it only shows categories available for the selected country.
-function updateCategoryFilterOptions() {
-    const countryFilter = document.getElementById('country-filter');
-    const categoryFilter = document.getElementById('category-filter');
-    const selectedCountry = countryFilter.value;
-    const previousCategory = categoryFilter.value;
-    const availableCategories = new Set();
-
-    Object.keys(airportIndex).forEach(icao => {
-        const airport = airportIndex[icao];
-        const category = categoryIndex[icao];
-        const countryMatches = selectedCountry === 'ALL' || airport.country === selectedCountry;
-
-        if (countryMatches && category) {
-            availableCategories.add(category);
-        }
-    });
-
-    categoryFilter.innerHTML = '<option value="ALL">All categories</option>';
-
-    Object.keys(CATEGORY_COLORS).forEach(category => {
-        if (availableCategories.has(category)) {
-            const option = document.createElement('option');
-            option.value = category;
-            option.textContent = category;
-            categoryFilter.appendChild(option);
-        }
-    });
-
-    if (previousCategory !== 'ALL' && availableCategories.has(previousCategory)) {
-        categoryFilter.value = previousCategory;
-    } else {
-        categoryFilter.value = 'ALL';
-    }
-}
-
-// Show or hide markers based on the selected country and flight category.
-function applyMarkerFilters() {
-    const countryFilter = document.getElementById('country-filter');
-    const categoryFilter = document.getElementById('category-filter');
-    const selectedCountry = countryFilter.value;
-    const selectedCategory = categoryFilter.value;
-
-    Object.keys(markerIndex).forEach(icao => {
-        const marker = markerIndex[icao];
-        const airport = airportIndex[icao];
-        const category = categoryIndex[icao];
-
-        const countryMatches = selectedCountry === 'ALL' || airport.country === selectedCountry;
-        const categoryMatches = selectedCategory === 'ALL' || category === selectedCategory;
-        const shouldShowMarker = countryMatches && categoryMatches;
-
-        if (shouldShowMarker) {
-            marker.addTo(map);
-        } else {
-            marker.removeFrom(map);
-        }
-    });
-}
-
-// Connect the filter dropdowns to the marker filter function.
-function setupMarkerFilters() {
-    const countryFilter = document.getElementById('country-filter');
-    const categoryFilter = document.getElementById('category-filter');
-
-    countryFilter.addEventListener('change', () => {
-        updateCategoryFilterOptions();
-        applyMarkerFilters();
-    });
-
-    categoryFilter.addEventListener('change', applyMarkerFilters);
-
-    updateCategoryFilterOptions();
-    applyMarkerFilters();
-}
-
-// Connect the refresh button to reload the local weather test data.
-function setupWeatherRefresh() {
-    const refreshWeatherButton = document.getElementById('refresh-weather-button');
-
-    refreshWeatherButton.addEventListener('click', () => {
-        loadAirportWeatherData();
-    });
-}
-
-// Show the latest time at which the weather data was loaded.
-function updateLastUpdatedTime() {
-    const lastUpdatedElement = document.getElementById('last-updated');
-    const now = new Date();
-    const formattedTime = now.toLocaleTimeString('en-GB', {
-        hour: '2-digit',
-        minute: '2-digit',
-        second: '2-digit'
-    });
-
-    lastUpdatedElement.textContent = `Last updated: ${formattedTime}`;
-}
-
-// Show a short status message when the optional status element exists.
-function updateDataStatus(message, isError = false) {
-    const dataStatusElement = document.getElementById('data-status');
-
-    if (!dataStatusElement) {
-        return;
-    }
-
-    dataStatusElement.textContent = message;
-    dataStatusElement.classList.toggle('error', isError);
-}
-
-// Reset the search field, filters, sidebar and map position to the default view.
-function resetMapView() {
-    const searchInput = document.getElementById('airport-search');
-    const countryFilter = document.getElementById('country-filter');
-    const categoryFilter = document.getElementById('category-filter');
-
-    searchInput.value = '';
-    countryFilter.value = 'ALL';
-    categoryFilter.value = 'ALL';
-
-    updateCategoryFilterOptions();
-    applyMarkerFilters();
-    closeSidebar();
-    map.flyTo([51.5, 5.0], 6);
-}
-
-// Connect the reset button to the reset view function.
-function setupResetView() {
-    const resetViewButton = document.getElementById('reset-view-button');
-    resetViewButton.addEventListener('click', resetMapView);
-}
-
-// Draw a simple wind compass inside the right airport sidebar.
-function drawCompass(canvas, windDirection, windSpeed) {
-    if (!canvas) {
-        return;
-    }
-
-    const context = canvas.getContext('2d');
-    const centerX = canvas.width / 2;
-    const centerY = canvas.height / 2;
-    const radius = centerX - 16;
-
-    context.clearRect(0, 0, canvas.width, canvas.height);
-
-    context.beginPath();
-    context.arc(centerX, centerY, radius, 0, Math.PI * 2);
-    context.fillStyle = 'rgba(0,0,0,0.25)';
-    context.fill();
-    context.strokeStyle = 'rgba(255,255,255,0.15)';
-    context.lineWidth = 1;
-    context.stroke();
-
-    const cardinalDirections = [
-        { label: 'N', angle: 0 },
-        { label: 'E', angle: 90 },
-        { label: 'S', angle: 180 },
-        { label: 'W', angle: 270 }
-    ];
-
-    context.fillStyle = 'rgba(255,255,255,0.55)';
-    context.font = '11px sans-serif';
-    context.textAlign = 'center';
-    context.textBaseline = 'middle';
-
-    cardinalDirections.forEach(direction => {
-        const radians = (direction.angle - 90) * Math.PI / 180;
-        const x = centerX + (radius - 13) * Math.cos(radians);
-        const y = centerY + (radius - 13) * Math.sin(radians);
-        context.fillText(direction.label, x, y);
-    });
-
-    for (let degrees = 0; degrees < 360; degrees += 30) {
-        const radians = (degrees - 90) * Math.PI / 180;
-        const innerRadius = radius - 22;
-        const outerRadius = radius - 14;
-
-        context.beginPath();
-        context.moveTo(centerX + innerRadius * Math.cos(radians), centerY + innerRadius * Math.sin(radians));
-        context.lineTo(centerX + outerRadius * Math.cos(radians), centerY + outerRadius * Math.sin(radians));
-        context.strokeStyle = 'rgba(255,255,255,0.25)';
-        context.lineWidth = 1;
-        context.stroke();
-    }
-
-    if (windDirection == null || windSpeed == null) {
-        return;
-    }
-
-    const windRadians = (windDirection - 90) * Math.PI / 180;
-    const arrowRadius = radius - 28;
-    const arrowTipX = centerX + arrowRadius * Math.cos(windRadians);
-    const arrowTipY = centerY + arrowRadius * Math.sin(windRadians);
-    const arrowBaseX = centerX - arrowRadius * Math.cos(windRadians);
-    const arrowBaseY = centerY - arrowRadius * Math.sin(windRadians);
-
-    context.beginPath();
-    context.moveTo(arrowBaseX, arrowBaseY);
-    context.lineTo(arrowTipX, arrowTipY);
-    context.strokeStyle = 'white';
-    context.lineWidth = 2;
-    context.stroke();
-
-    const headSize = 9;
-    context.beginPath();
-    context.moveTo(arrowTipX, arrowTipY);
-    context.lineTo(
-        arrowTipX - headSize * Math.cos(windRadians - 0.4),
-        arrowTipY - headSize * Math.sin(windRadians - 0.4)
-    );
-    context.lineTo(
-        arrowTipX - headSize * Math.cos(windRadians + 0.4),
-        arrowTipY - headSize * Math.sin(windRadians + 0.4)
-    );
-    context.closePath();
-    context.fillStyle = 'white';
-    context.fill();
-}
-
-// Open the right sidebar with detailed airport weather information.
-function openSidebar(airport, metar, taf) {
-    if (!airport) {
-        return;
-    }
-
-    const fltCat = calculateFlightCategory(metar);
-    const color = CATEGORY_COLORS[fltCat] ?? '#999999';
-    const sidebar = document.getElementById('sidebar');
-    const legend = document.querySelector('.legend');
-
-    document.getElementById('sidebar-icao').textContent = airport.icao;
-    document.getElementById('sidebar-name').textContent = airport.name;
-    document.getElementById('sidebar-location').textContent = airport.country;
-
-    const categoryBadge = document.getElementById('sidebar-category-badge');
-    categoryBadge.textContent = fltCat;
-    categoryBadge.style.background = color;
-
-    document.getElementById('sidebar-visib').textContent = metar ? `${metar.visib} SM` : '—';
-    document.getElementById('sidebar-wxstring').textContent = metar?.wxString ?? 'None';
-    document.getElementById('sidebar-temp').textContent = metar?.temp != null ? `${metar.temp} °C` : '—';
-    document.getElementById('sidebar-wind-label').textContent = metar ? `${metar.wdir ?? '—'}° ${metar.wspd ?? '—'} kt` : '—';
-    document.getElementById('sidebar-raw-metar').textContent = `${metar?.rawOb ?? 'No METAR available'}\n\n${taf?.rawTAF ?? 'No TAF available'}`;
-
-    drawCompass(document.getElementById('wind-compass'), metar?.wdir ?? null, metar?.wspd ?? null);
-
-    sidebar.classList.add('open');
-    document.getElementById('map').style.right = '375px';
-
-    if (legend) {
-        legend.style.right = '391px';
-    }
-
-    map.invalidateSize();
-}
-
-// Close the right airport sidebar and restore the map width.
-function closeSidebar() {
-    const sidebar = document.getElementById('sidebar');
-    const legend = document.querySelector('.legend');
-
-    if (sidebar) {
-        sidebar.classList.remove('open');
-    }
-
-    document.getElementById('map').style.right = '0';
-
-    if (legend) {
-        legend.style.right = '16px';
-    }
-
-    map.invalidateSize();
-}
-
-// Connect the custom toolbar buttons to map and UI actions.
-function setupToolbarControls() {
-    const filterPanelButton = document.getElementById('layer-category-filter');
-    const zoomInButton = document.getElementById('layer-zoom-in');
-    const zoomOutButton = document.getElementById('layer-zoom-out');
-    const sidebarCloseButton = document.getElementById('sidebar-close');
-    const filterPanel = document.getElementById('filter-panel');
-
-    if (filterPanelButton && filterPanel) {
-        filterPanelButton.addEventListener('click', () => {
-            filterPanel.classList.toggle('open');
-        });
-    }
-
-    if (zoomInButton) {
-        zoomInButton.addEventListener('click', () => map.zoomIn());
-    }
-
-    if (zoomOutButton) {
-        zoomOutButton.addEventListener('click', () => map.zoomOut());
-    }
-
-    if (sidebarCloseButton) {
-        sidebarCloseButton.addEventListener('click', closeSidebar);
-    }
-}
-
-// Load airport, METAR and TAF data, then combine and place markers.
-function loadAirportWeatherData() {
-    clearAirportData();
-
-    Promise.all([
-        fetch('data/airports.json').then(r => r.json()),
-        fetch('data/metar-test.json').then(r => r.json()),
-        fetch('data/taf-test.json').then(r => r.json())
-    ])
-        .then(([airports, metarList, tafList]) => {
-            // Build a lookup map: icaoId -> metar object.
-            const metarMap = {};
-            metarList.forEach(metar => {
-                metarMap[metar.icaoId] = metar;
-            });
-
-            // Build a lookup map: icaoId -> taf object.
-            const tafMap = {};
-            tafList.forEach(taf => {
-                tafMap[taf.icaoId] = taf;
-            });
-
-            airports.forEach(airport => {
-                const metar = normalizeMetar(metarMap[airport.icao]);
-                const taf = tafMap[airport.icao];
-                const fltCat = calculateFlightCategory(metar);
-                const icon = createIcon(fltCat);
-
-                airport.metar = metar;
-                airport.taf = taf;
-
-                const marker = L.marker([airport.lat, airport.lon], { icon })
-                    .addTo(map);
-
-                marker.on('click', () => {
-                    openSidebar(airport, metar, taf);
-                });
-
-                markerIndex[airport.icao] = marker;
-                airportIndex[airport.icao] = airport;
-                categoryIndex[airport.icao] = fltCat;
-                airportSearchIndex.push(airport);
-            });
-
-            updateCategoryFilterOptions();
-            applyMarkerFilters();
-            updateLastUpdatedTime();
-            updateDataStatus('');
-        })
-        .catch(error => {
-            console.error('Could not load airport or weather data:', error);
-            updateDataStatus('Could not load airport or weather data.', true);
-        });
-}
-
-setupAirportSearch();
-setupMarkerFilters();
-setupWeatherRefresh();
-setupResetView();
-setupToolbarControls();
-loadAirportWeatherData();
+loadData();

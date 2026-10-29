@@ -1,0 +1,4786 @@
+[
+  {
+    "icaoId": "EBAW",
+    "rawOb": "METAR EBAW 172020Z 35004KT CAVOK 19/13 Q1016 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 350,
+    "wspd": 4,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 19,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 51.189,
+    "lon": 4.46
+  },
+  {
+    "icaoId": "EBBR",
+    "rawOb": "METAR EBBR 172020Z VRB02KT 9999 BKN038 BKN046 19/13 Q1016 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 3800
+      },
+      {
+        "cover": "BKN",
+        "base": 4600
+      }
+    ],
+    "ceiling": 3800,
+    "temp": 19,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 50.896,
+    "lon": 4.526
+  },
+  {
+    "icaoId": "EBCI",
+    "rawOb": "METAR EBCI 172020Z 02005KT 9999 FEW043 20/14 Q1016 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 20,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 4300
+      }
+    ],
+    "ceiling": null,
+    "temp": 20,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 50.459,
+    "lon": 4.454
+  },
+  {
+    "icaoId": "EBLG",
+    "rawOb": "METAR EBLG 172020Z 33003KT 9999 BKN036 19/14 Q1016 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 330,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 3600
+      }
+    ],
+    "ceiling": 3600,
+    "temp": 19,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 50.637,
+    "lon": 5.443
+  },
+  {
+    "icaoId": "EBOS",
+    "rawOb": "METAR EBOS 172020Z 11004KT CAVOK 19/14 Q1016 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 110,
+    "wspd": 4,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 19,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 51.199,
+    "lon": 2.862
+  },
+  {
+    "icaoId": "EDAC",
+    "rawOb": "METAR EDAC 172020Z AUTO 27005KT 9999 // SCT024/// OVC028/// 16/13 Q1013",
+    "fltCat": "MVFR",
+    "visib": 6,
+    "wdir": 270,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "SCT",
+        "base": 2400
+      },
+      {
+        "cover": "OVC",
+        "base": 2800
+      }
+    ],
+    "ceiling": 2800,
+    "temp": 16,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 50.982,
+    "lon": 12.506
+  },
+  {
+    "icaoId": "EDAH",
+    "rawOb": "METAR EDAH 172020Z AUTO 27008KT 9999 // OVC120/// 16/12 Q1009",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 270,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1009,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": 12000
+      }
+    ],
+    "ceiling": 12000,
+    "temp": 16,
+    "dewp": 12,
+    "wxString": null,
+    "lat": 53.879,
+    "lon": 14.152
+  },
+  {
+    "icaoId": "EDBC",
+    "rawOb": "METAR EDBC 172020Z AUTO 30009KT CAVOK 16/12 Q1013",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 300,
+    "wspd": 9,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 16,
+    "dewp": 12,
+    "wxString": null,
+    "lat": 51.856,
+    "lon": 11.42
+  },
+  {
+    "icaoId": "EDDB",
+    "rawOb": "METAR EDDB 172020Z AUTO 26006KT 9999 FEW021 BKN034 BKN042 15/14 Q1011 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 260,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1011,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 2100
+      },
+      {
+        "cover": "BKN",
+        "base": 3400
+      },
+      {
+        "cover": "BKN",
+        "base": 4200
+      }
+    ],
+    "ceiling": 3400,
+    "temp": 15,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 52.3807,
+    "lon": 13.5306
+  },
+  {
+    "icaoId": "EDDC",
+    "rawOb": "METAR EDDC 172020Z AUTO 23003KT 170V290 9999 -SHRA BKN021 BKN032 OVC039 FEW///TCU 15/14 Q1012",
+    "fltCat": "MVFR",
+    "visib": 6,
+    "wdir": 230,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1012,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 2100
+      },
+      {
+        "cover": "BKN",
+        "base": 3200
+      },
+      {
+        "cover": "OVC",
+        "base": 3900
+      }
+    ],
+    "ceiling": 2100,
+    "temp": 15,
+    "dewp": 14,
+    "wxString": "-SHRA",
+    "lat": 51.128,
+    "lon": 13.7543
+  },
+  {
+    "icaoId": "EDDE",
+    "rawOb": "METAR EDDE 172020Z AUTO 27007KT 9999 SCT029 SCT035 BKN044 14/12 Q1014",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 270,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "SCT",
+        "base": 2900
+      },
+      {
+        "cover": "SCT",
+        "base": 3500
+      },
+      {
+        "cover": "BKN",
+        "base": 4400
+      }
+    ],
+    "ceiling": 4400,
+    "temp": 14,
+    "dewp": 12,
+    "wxString": null,
+    "lat": 50.983,
+    "lon": 10.961
+  },
+  {
+    "icaoId": "EDDF",
+    "rawOb": "METAR EDDF 172020Z AUTO 35003KT 310V040 CAVOK 19/12 Q1015 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 350,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 19,
+    "dewp": 12,
+    "wxString": null,
+    "lat": 50.045,
+    "lon": 8.598
+  },
+  {
+    "icaoId": "EDDG",
+    "rawOb": "METAR EDDG 172020Z AUTO 27005KT 9999 BKN046 17/13 Q1014 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 270,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 4600
+      }
+    ],
+    "ceiling": 4600,
+    "temp": 17,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 52.135,
+    "lon": 7.697
+  },
+  {
+    "icaoId": "EDDH",
+    "rawOb": "METAR EDDH 172020Z AUTO 27004KT 230V290 9999 VCSH FEW///TCU 15/13 Q1012 TEMPO SHRA",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 270,
+    "wspd": 4,
+    "wgst": null,
+    "altim": 1012,
+    "clouds": [],
+    "ceiling": null,
+    "temp": 15,
+    "dewp": 13,
+    "wxString": "VCSH",
+    "lat": 53.633,
+    "lon": 9.988
+  },
+  {
+    "icaoId": "EDDK",
+    "rawOb": "METAR EDDK 172020Z AUTO 04003KT 9999 BKN040 OVC047 18/14 Q1015 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 40,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 4000
+      },
+      {
+        "cover": "OVC",
+        "base": 4700
+      }
+    ],
+    "ceiling": 4000,
+    "temp": 18,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 50.865,
+    "lon": 7.157
+  },
+  {
+    "icaoId": "EDDL",
+    "rawOb": "METAR EDDL 172020Z AUTO VRB02KT CAVOK 18/14 Q1015 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 18,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 51.296,
+    "lon": 6.769
+  },
+  {
+    "icaoId": "EDDM",
+    "rawOb": "METAR EDDM 172020Z AUTO 26006KT CAVOK 19/15 Q1016 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 260,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 19,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 48.348,
+    "lon": 11.813
+  },
+  {
+    "icaoId": "EDDN",
+    "rawOb": "METAR EDDN 172020Z AUTO 30007KT CAVOK 19/11 Q1015",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 300,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 19,
+    "dewp": 11,
+    "wxString": null,
+    "lat": 49.503,
+    "lon": 11.055
+  },
+  {
+    "icaoId": "EDDP",
+    "rawOb": "METAR EDDP 172020Z AUTO 28008KT 9999 SCT027 BKN035 17/12 Q1013 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 280,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "SCT",
+        "base": 2700
+      },
+      {
+        "cover": "BKN",
+        "base": 3500
+      }
+    ],
+    "ceiling": 3500,
+    "temp": 17,
+    "dewp": 12,
+    "wxString": null,
+    "lat": 51.435,
+    "lon": 12.24
+  },
+  {
+    "icaoId": "EDDR",
+    "rawOb": "METAR EDDR 172020Z AUTO VRB02KT CAVOK 20/12 Q1016 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 20,
+    "dewp": 12,
+    "wxString": null,
+    "lat": 49.213,
+    "lon": 7.108
+  },
+  {
+    "icaoId": "EDDS",
+    "rawOb": "METAR EDDS 172020Z AUTO 33003KT 280V360 CAVOK 20/11 Q1016",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 330,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 20,
+    "dewp": 11,
+    "wxString": null,
+    "lat": 48.69,
+    "lon": 9.222
+  },
+  {
+    "icaoId": "EDDV",
+    "rawOb": "METAR EDDV 172020Z AUTO 25003KT CAVOK 15/11 Q1013 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 250,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 15,
+    "dewp": 11,
+    "wxString": null,
+    "lat": 52.466,
+    "lon": 9.68
+  },
+  {
+    "icaoId": "EDDW",
+    "rawOb": "METAR EDDW 172020Z AUTO 30004KT CAVOK 14/11 Q1013 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 300,
+    "wspd": 4,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 14,
+    "dewp": 11,
+    "wxString": null,
+    "lat": 53.047,
+    "lon": 8.787
+  },
+  {
+    "icaoId": "EDFH",
+    "rawOb": "METAR EDFH 172020Z VRB02KT 9999 SCT036 BKN041 17/13 Q1017",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "SCT",
+        "base": 3600
+      },
+      {
+        "cover": "BKN",
+        "base": 4100
+      }
+    ],
+    "ceiling": 4100,
+    "temp": 17,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 49.946,
+    "lon": 7.265
+  },
+  {
+    "icaoId": "EDFM",
+    "rawOb": "METAR EDFM 172020Z AUTO VRB02KT 9999 // FEW084/// OVC096/// 21/12 Q1015",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 8400
+      },
+      {
+        "cover": "OVC",
+        "base": 9600
+      }
+    ],
+    "ceiling": 9600,
+    "temp": 21,
+    "dewp": 12,
+    "wxString": null,
+    "lat": 49.474,
+    "lon": 8.515
+  },
+  {
+    "icaoId": "EDGS",
+    "rawOb": "METAR EDGS 172020Z AUTO 29006KT //// R31/P2000N // FEW004/// BKN025/// OVC039/// 14/13 Q1016",
+    "fltCat": "IFR",
+    "visib": 1.24,
+    "wdir": 290,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 400
+      },
+      {
+        "cover": "BKN",
+        "base": 2500
+      },
+      {
+        "cover": "OVC",
+        "base": 3900
+      }
+    ],
+    "ceiling": 2500,
+    "temp": 14,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 50.708,
+    "lon": 8.083
+  },
+  {
+    "icaoId": "EDHI",
+    "rawOb": "METAR EDHI 172020Z AUTO 29007KT 8000 // SCT017/// BKN022/// BKN029/// 15/13 Q1012",
+    "fltCat": "MVFR",
+    "visib": 4.97,
+    "wdir": 290,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1012,
+    "clouds": [
+      {
+        "cover": "SCT",
+        "base": 1700
+      },
+      {
+        "cover": "BKN",
+        "base": 2200
+      },
+      {
+        "cover": "BKN",
+        "base": 2900
+      }
+    ],
+    "ceiling": 2200,
+    "temp": 15,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 53.536,
+    "lon": 9.837
+  },
+  {
+    "icaoId": "EDHK",
+    "rawOb": "METAR EDHK 172020Z AUTO 31008KT 9999 // SCT027/// OVC079/// 15/11 Q1011",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 310,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1011,
+    "clouds": [
+      {
+        "cover": "SCT",
+        "base": 2700
+      },
+      {
+        "cover": "OVC",
+        "base": 7900
+      }
+    ],
+    "ceiling": 7900,
+    "temp": 15,
+    "dewp": 11,
+    "wxString": null,
+    "lat": 54.376,
+    "lon": 10.143
+  },
+  {
+    "icaoId": "EDHL",
+    "rawOb": "METAR EDHL 172020Z AUTO 27007KT 9999 // FEW070/// OVC083/// 15/13 Q1011",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 270,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1011,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 7000
+      },
+      {
+        "cover": "OVC",
+        "base": 8300
+      }
+    ],
+    "ceiling": 8300,
+    "temp": 15,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 53.805,
+    "lon": 10.719
+  },
+  {
+    "icaoId": "EDJA",
+    "rawOb": "METAR EDJA 172020Z 20006KT 9999 BKN052 16/16 Q1017",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 200,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 5200
+      }
+    ],
+    "ceiling": 5200,
+    "temp": 16,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 47.989,
+    "lon": 10.239
+  },
+  {
+    "icaoId": "EDLN",
+    "rawOb": "METAR EDLN 172020Z AUTO 34003KT 9999 // OVC048/// 18/14 Q1015",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 340,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": 4800
+      }
+    ],
+    "ceiling": 4800,
+    "temp": 18,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 51.23,
+    "lon": 6.504
+  },
+  {
+    "icaoId": "EDLP",
+    "rawOb": "METAR EDLP 172020Z 26005KT 230V290 9999 FEW046 16/13 Q1015",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 260,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 4600
+      }
+    ],
+    "ceiling": null,
+    "temp": 16,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 51.614,
+    "lon": 8.616
+  },
+  {
+    "icaoId": "EDLV",
+    "rawOb": "METAR EDLV 172020Z VRB02KT 9999 FEW039 17/14 Q1015",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 3900
+      }
+    ],
+    "ceiling": null,
+    "temp": 17,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 51.602,
+    "lon": 6.142
+  },
+  {
+    "icaoId": "EDLW",
+    "rawOb": "METAR EDLW 171950Z 24003KT 9999 FEW036 17/14 Q1015",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 240,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 3600
+      }
+    ],
+    "ceiling": null,
+    "temp": 17,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 51.518,
+    "lon": 7.612
+  },
+  {
+    "icaoId": "EDMA",
+    "rawOb": "METAR EDMA 172020Z AUTO 33003KT 290V350 9999 // FEW056/// SCT063/// BKN071/// 18/11 Q1016",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 330,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 5600
+      },
+      {
+        "cover": "SCT",
+        "base": 6300
+      },
+      {
+        "cover": "BKN",
+        "base": 7100
+      }
+    ],
+    "ceiling": 7100,
+    "temp": 18,
+    "dewp": 11,
+    "wxString": null,
+    "lat": 48.425,
+    "lon": 10.932
+  },
+  {
+    "icaoId": "EDMO",
+    "rawOb": "METAR EDMO 172020Z AUTO 22008KT 9999 BKN048 18/15 Q1016",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 220,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 4800
+      }
+    ],
+    "ceiling": 4800,
+    "temp": 18,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 48.081,
+    "lon": 11.283
+  },
+  {
+    "icaoId": "EDNY",
+    "rawOb": "METAR EDNY 172020Z AUTO 29003KT 230V320 9999 // FEW054/// BKN077/// 20/16 Q1017",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 290,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 5400
+      },
+      {
+        "cover": "BKN",
+        "base": 7700
+      }
+    ],
+    "ceiling": 7700,
+    "temp": 20,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 47.671,
+    "lon": 9.511
+  },
+  {
+    "icaoId": "EDQM",
+    "rawOb": "METAR EDQM 172020Z AUTO 24004KT 9999 // SCT030/// BKN037/// BKN048/// 15/10 Q1015",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 240,
+    "wspd": 4,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "SCT",
+        "base": 3000
+      },
+      {
+        "cover": "BKN",
+        "base": 3700
+      },
+      {
+        "cover": "BKN",
+        "base": 4800
+      }
+    ],
+    "ceiling": 3700,
+    "temp": 15,
+    "dewp": 10,
+    "wxString": null,
+    "lat": 50.289,
+    "lon": 11.86
+  },
+  {
+    "icaoId": "EDSB",
+    "rawOb": "METAR EDSB 172020Z AUTO 04009KT CAVOK 23/13 Q1015",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 40,
+    "wspd": 9,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 23,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 48.779,
+    "lon": 8.081
+  },
+  {
+    "icaoId": "EDTL",
+    "rawOb": "METAR EDTL 172020Z AUTO VRB02KT 9999 // SCT055/// BKN088/// BKN190/// 22/17 Q1015",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "SCT",
+        "base": 5500
+      },
+      {
+        "cover": "BKN",
+        "base": 8800
+      },
+      {
+        "cover": "BKN",
+        "base": 19000
+      }
+    ],
+    "ceiling": 8800,
+    "temp": 22,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 48.369,
+    "lon": 7.828
+  },
+  {
+    "icaoId": "EDVE",
+    "rawOb": "METAR EDVE 172020Z AUTO 27005KT 9999 FEW037 16/13 Q1013",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 270,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 3700
+      }
+    ],
+    "ceiling": null,
+    "temp": 16,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 52.319,
+    "lon": 10.558
+  },
+  {
+    "icaoId": "EDVK",
+    "rawOb": "METAR EDVK 172020Z AUTO 25004KT 9999 // FEW017/// SCT034/// 15/14 Q1014",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 250,
+    "wspd": 4,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 1700
+      },
+      {
+        "cover": "SCT",
+        "base": 3400
+      }
+    ],
+    "ceiling": null,
+    "temp": 15,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 51.421,
+    "lon": 9.388
+  },
+  {
+    "icaoId": "EDWE",
+    "rawOb": "METAR EDWE 172020Z AUTO 29003KT 9999 FEW028 17/12 Q1014",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 290,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 2800
+      }
+    ],
+    "ceiling": null,
+    "temp": 17,
+    "dewp": 12,
+    "wxString": null,
+    "lat": 53.388,
+    "lon": 7.229
+  },
+  {
+    "icaoId": "EDXW",
+    "rawOb": "METAR EDXW 172020Z AUTO 33012KT 9999 // FEW023/// BKN046/// 16/11 Q1012",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 330,
+    "wspd": 12,
+    "wgst": null,
+    "altim": 1012,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 2300
+      },
+      {
+        "cover": "BKN",
+        "base": 4600
+      }
+    ],
+    "ceiling": 4600,
+    "temp": 16,
+    "dewp": 11,
+    "wxString": null,
+    "lat": 54.913,
+    "lon": 8.341
+  },
+  {
+    "icaoId": "EGAA",
+    "rawOb": "METAR EGAA 172020Z AUTO 24011KT 9999 OVC004/// //////CB 17/16 Q1011 REUP",
+    "fltCat": "LIFR",
+    "visib": 6,
+    "wdir": 240,
+    "wspd": 11,
+    "wgst": null,
+    "altim": 1011,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": 400
+      }
+    ],
+    "ceiling": 400,
+    "temp": 17,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 54.654,
+    "lon": -6.225
+  },
+  {
+    "icaoId": "EGAC",
+    "rawOb": "METAR EGAC 172020Z AUTO 20009KT 9999 -RADZ OVC007/// //////CB 17/16 Q1010 RERA",
+    "fltCat": "IFR",
+    "visib": 6,
+    "wdir": 200,
+    "wspd": 9,
+    "wgst": null,
+    "altim": 1010,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": 700
+      }
+    ],
+    "ceiling": 700,
+    "temp": 17,
+    "dewp": 16,
+    "wxString": "-RA -DZ",
+    "lat": 54.614,
+    "lon": -5.873
+  },
+  {
+    "icaoId": "EGAE",
+    "rawOb": "METAR EGAE 172020Z 25011KT 9000 SCT006 BKN010 18/17 Q1010",
+    "fltCat": "MVFR",
+    "visib": 5.59,
+    "wdir": 250,
+    "wspd": 11,
+    "wgst": null,
+    "altim": 1010,
+    "clouds": [
+      {
+        "cover": "SCT",
+        "base": 600
+      },
+      {
+        "cover": "BKN",
+        "base": 1000
+      }
+    ],
+    "ceiling": 1000,
+    "temp": 18,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 55.043,
+    "lon": -7.161
+  },
+  {
+    "icaoId": "EGBB",
+    "rawOb": "METAR EGBB 172020Z 27007KT CAVOK 22/14 Q1014",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 270,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 22,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 52.46,
+    "lon": -1.758
+  },
+  {
+    "icaoId": "EGCC",
+    "rawOb": "METAR EGCC 172020Z AUTO 27004KT 9999 -RA BKN022/// BKN030/// //////CB 19/14 Q1014",
+    "fltCat": "MVFR",
+    "visib": 6,
+    "wdir": 270,
+    "wspd": 4,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 2200
+      },
+      {
+        "cover": "BKN",
+        "base": 3000
+      }
+    ],
+    "ceiling": 2200,
+    "temp": 19,
+    "dewp": 14,
+    "wxString": "-RA",
+    "lat": 53.354,
+    "lon": -2.275
+  },
+  {
+    "icaoId": "EGDY",
+    "rawOb": "METAR EGDY 172020Z AUTO 28005KT 9999 NCD 18/15 Q1016",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 280,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CLR",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 18,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 51.006,
+    "lon": -2.643
+  },
+  {
+    "icaoId": "EGFF",
+    "rawOb": "METAR EGFF 172020Z AUTO 29013KT 9999 SCT013 17/15 Q1016",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 290,
+    "wspd": 13,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "SCT",
+        "base": 1300
+      }
+    ],
+    "ceiling": null,
+    "temp": 17,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 51.397,
+    "lon": -3.343
+  },
+  {
+    "icaoId": "EGGD",
+    "rawOb": "METAR EGGD 172020Z AUTO 25012KT 9999 NCD 17/14 Q1016",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 250,
+    "wspd": 12,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CLR",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 17,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 51.383,
+    "lon": -2.719
+  },
+  {
+    "icaoId": "EGGP",
+    "rawOb": "METAR EGGP 172020Z VRB02KT 9000 -SHRA BKN042 17/15 Q1013",
+    "fltCat": "VFR",
+    "visib": 5.59,
+    "wdir": null,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 4200
+      }
+    ],
+    "ceiling": 4200,
+    "temp": 17,
+    "dewp": 15,
+    "wxString": "-SHRA",
+    "lat": 53.334,
+    "lon": -2.85
+  },
+  {
+    "icaoId": "EGGW",
+    "rawOb": "METAR EGGW 172020Z AUTO 17003KT 9999 SCT047 22/13 Q1014",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 170,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "SCT",
+        "base": 4700
+      }
+    ],
+    "ceiling": null,
+    "temp": 22,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 51.875,
+    "lon": -0.368
+  },
+  {
+    "icaoId": "EGHH",
+    "rawOb": "METAR EGHH 172020Z 27007KT 250V310 CAVOK 21/12 Q1015",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 270,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 21,
+    "dewp": 12,
+    "wxString": null,
+    "lat": 50.779,
+    "lon": -1.836
+  },
+  {
+    "icaoId": "EGHI",
+    "rawOb": "METAR EGHI 172020Z AUTO 26006KT 9999 NCD 22/12 Q1015",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 260,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "CLR",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 22,
+    "dewp": 12,
+    "wxString": null,
+    "lat": 50.944,
+    "lon": -1.358
+  },
+  {
+    "icaoId": "EGHQ",
+    "rawOb": "METAR EGHQ 172020Z AUTO 26010KT 9999 BKN012/// 18/16 Q1019",
+    "fltCat": "MVFR",
+    "visib": 6,
+    "wdir": 260,
+    "wspd": 10,
+    "wgst": null,
+    "altim": 1019,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 1200
+      }
+    ],
+    "ceiling": 1200,
+    "temp": 18,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 50.438,
+    "lon": -4.998
+  },
+  {
+    "icaoId": "EGKB",
+    "rawOb": "METAR EGKB 172020Z 24008KT 200V260 CAVOK 23/15 Q1014",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 240,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 23,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 51.33,
+    "lon": 0.033
+  },
+  {
+    "icaoId": "EGKK",
+    "rawOb": "METAR EGKK 172020Z 24006KT CAVOK 23/16 Q1014",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 240,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 23,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 51.148,
+    "lon": -0.19
+  },
+  {
+    "icaoId": "EGLC",
+    "rawOb": "METAR EGLC 172020Z AUTO 09005KT 9999 NCD 23/16 Q1013",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 90,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "CLR",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 23,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 51.505,
+    "lon": 0.055
+  },
+  {
+    "icaoId": "EGLF",
+    "rawOb": "METAR EGLF 172020Z 24006KT CAVOK 21/12 Q1014",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 240,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 21,
+    "dewp": 12,
+    "wxString": null,
+    "lat": 51.28,
+    "lon": -0.773
+  },
+  {
+    "icaoId": "EGLL",
+    "rawOb": "METAR EGLL 172020Z AUTO 25011KT 9999 NCD 25/12 Q1014",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 250,
+    "wspd": 11,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "CLR",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 25,
+    "dewp": 12,
+    "wxString": null,
+    "lat": 51.477,
+    "lon": -0.461
+  },
+  {
+    "icaoId": "EGMC",
+    "rawOb": "METAR EGMC 172020Z 11005KT CAVOK 20/17 Q1014",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 110,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 20,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 51.571,
+    "lon": 0.696
+  },
+  {
+    "icaoId": "EGMD",
+    "rawOb": "METAR EGMD 172020Z AUTO 22008KT 9999 NCD 21/19 Q1015",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 220,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "CLR",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 21,
+    "dewp": 19,
+    "wxString": null,
+    "lat": 50.956,
+    "lon": 0.939
+  },
+  {
+    "icaoId": "EGNJ",
+    "rawOb": "METAR EGNJ 172020Z 14008KT 9000 -RA FEW030 18/15 Q1013",
+    "fltCat": "VFR",
+    "visib": 5.59,
+    "wdir": 140,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 3000
+      }
+    ],
+    "ceiling": null,
+    "temp": 18,
+    "dewp": 15,
+    "wxString": "-RA",
+    "lat": 53.58,
+    "lon": -0.341
+  },
+  {
+    "icaoId": "EGNM",
+    "rawOb": "METAR EGNM 172020Z 24007KT 200V270 7000 -RA SCT014 SCT025 15/15 Q1013",
+    "fltCat": "MVFR",
+    "visib": 4.35,
+    "wdir": 240,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "SCT",
+        "base": 1400
+      },
+      {
+        "cover": "SCT",
+        "base": 2500
+      }
+    ],
+    "ceiling": null,
+    "temp": 15,
+    "dewp": 15,
+    "wxString": "-RA",
+    "lat": 53.862,
+    "lon": -1.665
+  },
+  {
+    "icaoId": "EGNR",
+    "rawOb": "METAR EGNR 171950Z 20002KT 9999 FEW016 19/15 Q1013",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 200,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 1600
+      }
+    ],
+    "ceiling": null,
+    "temp": 19,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 53.175,
+    "lon": -2.987
+  },
+  {
+    "icaoId": "EGNT",
+    "rawOb": "METAR EGNT 172020Z VRB01KT 6000 -RA BKN012 14/14 Q1013",
+    "fltCat": "MVFR",
+    "visib": 3.73,
+    "wdir": null,
+    "wspd": 1,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 1200
+      }
+    ],
+    "ceiling": 1200,
+    "temp": 14,
+    "dewp": 14,
+    "wxString": "-RA",
+    "lat": 55.037,
+    "lon": -1.702
+  },
+  {
+    "icaoId": "EGNV",
+    "rawOb": "METAR EGNV 172020Z 20005KT 2500 RA FEW007 BKN012 17/16 Q1013",
+    "fltCat": "IFR",
+    "visib": 1.55,
+    "wdir": 200,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 700
+      },
+      {
+        "cover": "BKN",
+        "base": 1200
+      }
+    ],
+    "ceiling": 1200,
+    "temp": 17,
+    "dewp": 16,
+    "wxString": "RA",
+    "lat": 54.511,
+    "lon": -1.418
+  },
+  {
+    "icaoId": "EGNX",
+    "rawOb": "METAR EGNX 172020Z 27004KT 9999 FEW037 21/14 Q1013",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 270,
+    "wspd": 4,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 3700
+      }
+    ],
+    "ceiling": null,
+    "temp": 21,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 52.833,
+    "lon": -1.333
+  },
+  {
+    "icaoId": "EGOS",
+    "rawOb": "METAR EGOS 172020Z AUTO 24007KT 9999 BKN049/// 19/13 Q1013",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 240,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 4900
+      }
+    ],
+    "ceiling": 4900,
+    "temp": 19,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 52.795,
+    "lon": -2.665
+  },
+  {
+    "icaoId": "EGOV",
+    "rawOb": "METAR EGOV 172020Z AUTO 20017KT 9999 DZ OVC023/// 17/16 Q1013",
+    "fltCat": "MVFR",
+    "visib": 6,
+    "wdir": 200,
+    "wspd": 17,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": 2300
+      }
+    ],
+    "ceiling": 2300,
+    "temp": 17,
+    "dewp": 16,
+    "wxString": "DZ",
+    "lat": 53.252,
+    "lon": -4.536
+  },
+  {
+    "icaoId": "EGPA",
+    "rawOb": "METAR EGPA 172020Z AUTO 13006KT 9999 NCD 10/08 Q1013",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 130,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "CLR",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 10,
+    "dewp": 8,
+    "wxString": null,
+    "lat": 58.958,
+    "lon": -2.905
+  },
+  {
+    "icaoId": "EGPB",
+    "rawOb": "METAR EGPB 172020Z AUTO 03001KT 9999 NCD 09/08 Q1014",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 30,
+    "wspd": 1,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "CLR",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 9,
+    "dewp": 8,
+    "wxString": null,
+    "lat": 59.88,
+    "lon": -1.296
+  },
+  {
+    "icaoId": "EGPC",
+    "rawOb": "METAR EGPC 172020Z AUTO 11011KT 9999 OVC029/// 12/10 Q1012",
+    "fltCat": "MVFR",
+    "visib": 6,
+    "wdir": 110,
+    "wspd": 11,
+    "wgst": null,
+    "altim": 1012,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": 2900
+      }
+    ],
+    "ceiling": 2900,
+    "temp": 12,
+    "dewp": 10,
+    "wxString": null,
+    "lat": 58.459,
+    "lon": -3.093
+  },
+  {
+    "icaoId": "EGPD",
+    "rawOb": "METAR EGPD 172020Z AUTO 16008KT 9999 BKN010 BKN049 14/12 Q1012",
+    "fltCat": "MVFR",
+    "visib": 6,
+    "wdir": 160,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1012,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 1000
+      },
+      {
+        "cover": "BKN",
+        "base": 4900
+      }
+    ],
+    "ceiling": 1000,
+    "temp": 14,
+    "dewp": 12,
+    "wxString": null,
+    "lat": 57.205,
+    "lon": -2.205
+  },
+  {
+    "icaoId": "EGPE",
+    "rawOb": "METAR EGPE 172020Z 00000KT 8000 -RA FEW005 SCT025 14/13 Q1010",
+    "fltCat": "MVFR",
+    "visib": 4.97,
+    "wdir": 0,
+    "wspd": 0,
+    "wgst": null,
+    "altim": 1010,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 500
+      },
+      {
+        "cover": "SCT",
+        "base": 2500
+      }
+    ],
+    "ceiling": null,
+    "temp": 14,
+    "dewp": 13,
+    "wxString": "-RA",
+    "lat": 57.538,
+    "lon": -4.053
+  },
+  {
+    "icaoId": "EGPF",
+    "rawOb": "METAR EGPF 172020Z AUTO 18004KT 9999 -RA SCT009 BKN027 OVC040 16/15 Q1011",
+    "fltCat": "MVFR",
+    "visib": 6,
+    "wdir": 180,
+    "wspd": 4,
+    "wgst": null,
+    "altim": 1011,
+    "clouds": [
+      {
+        "cover": "SCT",
+        "base": 900
+      },
+      {
+        "cover": "BKN",
+        "base": 2700
+      },
+      {
+        "cover": "OVC",
+        "base": 4000
+      }
+    ],
+    "ceiling": 2700,
+    "temp": 16,
+    "dewp": 15,
+    "wxString": "-RA",
+    "lat": 55.867,
+    "lon": -4.433
+  },
+  {
+    "icaoId": "EGPH",
+    "rawOb": "METAR EGPH 172020Z COR 11005KT 350V130 9999 -RA BKN023 BKN027 15/15 Q1011",
+    "fltCat": "MVFR",
+    "visib": 6,
+    "wdir": 110,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1011,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 2300
+      },
+      {
+        "cover": "BKN",
+        "base": 2700
+      }
+    ],
+    "ceiling": 2300,
+    "temp": 15,
+    "dewp": 15,
+    "wxString": "-RA",
+    "lat": 55.952,
+    "lon": -3.36
+  },
+  {
+    "icaoId": "EGPI",
+    "rawOb": "METAR EGPI 172020Z AUTO 17009KT 2200 RADZ OVC002/// ///// Q1009",
+    "fltCat": "LIFR",
+    "visib": 1.37,
+    "wdir": 170,
+    "wspd": 9,
+    "wgst": null,
+    "altim": 1009,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": 200
+      }
+    ],
+    "ceiling": 200,
+    "temp": null,
+    "dewp": null,
+    "wxString": "RA DZ",
+    "lat": 55.681,
+    "lon": -6.25
+  },
+  {
+    "icaoId": "EGPK",
+    "rawOb": "METAR EGPK 172020Z 13006KT 4500 -RA SCT005 BKN012 15/15 Q1011",
+    "fltCat": "IFR",
+    "visib": 2.8,
+    "wdir": 130,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1011,
+    "clouds": [
+      {
+        "cover": "SCT",
+        "base": 500
+      },
+      {
+        "cover": "BKN",
+        "base": 1200
+      }
+    ],
+    "ceiling": 1200,
+    "temp": 15,
+    "dewp": 15,
+    "wxString": "-RA",
+    "lat": 55.509,
+    "lon": -4.587
+  },
+  {
+    "icaoId": "EGPL",
+    "rawOb": "METAR EGPL 172020Z AUTO 16007KT 9999 OVC000/// 14/14 Q1007",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 160,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1007,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 14,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 57.475,
+    "lon": -7.364
+  },
+  {
+    "icaoId": "EGPN",
+    "rawOb": "METAR EGPN 171950Z 09007KT 7000 RA BKN006 BKN022 14/13 Q1012",
+    "fltCat": "IFR",
+    "visib": 4.35,
+    "wdir": 90,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1012,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 600
+      },
+      {
+        "cover": "BKN",
+        "base": 2200
+      }
+    ],
+    "ceiling": 600,
+    "temp": 14,
+    "dewp": 13,
+    "wxString": "RA",
+    "lat": 56.453,
+    "lon": -3.026
+  },
+  {
+    "icaoId": "EGPO",
+    "rawOb": "METAR EGPO 172020Z AUTO 11009KT 9999 -RA FEW008/// SCT023/// BKN034/// 14/13 Q1008",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 110,
+    "wspd": 9,
+    "wgst": null,
+    "altim": 1008,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 800
+      },
+      {
+        "cover": "SCT",
+        "base": 2300
+      },
+      {
+        "cover": "BKN",
+        "base": 3400
+      }
+    ],
+    "ceiling": 3400,
+    "temp": 14,
+    "dewp": 13,
+    "wxString": "-RA",
+    "lat": 58.215,
+    "lon": -6.329
+  },
+  {
+    "icaoId": "EGPU",
+    "rawOb": "METAR EGPU 172020Z AUTO 16012KT 1900 -RADZ OVC002/// 15/15 Q1008 REDZ",
+    "fltCat": "LIFR",
+    "visib": 1.18,
+    "wdir": 160,
+    "wspd": 12,
+    "wgst": null,
+    "altim": 1008,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": 200
+      }
+    ],
+    "ceiling": 200,
+    "temp": 15,
+    "dewp": 15,
+    "wxString": "-RA -DZ",
+    "lat": 56.499,
+    "lon": -6.872
+  },
+  {
+    "icaoId": "EGQL",
+    "rawOb": "METAR EGQL 171950Z 12009KT 4800 RA BKN004 OVC020 15/14 Q1012 RMK YLO2",
+    "fltCat": "LIFR",
+    "visib": 2.98,
+    "wdir": 120,
+    "wspd": 9,
+    "wgst": null,
+    "altim": 1012,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 400
+      },
+      {
+        "cover": "OVC",
+        "base": 2000
+      }
+    ],
+    "ceiling": 400,
+    "temp": 15,
+    "dewp": 14,
+    "wxString": "RA",
+    "lat": 56.377,
+    "lon": -2.862
+  },
+  {
+    "icaoId": "EGQS",
+    "rawOb": "METAR EGQS 171950Z 12008KT 9999 -RA FEW020 BKN040 14/12 Q1011 TEMPO 4000 +RA BKN018 RMK BLU TEMPO GRN",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 120,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1011,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 2000
+      },
+      {
+        "cover": "BKN",
+        "base": 4000
+      }
+    ],
+    "ceiling": 4000,
+    "temp": 14,
+    "dewp": 12,
+    "wxString": "-RA",
+    "lat": 57.711,
+    "lon": -3.324
+  },
+  {
+    "icaoId": "EGSH",
+    "rawOb": "METAR EGSH 172020Z 16007KT CAVOK 18/14 Q1014",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 160,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 18,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 52.676,
+    "lon": 1.283
+  },
+  {
+    "icaoId": "EGSS",
+    "rawOb": "METAR EGSS 172020Z AUTO 13009KT 090V160 9999 NCD 21/17 Q1014",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 130,
+    "wspd": 9,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "CLR",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 21,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 51.881,
+    "lon": 0.223
+  },
+  {
+    "icaoId": "EGSY",
+    "rawOb": "METAR EGSY 172020Z AUTO 28014KT 9999 SCT015/// 18/15 Q1017",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 280,
+    "wspd": 14,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "SCT",
+        "base": 1500
+      }
+    ],
+    "ceiling": null,
+    "temp": 18,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 51.406,
+    "lon": -3.434
+  },
+  {
+    "icaoId": "EGTE",
+    "rawOb": "METAR EGTE 172020Z VRB04KT CAVOK 19/14 Q1017",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 4,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 19,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 50.737,
+    "lon": -3.406
+  },
+  {
+    "icaoId": "EGTK",
+    "rawOb": "METAR EGTK 172020Z 24011KT CAVOK 22/15 Q1014",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 240,
+    "wspd": 11,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 22,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 51.838,
+    "lon": -1.317
+  },
+  {
+    "icaoId": "EGUB",
+    "rawOb": "METAR EGUB 172020Z 25007KT CAVOK 23/15 Q1014 NOSIG RMK BLU BLU",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 250,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 23,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 51.62,
+    "lon": -1.099
+  },
+  {
+    "icaoId": "EGUL",
+    "rawOb": "METAR EGUL 171955Z AUTO 13010KT 9999 OVC090 21/14 A2992 RMK AO2 SLP135 T02070141 $",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 130,
+    "wspd": 10,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": 9000
+      }
+    ],
+    "ceiling": 9000,
+    "temp": 20.7,
+    "dewp": 14.1,
+    "wxString": null,
+    "lat": 52.409,
+    "lon": 0.561
+  },
+  {
+    "icaoId": "EGUN",
+    "rawOb": "METAR EGUN 171955Z AUTO 16008KT 9999 OVC090 21/14 A2991 RMK AO2 SLP132 T02130144 $",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 160,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": 9000
+      }
+    ],
+    "ceiling": 9000,
+    "temp": 21.3,
+    "dewp": 14.4,
+    "wxString": null,
+    "lat": 52.362,
+    "lon": 0.486
+  },
+  {
+    "icaoId": "EGVA",
+    "rawOb": "METAR EGVA 171955Z 27011KT 9999 SCT075 21/14 A2996 RMK AO2A SLP148 T02110142",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 270,
+    "wspd": 11,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "SCT",
+        "base": 7500
+      }
+    ],
+    "ceiling": null,
+    "temp": 21.1,
+    "dewp": 14.2,
+    "wxString": null,
+    "lat": 51.682,
+    "lon": -1.79
+  },
+  {
+    "icaoId": "EGVN",
+    "rawOb": "METAR EGVN 172020Z AUTO 24005KT 9999 NCD 22/15 Q1014",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 240,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "CLR",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 22,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 51.758,
+    "lon": -1.578
+  },
+  {
+    "icaoId": "EGVO",
+    "rawOb": "METAR EGVO 172020Z 23009KT CAVOK 22/11 Q1015 NOSIG RMK BLU BLU",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 230,
+    "wspd": 9,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 22,
+    "dewp": 11,
+    "wxString": null,
+    "lat": 51.239,
+    "lon": -0.945
+  },
+  {
+    "icaoId": "EGWU",
+    "rawOb": "METAR EGWU 172020Z AUTO 26010KT 9999 NCD 24/13 Q1013",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 260,
+    "wspd": 10,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "CLR",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 24,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 51.549,
+    "lon": -0.417
+  },
+  {
+    "icaoId": "EGXC",
+    "rawOb": "METAR EGXC 171950Z 09008KT 9999 FEW049 BKN080 18/15 Q1013 RMK BLU",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 90,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 4900
+      },
+      {
+        "cover": "BKN",
+        "base": 8000
+      }
+    ],
+    "ceiling": 8000,
+    "temp": 18,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 53.094,
+    "lon": -0.173
+  },
+  {
+    "icaoId": "EGXT",
+    "rawOb": "METAR EGXT 172020Z AUTO 30001KT 9999 OVC050/// 22/13 Q1013",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 300,
+    "wspd": 1,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": 5000
+      }
+    ],
+    "ceiling": 5000,
+    "temp": 22,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 52.611,
+    "lon": -0.461
+  },
+  {
+    "icaoId": "EGXW",
+    "rawOb": "METAR EGXW 172020Z AUTO 12007KT 9999 // FEW063/// OVC075/// 18/15 Q1013",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 120,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 6300
+      },
+      {
+        "cover": "OVC",
+        "base": 7500
+      }
+    ],
+    "ceiling": 7500,
+    "temp": 18,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 53.175,
+    "lon": -0.523
+  },
+  {
+    "icaoId": "EGYD",
+    "rawOb": "METAR EGYD 172020Z AUTO 10006KT 9999 BKN076/// BKN100/// 18/15 Q1013",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 100,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 7600
+      },
+      {
+        "cover": "BKN",
+        "base": 10000
+      }
+    ],
+    "ceiling": 7600,
+    "temp": 18,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 53.031,
+    "lon": -0.503
+  },
+  {
+    "icaoId": "EGYE",
+    "rawOb": "METAR EGYE 171950Z AUTO 10005KT //// BKN076/// SCT100/// 19/15 Q1013",
+    "fltCat": "VFR",
+    "visib": null,
+    "wdir": 100,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 7600
+      },
+      {
+        "cover": "SCT",
+        "base": 10000
+      }
+    ],
+    "ceiling": 7600,
+    "temp": 19,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 52.962,
+    "lon": -0.562
+  },
+  {
+    "icaoId": "EGYM",
+    "rawOb": "METAR EGYM 172020Z AUTO 16008KT 9999 BKN085/// SCT100/// 20/14 Q1013",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 160,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 8500
+      },
+      {
+        "cover": "SCT",
+        "base": 10000
+      }
+    ],
+    "ceiling": 8500,
+    "temp": 20,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 52.648,
+    "lon": 0.567
+  },
+  {
+    "icaoId": "EHAM",
+    "rawOb": "METAR EHAM 172025Z 31001KT 9999 FEW020 17/13 Q1015 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 310,
+    "wspd": 1,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 2000
+      }
+    ],
+    "ceiling": null,
+    "temp": 17,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 52.315,
+    "lon": 4.79
+  },
+  {
+    "icaoId": "EHBK",
+    "rawOb": "METAR EHBK 172025Z AUTO 07003KT 9999 BKN044/// 19/14 Q1015 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 70,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 4400
+      }
+    ],
+    "ceiling": 4400,
+    "temp": 19,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 50.905,
+    "lon": 5.762
+  },
+  {
+    "icaoId": "EHDL",
+    "rawOb": "METAR EHDL 172025Z AUTO 31001KT 9999 BKN053 OVC058 16/14 Q1015 BLU",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 310,
+    "wspd": 1,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 5300
+      },
+      {
+        "cover": "OVC",
+        "base": 5800
+      }
+    ],
+    "ceiling": 5300,
+    "temp": 16,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 52.061,
+    "lon": 5.887
+  },
+  {
+    "icaoId": "EHDV",
+    "rawOb": "METAR EHDV 172025Z AUTO VRB02KT 9999 NSC 17/12 Q1014",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "CLR",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 17,
+    "dewp": 12,
+    "wxString": null,
+    "lat": 54.326,
+    "lon": 2.936
+  },
+  {
+    "icaoId": "EHEH",
+    "rawOb": "METAR EHEH 172025Z AUTO 30002KT 9999 OVC140 16/14 Q1015 BLU NOSIG RMK TREND REMOTE BY EHWX",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 300,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": 14000
+      }
+    ],
+    "ceiling": 14000,
+    "temp": 16,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 51.45,
+    "lon": 5.377
+  },
+  {
+    "icaoId": "EHGG",
+    "rawOb": "METAR EHGG 172025Z AUTO 24003KT 9999 NSC 15/12 Q1014 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 240,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "CLR",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 15,
+    "dewp": 12,
+    "wxString": null,
+    "lat": 53.12,
+    "lon": 6.579
+  },
+  {
+    "icaoId": "EHGR",
+    "rawOb": "METAR EHGR 172025Z AUTO 35004KT 310V020 9999 FEW028 OVC130 18/13 Q1015 BLU NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 350,
+    "wspd": 4,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 2800
+      },
+      {
+        "cover": "OVC",
+        "base": 13000
+      }
+    ],
+    "ceiling": 13000,
+    "temp": 18,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 51.565,
+    "lon": 4.935
+  },
+  {
+    "icaoId": "EHKD",
+    "rawOb": "METAR EHKD 172025Z AUTO 30002KT 9999 FEW025 BKN180 BKN240 15/13 Q1014 BLACKBLU BECMG 20003KT",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 300,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 2500
+      },
+      {
+        "cover": "BKN",
+        "base": 18000
+      },
+      {
+        "cover": "BKN",
+        "base": 24000
+      }
+    ],
+    "ceiling": 18000,
+    "temp": 15,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 52.927,
+    "lon": 4.781
+  },
+  {
+    "icaoId": "EHLE",
+    "rawOb": "METAR EHLE 172025Z AUTO 28003KT 9999 NSC 16/13 Q1015",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 280,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "CLR",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 16,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 52.456,
+    "lon": 5.522
+  },
+  {
+    "icaoId": "EHLW",
+    "rawOb": "METAR EHLW 172025Z AUTO 26003KT 9999 -RA FEW029 BKN048 OVC052 17/13 Q1014 BLU",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 260,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 2900
+      },
+      {
+        "cover": "BKN",
+        "base": 4800
+      },
+      {
+        "cover": "OVC",
+        "base": 5200
+      }
+    ],
+    "ceiling": 4800,
+    "temp": 17,
+    "dewp": 13,
+    "wxString": "-RA",
+    "lat": 53.223,
+    "lon": 5.752
+  },
+  {
+    "icaoId": "EHRD",
+    "rawOb": "METAR EHRD 172025Z AUTO VRB02KT 9999 NSC 17/14 Q1015 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "CLR",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 17,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 51.954,
+    "lon": 4.444
+  },
+  {
+    "icaoId": "EHVK",
+    "rawOb": "METAR EHVK 172025Z AUTO 31001KT 9999 BKN033 OVC150 17/14 Q1015 BLU",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 310,
+    "wspd": 1,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 3300
+      },
+      {
+        "cover": "OVC",
+        "base": 15000
+      }
+    ],
+    "ceiling": 3300,
+    "temp": 17,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 51.658,
+    "lon": 5.707
+  },
+  {
+    "icaoId": "EHWO",
+    "rawOb": "METAR EHWO 172025Z AUTO VRB01KT 9999 FEW057 BKN062 BKN069 18/13 Q1015 BLU",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 1,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 5700
+      },
+      {
+        "cover": "BKN",
+        "base": 6200
+      },
+      {
+        "cover": "BKN",
+        "base": 6900
+      }
+    ],
+    "ceiling": 6200,
+    "temp": 18,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 51.448,
+    "lon": 4.342
+  },
+  {
+    "icaoId": "LFAC",
+    "rawOb": "METAR LFAC 172030Z AUTO 19006KT CAVOK 20/17 Q1015",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 190,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 20,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 50.962,
+    "lon": 1.955
+  },
+  {
+    "icaoId": "LFAQ",
+    "rawOb": "METAR LFAQ 172030Z AUTO 30010KT CAVOK 20/16 Q1017",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 300,
+    "wspd": 10,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 20,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 49.972,
+    "lon": 2.704
+  },
+  {
+    "icaoId": "LFAT",
+    "rawOb": "METAR LFAT 172030Z AUTO 24006KT CAVOK 20/18 Q1016",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 240,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 20,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 50.515,
+    "lon": 1.623
+  },
+  {
+    "icaoId": "LFBA",
+    "rawOb": "METAR LFBA 172030Z AUTO 29007KT CAVOK 24/19 Q1019",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 290,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1019,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 24,
+    "dewp": 19,
+    "wxString": null,
+    "lat": 44.176,
+    "lon": 0.593
+  },
+  {
+    "icaoId": "LFBD",
+    "rawOb": "METAR LFBD 172030Z AUTO 25004KT CAVOK 22/18 Q1019 TEMPO BKN012",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 250,
+    "wspd": 4,
+    "wgst": null,
+    "altim": 1019,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 22,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 44.831,
+    "lon": -0.691
+  },
+  {
+    "icaoId": "LFBE",
+    "rawOb": "METAR LFBE 172030Z AUTO 28008KT 9999 FEW044 24/19 Q1019 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 280,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1019,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 4400
+      }
+    ],
+    "ceiling": null,
+    "temp": 24,
+    "dewp": 19,
+    "wxString": null,
+    "lat": 44.826,
+    "lon": 0.516
+  },
+  {
+    "icaoId": "LFBG",
+    "rawOb": "METAR LFBG 172030Z AUTO 26007KT CAVOK 23/18 Q1019",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 260,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1019,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 23,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 45.665,
+    "lon": -0.316
+  },
+  {
+    "icaoId": "LFBH",
+    "rawOb": "METAR LFBH 172030Z AUTO 30013KT CAVOK 21/18 Q1018 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 300,
+    "wspd": 13,
+    "wgst": null,
+    "altim": 1018,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 21,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 46.178,
+    "lon": -1.193
+  },
+  {
+    "icaoId": "LFBI",
+    "rawOb": "METAR LFBI 172030Z AUTO 23005KT CAVOK 22/11 Q1018 BECMG 33010KT",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 230,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1018,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 22,
+    "dewp": 11,
+    "wxString": null,
+    "lat": 46.584,
+    "lon": 0.309
+  },
+  {
+    "icaoId": "LFBL",
+    "rawOb": "METAR LFBL 172030Z AUTO 26008KT 230V290 CAVOK 24/19 Q1019 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 260,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1019,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 24,
+    "dewp": 19,
+    "wxString": null,
+    "lat": 45.863,
+    "lon": 1.179
+  },
+  {
+    "icaoId": "LFBM",
+    "rawOb": "METAR LFBM 172030Z AUTO 27006KT 9999 OVC041 24/17 Q1020 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 270,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1020,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": 4100
+      }
+    ],
+    "ceiling": 4100,
+    "temp": 24,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 43.912,
+    "lon": -0.507
+  },
+  {
+    "icaoId": "LFBO",
+    "rawOb": "METAR LFBO 172030Z AUTO 29010KT 9999 FEW048 25/17 Q1019 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 290,
+    "wspd": 10,
+    "wgst": null,
+    "altim": 1019,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 4800
+      }
+    ],
+    "ceiling": null,
+    "temp": 25,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 43.621,
+    "lon": 1.379
+  },
+  {
+    "icaoId": "LFBP",
+    "rawOb": "METAR LFBP 172030Z AUTO 28004KT 9999 OVC044 23/18 Q1020 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 280,
+    "wspd": 4,
+    "wgst": null,
+    "altim": 1020,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": 4400
+      }
+    ],
+    "ceiling": 4400,
+    "temp": 23,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 43.385,
+    "lon": -0.416
+  },
+  {
+    "icaoId": "LFBT",
+    "rawOb": "METAR LFBT 172030Z AUTO 27003KT 230V310 9999 OVC037 23/18 Q1021 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 270,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1021,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": 3700
+      }
+    ],
+    "ceiling": 3700,
+    "temp": 23,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 43.189,
+    "lon": 0.0
+  },
+  {
+    "icaoId": "LFBU",
+    "rawOb": "METAR LFBU 172030Z AUTO 25008KT 220V280 CAVOK 24/19 Q1019 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 250,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1019,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 24,
+    "dewp": 19,
+    "wxString": null,
+    "lat": 45.728,
+    "lon": 0.22
+  },
+  {
+    "icaoId": "LFBX",
+    "rawOb": "METAR LFBX 172030Z AUTO 28007KT CAVOK 25/18 Q1018",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 280,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1018,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 25,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 45.196,
+    "lon": 0.815
+  },
+  {
+    "icaoId": "LFBY",
+    "rawOb": "METAR LFBY 172030Z AUTO VRB03KT 9999 // ////// 23/19 Q1020",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1020,
+    "clouds": [],
+    "ceiling": null,
+    "temp": 23,
+    "dewp": 19,
+    "wxString": null,
+    "lat": 43.69,
+    "lon": -1.07
+  },
+  {
+    "icaoId": "LFBZ",
+    "rawOb": "METAR LFBZ 172030Z AUTO 26005KT 220V290 9999 FEW022 OVC040 23/19 Q1021 TEMPO BKN010",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 260,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1021,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 2200
+      },
+      {
+        "cover": "OVC",
+        "base": 4000
+      }
+    ],
+    "ceiling": 4000,
+    "temp": 23,
+    "dewp": 19,
+    "wxString": null,
+    "lat": 43.469,
+    "lon": -1.534
+  },
+  {
+    "icaoId": "LFCK",
+    "rawOb": "METAR LFCK 172030Z AUTO 30008KT CAVOK 25/18 Q1020 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 300,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1020,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 25,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 43.556,
+    "lon": 2.289
+  },
+  {
+    "icaoId": "LFCR",
+    "rawOb": "METAR LFCR 172030Z AUTO 28006KT CAVOK 20/17 Q1021 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 280,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1021,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 20,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 44.41,
+    "lon": 2.483
+  },
+  {
+    "icaoId": "LFGA",
+    "rawOb": "METAR LFGA 172030Z AUTO 30003KT 240V330 CAVOK 20/19 Q1016",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 300,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 20,
+    "dewp": 19,
+    "wxString": null,
+    "lat": 48.11,
+    "lon": 7.359
+  },
+  {
+    "icaoId": "LFGJ",
+    "rawOb": "METAR LFGJ 172030Z AUTO 08004KT CAVOK 21/19 Q1016",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 80,
+    "wspd": 4,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 21,
+    "dewp": 19,
+    "wxString": null,
+    "lat": 47.044,
+    "lon": 5.427
+  },
+  {
+    "icaoId": "LFJL",
+    "rawOb": "METAR LFJL 172030Z AUTO 06003KT CAVOK 23/14 Q1016 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 60,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 23,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 48.982,
+    "lon": 6.251
+  },
+  {
+    "icaoId": "LFJR",
+    "rawOb": "METAR LFJR 172030Z AUTO 34006KT 310V010 CAVOK 23/17 Q1018",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 340,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1018,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 23,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 47.562,
+    "lon": -0.317
+  },
+  {
+    "icaoId": "LFKB",
+    "rawOb": "METAR LFKB 172030Z AUTO VRB03KT CAVOK 23/20 Q1010 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1010,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 23,
+    "dewp": 20,
+    "wxString": null,
+    "lat": 42.553,
+    "lon": 9.484
+  },
+  {
+    "icaoId": "LFKC",
+    "rawOb": "METAR LFKC 172030Z AUTO 19012KT CAVOK 29/20 Q1010 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 190,
+    "wspd": 12,
+    "wgst": null,
+    "altim": 1010,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 29,
+    "dewp": 20,
+    "wxString": null,
+    "lat": 42.531,
+    "lon": 8.793
+  },
+  {
+    "icaoId": "LFKF",
+    "rawOb": "METAR LFKF 172030Z AUTO 26015KT CAVOK 27/23 Q1011 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 260,
+    "wspd": 15,
+    "wgst": null,
+    "altim": 1011,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 27,
+    "dewp": 23,
+    "wxString": null,
+    "lat": 41.501,
+    "lon": 9.098
+  },
+  {
+    "icaoId": "LFKJ",
+    "rawOb": "METAR LFKJ 172030Z AUTO 10002KT CAVOK 28/22 Q1012 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 100,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1012,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 28,
+    "dewp": 22,
+    "wxString": null,
+    "lat": 41.924,
+    "lon": 8.803
+  },
+  {
+    "icaoId": "LFKS",
+    "rawOb": "METAR LFKS 172030Z AUTO VRB03KT CAVOK 26/20 Q1010",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1010,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 26,
+    "dewp": 20,
+    "wxString": null,
+    "lat": 41.924,
+    "lon": 9.406
+  },
+  {
+    "icaoId": "LFLB",
+    "rawOb": "METAR LFLB 172030Z AUTO 03001KT 9999 BKN082 BKN100 21/19 Q1017",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 30,
+    "wspd": 1,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 8200
+      },
+      {
+        "cover": "BKN",
+        "base": 10000
+      }
+    ],
+    "ceiling": 8200,
+    "temp": 21,
+    "dewp": 19,
+    "wxString": null,
+    "lat": 45.637,
+    "lon": 5.883
+  },
+  {
+    "icaoId": "LFLC",
+    "rawOb": "METAR LFLC 172030Z AUTO 34003KT 310V010 CAVOK 25/14 Q1018 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 340,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1018,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 25,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 45.787,
+    "lon": 3.169
+  },
+  {
+    "icaoId": "LFLL",
+    "rawOb": "METAR LFLL 172030Z 23003KT CAVOK 24/19 Q1016 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 230,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 24,
+    "dewp": 19,
+    "wxString": null,
+    "lat": 45.726,
+    "lon": 5.078
+  },
+  {
+    "icaoId": "LFLN",
+    "rawOb": "METAR LFLN 172030Z AUTO 30002KT CAVOK 24/11 Q1016",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 300,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 24,
+    "dewp": 11,
+    "wxString": null,
+    "lat": 46.412,
+    "lon": 4.025
+  },
+  {
+    "icaoId": "LFLP",
+    "rawOb": "METAR LFLP 172030Z AUTO VRB03KT CAVOK 22/19 Q1018",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1018,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 22,
+    "dewp": 19,
+    "wxString": null,
+    "lat": 45.93,
+    "lon": 6.106
+  },
+  {
+    "icaoId": "LFLS",
+    "rawOb": "METAR LFLS 172030Z AUTO 00000KT CAVOK 22/20 Q1017",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 0,
+    "wspd": 0,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 22,
+    "dewp": 20,
+    "wxString": null,
+    "lat": 45.363,
+    "lon": 5.329
+  },
+  {
+    "icaoId": "LFLW",
+    "rawOb": "METAR LFLW 172030Z AUTO 19002KT CAVOK 19/17 Q1021",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 190,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1021,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 19,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 44.899,
+    "lon": 2.421
+  },
+  {
+    "icaoId": "LFLX",
+    "rawOb": "METAR LFLX 172030Z AUTO 31006KT CAVOK 23/10 Q1017 BECMG 01010KT",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 310,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 23,
+    "dewp": 10,
+    "wxString": null,
+    "lat": 46.87,
+    "lon": 1.741
+  },
+  {
+    "icaoId": "LFLY",
+    "rawOb": "METAR LFLY 172030Z AUTO 19003KT CAVOK 23/22 Q1016 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 190,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 23,
+    "dewp": 22,
+    "wxString": null,
+    "lat": 45.726,
+    "lon": 4.938
+  },
+  {
+    "icaoId": "LFMD",
+    "rawOb": "METAR LFMD 172030Z AUTO VRB01KT CAVOK 26/20 Q1010",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 1,
+    "wgst": null,
+    "altim": 1010,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 26,
+    "dewp": 20,
+    "wxString": null,
+    "lat": 43.544,
+    "lon": 6.953
+  },
+  {
+    "icaoId": "LFMH",
+    "rawOb": "METAR LFMH 172030Z AUTO 32003KT CAVOK 24/15 Q1018",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 320,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1018,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 24,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 45.533,
+    "lon": 4.293
+  },
+  {
+    "icaoId": "LFMI",
+    "rawOb": "METAR LFMI 172030Z AUTO 33010KT CAVOK 29/16 Q1013 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 330,
+    "wspd": 10,
+    "wgst": null,
+    "altim": 1013,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 29,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 43.516,
+    "lon": 4.935
+  },
+  {
+    "icaoId": "LFMK",
+    "rawOb": "METAR LFMK 172030Z AUTO 28007KT CAVOK 26/18 Q1018",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 280,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1018,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 26,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 43.214,
+    "lon": 2.31
+  },
+  {
+    "icaoId": "LFML",
+    "rawOb": "METAR LFML 172030Z AUTO 30014KT CAVOK 30/19 Q1012 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 300,
+    "wspd": 14,
+    "wgst": null,
+    "altim": 1012,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 30,
+    "dewp": 19,
+    "wxString": null,
+    "lat": 43.438,
+    "lon": 5.216
+  },
+  {
+    "icaoId": "LFMN",
+    "rawOb": "METAR LFMN 172030Z 36003KT 330V030 CAVOK 27/21 Q1010 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 360,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1010,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 27,
+    "dewp": 21,
+    "wxString": null,
+    "lat": 43.658,
+    "lon": 7.216
+  },
+  {
+    "icaoId": "LFMP",
+    "rawOb": "METAR LFMP 172030Z AUTO 32016KT CAVOK 29/17 Q1016 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 320,
+    "wspd": 16,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 29,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 42.737,
+    "lon": 2.873
+  },
+  {
+    "icaoId": "LFMT",
+    "rawOb": "METAR LFMT 172030Z AUTO 34009KT CAVOK 30/17 Q1015 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 340,
+    "wspd": 9,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 30,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 43.577,
+    "lon": 3.963
+  },
+  {
+    "icaoId": "LFMU",
+    "rawOb": "METAR LFMU 172030Z AUTO 25005KT CAVOK 27/18 Q1015 BECMG 31012KT",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 250,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 27,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 43.322,
+    "lon": 3.353
+  },
+  {
+    "icaoId": "LFMV",
+    "rawOb": "METAR LFMV 172030Z AUTO 34009KT CAVOK 28/17 Q1014",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 340,
+    "wspd": 9,
+    "wgst": null,
+    "altim": 1014,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 28,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 43.911,
+    "lon": 4.903
+  },
+  {
+    "icaoId": "LFOB",
+    "rawOb": "METAR LFOB 172030Z AUTO 29005KT 9999 BKN029 BKN060 BKN170 20/15 Q1017 NOSIG",
+    "fltCat": "MVFR",
+    "visib": 6,
+    "wdir": 290,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 2900
+      },
+      {
+        "cover": "BKN",
+        "base": 6000
+      },
+      {
+        "cover": "BKN",
+        "base": 17000
+      }
+    ],
+    "ceiling": 2900,
+    "temp": 20,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 49.454,
+    "lon": 2.113
+  },
+  {
+    "icaoId": "LFOE",
+    "rawOb": "METAR LFOE 172030Z AUTO 29006KT 9999 FEW035 21/16 Q1018",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 290,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1018,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 3500
+      }
+    ],
+    "ceiling": null,
+    "temp": 21,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 49.025,
+    "lon": 1.222
+  },
+  {
+    "icaoId": "LFOH",
+    "rawOb": "METAR LFOH 172030Z AUTO 26012KT 9999 FEW013 20/18 Q1017",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 260,
+    "wspd": 12,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 1300
+      }
+    ],
+    "ceiling": null,
+    "temp": 20,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 49.533,
+    "lon": 0.091
+  },
+  {
+    "icaoId": "LFOK",
+    "rawOb": "METAR LFOK 172030Z AUTO 33005KT CAVOK 22/13 Q1016 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 330,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 22,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 48.777,
+    "lon": 4.165
+  },
+  {
+    "icaoId": "LFOP",
+    "rawOb": "METAR LFOP 172030Z AUTO 29009KT 9999 BKN022 BKN030 20/16 Q1017",
+    "fltCat": "MVFR",
+    "visib": 6,
+    "wdir": 290,
+    "wspd": 9,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 2200
+      },
+      {
+        "cover": "BKN",
+        "base": 3000
+      }
+    ],
+    "ceiling": 2200,
+    "temp": 20,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 49.383,
+    "lon": 1.182
+  },
+  {
+    "icaoId": "LFOT",
+    "rawOb": "METAR LFOT 172030Z AUTO 32008KT 300V360 CAVOK 26/16 Q1017 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 320,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 26,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 47.444,
+    "lon": 0.728
+  },
+  {
+    "icaoId": "LFOV",
+    "rawOb": "METAR LFOV 172030Z AUTO 33005KT 300V010 CAVOK 21/17 Q1019",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 330,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1019,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 21,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 48.031,
+    "lon": -0.746
+  },
+  {
+    "icaoId": "LFOZ",
+    "rawOb": "METAR LFOZ 172030Z AUTO 35001KT CAVOK 23/14 Q1017",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 350,
+    "wspd": 1,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 23,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 47.897,
+    "lon": 2.163
+  },
+  {
+    "icaoId": "LFPB",
+    "rawOb": "METAR LFPB 172030Z AUTO 31005KT 280V350 CAVOK 24/15 Q1017 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 310,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 24,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 48.967,
+    "lon": 2.428
+  },
+  {
+    "icaoId": "LFPG",
+    "rawOb": "METAR LFPG 172030Z 32006KT CAVOK 23/15 Q1017 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 320,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 23,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 49.015,
+    "lon": 2.534
+  },
+  {
+    "icaoId": "LFPN",
+    "rawOb": "METAR LFPN 172030Z AUTO 32008KT CAVOK 22/15 Q1017",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 320,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 22,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 48.752,
+    "lon": 2.114
+  },
+  {
+    "icaoId": "LFPO",
+    "rawOb": "METAR LFPO 172030Z AUTO 32006KT CAVOK 24/15 Q1017 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 320,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 24,
+    "dewp": 15,
+    "wxString": null,
+    "lat": 48.717,
+    "lon": 2.384
+  },
+  {
+    "icaoId": "LFPT",
+    "rawOb": "METAR LFPT 172030Z AUTO 31006KT 9999 BKN047 BKN056 22/16 Q1017",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 310,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1017,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 4700
+      },
+      {
+        "cover": "BKN",
+        "base": 5600
+      }
+    ],
+    "ceiling": 4700,
+    "temp": 22,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 49.097,
+    "lon": 2.041
+  },
+  {
+    "icaoId": "LFQQ",
+    "rawOb": "METAR LFQQ 172030Z AUTO 05004KT 9999 FEW029 BKN140 21/14 Q1016 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 50,
+    "wspd": 4,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "FEW",
+        "base": 2900
+      },
+      {
+        "cover": "BKN",
+        "base": 14000
+      }
+    ],
+    "ceiling": 14000,
+    "temp": 21,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 50.562,
+    "lon": 3.089
+  },
+  {
+    "icaoId": "LFRB",
+    "rawOb": "METAR LFRB 172030Z AUTO 26005KT 230V290 9999 OVC006 19/18 Q1020 NOSIG",
+    "fltCat": "IFR",
+    "visib": 6,
+    "wdir": 260,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1020,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": 600
+      }
+    ],
+    "ceiling": 600,
+    "temp": 19,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 48.444,
+    "lon": -4.412
+  },
+  {
+    "icaoId": "LFRC",
+    "rawOb": "METAR LFRC 172030Z AUTO 26011KT 9999 OVC007 19/18 Q1018",
+    "fltCat": "IFR",
+    "visib": 6,
+    "wdir": 260,
+    "wspd": 11,
+    "wgst": null,
+    "altim": 1018,
+    "clouds": [
+      {
+        "cover": "OVC",
+        "base": 700
+      }
+    ],
+    "ceiling": 700,
+    "temp": 19,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 49.65,
+    "lon": -1.47
+  },
+  {
+    "icaoId": "LFRD",
+    "rawOb": "METAR LFRD 172030Z AUTO 32010KT 9999 BKN008 19/18 Q1019 TEMPO 3000 BR BKN003",
+    "fltCat": "IFR",
+    "visib": 6,
+    "wdir": 320,
+    "wspd": 10,
+    "wgst": null,
+    "altim": 1019,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 800
+      }
+    ],
+    "ceiling": 800,
+    "temp": 19,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 48.589,
+    "lon": -2.075
+  },
+  {
+    "icaoId": "LFRG",
+    "rawOb": "METAR LFRG 172030Z AUTO 28011KT 240V300 9999 BKN017 BKN023 BKN028 20/18 Q1018",
+    "fltCat": "MVFR",
+    "visib": 6,
+    "wdir": 280,
+    "wspd": 11,
+    "wgst": null,
+    "altim": 1018,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 1700
+      },
+      {
+        "cover": "BKN",
+        "base": 2300
+      },
+      {
+        "cover": "BKN",
+        "base": 2800
+      }
+    ],
+    "ceiling": 1700,
+    "temp": 20,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 49.365,
+    "lon": 0.154
+  },
+  {
+    "icaoId": "LFRH",
+    "rawOb": "METAR LFRH 172030Z AUTO 30006KT CAVOK 21/16 Q1020 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 300,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1020,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 21,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 47.761,
+    "lon": -3.44
+  },
+  {
+    "icaoId": "LFRI",
+    "rawOb": "METAR LFRI 172030Z AUTO 31009KT CAVOK 22/16 Q1019 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 310,
+    "wspd": 9,
+    "wgst": null,
+    "altim": 1019,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 22,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 46.702,
+    "lon": -1.379
+  },
+  {
+    "icaoId": "LFRJ",
+    "rawOb": "METAR LFRJ 172030Z AUTO 25007KT 9999 BKN008 BKN013 OVC019 19/18 Q1020",
+    "fltCat": "IFR",
+    "visib": 6,
+    "wdir": 250,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1020,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 800
+      },
+      {
+        "cover": "BKN",
+        "base": 1300
+      },
+      {
+        "cover": "OVC",
+        "base": 1900
+      }
+    ],
+    "ceiling": 800,
+    "temp": 19,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 48.527,
+    "lon": -4.138
+  },
+  {
+    "icaoId": "LFRK",
+    "rawOb": "METAR LFRK 172030Z AUTO 27009KT CAVOK 20/17 Q1018",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 270,
+    "wspd": 9,
+    "wgst": null,
+    "altim": 1018,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 20,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 49.18,
+    "lon": -0.456
+  },
+  {
+    "icaoId": "LFRM",
+    "rawOb": "METAR LFRM 172030Z AUTO 30007KT 270V340 CAVOK 24/17 Q1018 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 300,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1018,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 24,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 47.949,
+    "lon": 0.202
+  },
+  {
+    "icaoId": "LFRN",
+    "rawOb": "METAR LFRN 172030Z AUTO 35005KT CAVOK 21/16 Q1019 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 350,
+    "wspd": 5,
+    "wgst": null,
+    "altim": 1019,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 21,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 48.069,
+    "lon": -1.734
+  },
+  {
+    "icaoId": "LFRO",
+    "rawOb": "METAR LFRO 172030Z AUTO 26010KT 9999 SCT005 SCT014 OVC024 19/18 Q1020",
+    "fltCat": "MVFR",
+    "visib": 6,
+    "wdir": 260,
+    "wspd": 10,
+    "wgst": null,
+    "altim": 1020,
+    "clouds": [
+      {
+        "cover": "SCT",
+        "base": 500
+      },
+      {
+        "cover": "SCT",
+        "base": 1400
+      },
+      {
+        "cover": "OVC",
+        "base": 2400
+      }
+    ],
+    "ceiling": 2400,
+    "temp": 19,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 48.755,
+    "lon": -3.469
+  },
+  {
+    "icaoId": "LFRQ",
+    "rawOb": "METAR LFRQ 172030Z AUTO 30008KT 9999 BKN010 OVC023 20/18 Q1021 TEMPO 2000 BR BKN002",
+    "fltCat": "MVFR",
+    "visib": 6,
+    "wdir": 300,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1021,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 1000
+      },
+      {
+        "cover": "OVC",
+        "base": 2300
+      }
+    ],
+    "ceiling": 1000,
+    "temp": 20,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 47.975,
+    "lon": -4.168
+  },
+  {
+    "icaoId": "LFRS",
+    "rawOb": "METAR LFRS 172030Z AUTO 30006KT CAVOK 23/17 Q1018 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 300,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1018,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 23,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 47.15,
+    "lon": -1.609
+  },
+  {
+    "icaoId": "LFRT",
+    "rawOb": "METAR LFRT 172030Z AUTO 29007KT CAVOK 19/16 Q1020",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 290,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1020,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 19,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 48.536,
+    "lon": -2.853
+  },
+  {
+    "icaoId": "LFRU",
+    "rawOb": "METAR LFRU 172000Z AUTO 26008KT 9999 BKN010 OVC022 20/18 Q1020",
+    "fltCat": "MVFR",
+    "visib": 6,
+    "wdir": 260,
+    "wspd": 8,
+    "wgst": null,
+    "altim": 1020,
+    "clouds": [
+      {
+        "cover": "BKN",
+        "base": 1000
+      },
+      {
+        "cover": "OVC",
+        "base": 2200
+      }
+    ],
+    "ceiling": 1000,
+    "temp": 20,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 48.601,
+    "lon": -3.814
+  },
+  {
+    "icaoId": "LFRV",
+    "rawOb": "METAR LFRV 172030Z AUTO 36006KT CAVOK 22/16 Q1019",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 360,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1019,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 22,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 47.722,
+    "lon": -2.727
+  },
+  {
+    "icaoId": "LFRZ",
+    "rawOb": "METAR LFRZ 172030Z AUTO 30007KT CAVOK 22/17 Q1019 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 300,
+    "wspd": 7,
+    "wgst": null,
+    "altim": 1019,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 22,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 47.312,
+    "lon": -2.163
+  },
+  {
+    "icaoId": "LFSB",
+    "rawOb": "METAR LFSB 172030Z AUTO 14004KT 100V170 CAVOK 19/18 Q1016 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 140,
+    "wspd": 4,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 19,
+    "dewp": 18,
+    "wxString": null,
+    "lat": 47.614,
+    "lon": 7.51
+  },
+  {
+    "icaoId": "LFSD",
+    "rawOb": "METAR LFSD 172030Z AUTO VRB03KT CAVOK 24/16 Q1016",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 24,
+    "dewp": 16,
+    "wxString": null,
+    "lat": 47.269,
+    "lon": 5.09
+  },
+  {
+    "icaoId": "LFSG",
+    "rawOb": "METAR LFSG 172030Z AUTO 19003KT CAVOK 21/14 Q1016",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 190,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1016,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 21,
+    "dewp": 14,
+    "wxString": null,
+    "lat": 48.325,
+    "lon": 6.07
+  },
+  {
+    "icaoId": "LFSL",
+    "rawOb": "METAR LFSL 172030Z AUTO VRB02KT CAVOK 24/19 Q1019 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": null,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1019,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 24,
+    "dewp": 19,
+    "wxString": null,
+    "lat": 45.04,
+    "lon": 1.486
+  },
+  {
+    "icaoId": "LFSN",
+    "rawOb": "METAR LFSN 172030Z AUTO 11002KT CAVOK 22/13 Q1015",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 110,
+    "wspd": 2,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 22,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 48.692,
+    "lon": 6.231
+  },
+  {
+    "icaoId": "LFST",
+    "rawOb": "METAR LFST 172030Z AUTO 22003KT CAVOK 23/13 Q1015 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 220,
+    "wspd": 3,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 23,
+    "dewp": 13,
+    "wxString": null,
+    "lat": 48.549,
+    "lon": 7.64
+  },
+  {
+    "icaoId": "LFTH",
+    "rawOb": "METAR LFTH 172030Z AUTO 33006KT 280V020 CAVOK 32/12 Q1010 NOSIG",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 330,
+    "wspd": 6,
+    "wgst": null,
+    "altim": 1010,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 32,
+    "dewp": 12,
+    "wxString": null,
+    "lat": 43.094,
+    "lon": 6.146
+  },
+  {
+    "icaoId": "LFTW",
+    "rawOb": "METAR LFTW 172030Z AUTO 34004KT CAVOK 27/17 Q1015",
+    "fltCat": "VFR",
+    "visib": 6,
+    "wdir": 340,
+    "wspd": 4,
+    "wgst": null,
+    "altim": 1015,
+    "clouds": [
+      {
+        "cover": "CAVOK",
+        "base": null
+      }
+    ],
+    "ceiling": null,
+    "temp": 27,
+    "dewp": 17,
+    "wxString": null,
+    "lat": 43.757,
+    "lon": 4.416
+  }
+]

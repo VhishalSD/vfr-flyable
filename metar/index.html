@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <base href="../">
+  <title>METAR-detail · METAR &amp; TAF</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/metar-detail.css">
+</head>
+<body>
+  <header class="detail-topbar">
+    <a class="detail-brand" href="./" aria-label="Terug naar de kaart">
+      <svg class="detail-windsock" viewBox="0 0 34 34" aria-hidden="true"><path class="windsock-pole" d="M6 4v27M3.5 31h5"/><path class="windsock-red" d="M7 7.5 13.5 6l4.2 2.6 5.8-.8 4 3.2-4 5.1-5.8-.7-4.2 2.5L7 16.5Z"/><path class="windsock-white" d="m13.5 6 4.2 2.6v6.8l-4.2 2.5Zm10 1.8 4 3.2-4 5.1Z"/></svg>
+    </a>
+    <div class="station-identity">
+      <h1 id="header-airport-name">Airport</h1>
+      <p><span id="header-icao">ICAO</span><span aria-hidden="true"> · </span><span id="header-country">Land</span></p>
+    </div>
+    <a class="back-to-map" href="./">← Terug naar kaart</a>
+  </header>
+
+  <nav class="detail-tabs" aria-label="Airportsecties">
+    <div class="tab-reel">
+      <a class="detail-tab active" href="#metar-content" data-detail-tab="metar" aria-controls="metar-panel" aria-current="page">METAR</a>
+      <a class="detail-tab" href="#taf-panel" data-detail-tab="taf" aria-controls="taf-panel">TAF</a>
+      <a class="detail-tab" href="#history-panel" data-detail-tab="history" aria-controls="history-panel">History</a>
+      <a class="detail-tab" href="#airport-content" data-detail-tab="airport" aria-controls="airport-content">Airport</a>
+      <a class="detail-tab" href="#trends" data-detail-tab="trends" aria-controls="trends-panel">Trends</a>
+    </div>
+  </nav>
+
+  <main class="detail-main" id="detail-main" hidden>
+    <nav class="breadcrumbs" aria-label="Kruimelpad"><a href="./">Countries</a><span>›</span><span id="breadcrumb-country">Land</span><span>›</span><span id="breadcrumb-icao">METAR</span></nav>
+    <dl class="detail-airport-metadata" aria-label="Airportmetadata">
+      <div><dt>Municipality</dt><dd id="detail-municipality">—</dd></div>
+      <div><dt>IATA-code</dt><dd id="detail-iata">—</dd></div>
+      <div><dt>FIR</dt><dd id="detail-fir">—</dd></div>
+      <div><dt>Elevation</dt><dd id="detail-elevation-ft">—</dd></div>
+      <div><dt>Elevation</dt><dd id="detail-elevation-m">—</dd></div>
+      <div><dt>Local time</dt><dd id="detail-local-time">—</dd></div>
+      <div><dt>Timezone</dt><dd id="detail-timezone">—</dd></div>
+      <div><dt>Sunrise</dt><dd id="detail-sunrise">—</dd></div>
+      <div><dt>Sunset</dt><dd id="detail-sunset">—</dd></div>
+      <div><dt>Daylight status</dt><dd id="detail-daylight-status">—</dd></div>
+      <div><dt>Solar noon</dt><dd id="detail-solar-noon">—</dd></div>
+      <div><dt>Day length</dt><dd id="detail-day-length">—</dd></div>
+    </dl>
+    <div class="detail-panel" id="metar-panel">
+    <div class="station-title-row">
+      <h1 id="detail-title">METAR</h1>
+      <span class="station-chip" id="station-icao">ICAO</span>
+    </div>
+
+    <section class="metric-grid" id="metar-content" aria-label="Actuele METAR-samenvatting">
+      <article class="metric-card"><strong class="metric-top" id="metric-category">—</strong><span class="metric-bottom">Flight category</span></article>
+      <article class="metric-card metric-weather"><strong class="metric-top" id="metric-weather">—</strong><span class="metric-bottom" id="metric-weather-detail">Weather</span></article>
+      <article class="metric-card"><strong class="metric-top metric-valid" id="metric-wind">—</strong><span class="metric-bottom" id="metric-wind-detail">Wind</span></article>
+      <article class="metric-card"><strong class="metric-top metric-valid" id="metric-visibility">—</strong><span class="metric-bottom">Visibility</span></article>
+      <article class="metric-card"><strong class="metric-top metric-valid" id="metric-ceiling">—</strong><span class="metric-bottom">Ceiling</span></article>
+      <article class="metric-card"><strong class="metric-top" id="metric-qnh">—</strong><span class="metric-bottom">QNH</span></article>
+    </section>
+
+    <section class="weather-visuals" aria-label="Wind, runway, ceiling en zicht">
+      <div class="wind-visual-column">
+      <div class="compass-column">
+        <div class="compass position-relative w-100 overflow-hidden" aria-label="Wind- en runwaykompas">
+          <div class="img-wrap w-100" aria-hidden="true"></div>
+          <div class="wind-speed-meter" aria-label="Actuele windsnelheid in knots">
+            <svg id="wind-speed-svg" viewBox="0 0 270 150" role="img" aria-labelledby="wind-speed-title wind-speed-description">
+              <title id="wind-speed-title">Windsnelheid</title>
+              <desc id="wind-speed-description">Gebogen schaal van 0 tot 45 knots met de actuele windsnelheid.</desc>
+              <g id="wind-speed-visible">
+                <path class="wind-speed-arc" d="M211 140 A60 60 0 0 1 211 20"/>
+                <g id="wind-speed-ticks" class="wind-speed-ticks" aria-hidden="true"></g>
+                <line id="wind-gust-indicator" class="wind-gust-indicator" x1="211" y1="80" x2="211" y2="31" hidden/>
+                <line id="wind-speed-needle" class="wind-speed-needle" x1="211" y1="80" x2="211" y2="128"/>
+                <circle class="wind-speed-pivot" cx="211" cy="80" r="6.5"/>
+                <circle class="wind-speed-cap" cx="211" cy="80" r="3.5"/>
+                <text class="wind-speed-unit" x="204" y="72">kt</text>
+              </g>
+            </svg>
+            <div class="wind-speed-reading"><strong id="wind-speed-value">—</strong><span>kt</span></div>
+            <div id="wind-gust-reading" class="wind-gust-reading" hidden>Gust —</div>
+          </div>
+          <div id="compass-holder" class="compass-holder position-absolute left-top compass-width" data-heading="0" title="Klik om de geselecteerde runway bovenaan te zetten">
+            <img id="detail-compass-base" class="detail-compass-layer" src="images/compass-2024.svg" alt="Kompas">
+            <img id="detail-wind-arrow" class="detail-compass-layer rotating" src="images/compass-arrow.svg" alt="Hoofdwindrichting" hidden>
+            <img id="detail-wind-min" class="detail-compass-layer rotating" src="images/compass-needle-min.svg" alt="Minimale variabele windrichting" hidden>
+            <img id="detail-wind-max" class="detail-compass-layer rotating" src="images/compass-needle-max.svg" alt="Maximale variabele windrichting" hidden>
+            <svg id="detail-runway" class="detail-compass-layer rotating" viewBox="0 0 300 300" role="img" aria-label="Geselecteerde runway" hidden>
+              <rect class="runway-surface" x="136" y="43" width="28" height="214" rx="1"/>
+              <path class="runway-marking" d="M141 51v18m6-18v18m6-18v18m6-18v18M141 249v-18m6 18v-18m6 18v-18m6 18v-18M150 89v22m0 13v22m0 13v22m0 13v22"/>
+              <text id="detail-runway-primary" class="runway-designator" x="150" y="79">—</text>
+              <text id="detail-runway-opposite" class="runway-designator" x="150" y="221" transform="rotate(180 150 221)">—</text>
+            </svg>
+          </div>
+          <div class="wind-component component-headwind"><span>↓</span><b id="headwind-component">—</b></div>
+          <div class="wind-component component-crosswind"><span>←</span><b id="crosswind-component">—</b></div>
+          <div class="compass-wind-label" id="compass-wind-label">—</div>
+        </div>
+        <div class="runway-selector" aria-label="Runwaykeuze">
+          <div id="runway-inputs" class="runway-inputs"></div>
+          <button id="change-runway" type="button" disabled>✎ Change</button>
+        </div>
+      </div>
+      </div>
+
+      <div class="ceiling-column">
+        <div class="ceiling-visual" aria-label="Actuele ceiling en visibility">
+          <svg viewBox="0 0 618 350" role="img" aria-hidden="true">
+            <g class="ceiling-grid">
+              <path d="M60 25V325M60 25H605M60 85H605M60 145H605M60 205H605M60 265H605M60 325H605"/>
+              <text x="8" y="31">5,000</text><text x="8" y="91">4,000</text><text x="8" y="151">3,000</text><text x="8" y="211">2,000</text><text x="8" y="271">1,000</text><text x="24" y="331">0 ft</text>
+            </g>
+          </svg>
+          <div id="ceiling-current" class="ceiling-current">—</div>
+          <div id="visibility-current" class="visibility-current">Visibility —</div>
+        </div>
+        <div class="raw-metar-bar"><code id="raw-metar">—</code></div>
+      </div>
+    </section>
+
+    <section class="history-charts" id="history-charts" aria-label="Historische METAR-grafieken" aria-busy="true">
+      <article class="history-chart" data-history-field="temp">
+        <svg id="history-temp" viewBox="0 0 360 130" role="img" aria-label="Temperature history"></svg>
+        <p class="history-chart-status">Historische data laden…</p>
+      </article>
+      <article class="history-chart" data-history-field="visib">
+        <svg id="history-visib" viewBox="0 0 360 130" role="img" aria-label="Visibility history"></svg>
+        <p class="history-chart-status">Historische data laden…</p>
+      </article>
+      <article class="history-chart" data-history-field="wspd">
+        <svg id="history-wspd" viewBox="0 0 360 130" role="img" aria-label="Wind speed history"></svg>
+        <p class="history-chart-status">Historische data laden…</p>
+      </article>
+      <article class="history-chart" data-history-field="altim">
+        <svg id="history-altim" viewBox="0 0 360 130" role="img" aria-label="QNH history"></svg>
+        <p class="history-chart-status">Historische data laden…</p>
+      </article>
+    </section>
+
+    <section class="content-grid">
+      <article class="airport-copy" id="airport-content" aria-labelledby="airport-title">
+        <h2 id="airport-title">METAR airport</h2>
+        <p id="airport-description">—</p>
+        <section class="observations" aria-labelledby="observations-title">
+          <h3 id="observations-title">Airport observations</h3>
+          <p id="observation-wind">—</p>
+          <p id="observation-conditions">—</p>
+          <p id="observation-temperature">—</p>
+          <p id="observation-pressure">—</p>
+        </section>
+        <section class="metar-daylight-copy" aria-labelledby="metar-daylight-copy-title">
+          <h3 id="metar-daylight-copy-title">Daylight period</h3>
+          <p id="metar-daylight-summary">Daylightdata laden…</p>
+        </section>
+        <section class="metar-experiences" aria-labelledby="metar-experiences-title">
+          <h3 id="metar-experiences-title">Experiences</h3>
+          <p id="metar-experiences-copy">Deze projectpagina visualiseert beschikbare luchtvaartweer- en luchthavengegevens.</p>
+        </section>
+      </article>
+      <section class="runway-section">
+        <h2>Runways</h2>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Id</th><th>Heading</th><th>Crosswind</th><th>Headwind</th><th>Crosswind %</th></tr></thead>
+            <tbody id="runway-table"></tbody>
+          </table>
+        </div>
+        <p class="runway-note">De runway-end met de grootste headwindcomponent is gemarkeerd en wordt gebruikt voor de berekeningen.</p>
+        <section class="temperature-weather" aria-labelledby="temperature-weather-title">
+          <h2 id="temperature-weather-title">Temperature &amp; Weather</h2>
+          <table class="weather-table">
+            <tbody>
+              <tr><th scope="row">Temperature</th><td id="weather-temperature">—</td></tr>
+              <tr><th scope="row">Dewpoint</th><td id="weather-dewpoint">—</td></tr>
+              <tr><th scope="row">Relative humidity</th><td id="weather-humidity">—</td></tr>
+            </tbody>
+          </table>
+        </section>
+        <section class="metar-daylight-visual" aria-labelledby="metar-daylight-visual-title">
+          <h2 id="metar-daylight-visual-title">Daylight period</h2>
+          <svg id="metar-daylight-chart" viewBox="0 0 560 220" role="img" aria-labelledby="metar-daylight-chart-title metar-daylight-chart-description">
+            <title id="metar-daylight-chart-title">Daylight period</title>
+            <desc id="metar-daylight-chart-description">Sunrise, solar noon and sunset for the selected airport.</desc>
+            <path class="daylight-curve" d="M 52 126 C 150 126 172 48 280 48 C 388 48 410 126 508 126"></path>
+            <path class="daylight-baseline" d="M 52 126 H 508"></path>
+            <path class="daylight-guide" d="M 124 126 V 164"></path>
+            <path class="daylight-guide" d="M 280 126 V 164"></path>
+            <path class="daylight-guide" d="M 436 126 V 164"></path>
+            <g id="metar-daylight-sun" class="daylight-sun" aria-hidden="true">
+              <circle r="10"></circle>
+              <path d="M 0 -18 V -25 M 0 18 V 25 M -18 0 H -25 M 18 0 H 25 M -13 -13 L -18 -18 M 13 -13 L 18 -18 M -13 13 L -18 18 M 13 13 L 18 18"></path>
+            </g>
+            <g class="daylight-label daylight-label-start">
+              <text x="124" y="190">Sunrise</text>
+              <text id="metar-daylight-sunrise" x="124" y="207">—</text>
+            </g>
+            <g class="daylight-label daylight-label-middle">
+              <text x="280" y="190">Midday</text>
+              <text id="metar-daylight-noon" x="280" y="207">—</text>
+            </g>
+            <g class="daylight-label daylight-label-end">
+              <text x="436" y="190">Sunset</text>
+              <text id="metar-daylight-sunset" x="436" y="207">—</text>
+            </g>
+          </svg>
+          <p class="metar-daylight-status" id="metar-daylight-status" role="status" hidden></p>
+        </section>
+        <section class="metar-project-summary" aria-labelledby="metar-project-summary-title">
+          <h2 id="metar-project-summary-title">Project</h2>
+          <p id="metar-project-summary-copy">Deze weergave combineert de beschikbare METAR-observatie met luchthaven- en baangegevens uit het project.</p>
+        </section>
+      </section>
+    </section>
+
+    <footer class="metar-footer" aria-label="Projectinformatie">
+      <section class="metar-footer-info">
+        <div class="metar-footer-info-inner">
+          <p class="metar-footer-kicker">METAR &amp; TAF</p>
+          <h2>VFR Flyable</h2>
+          <p>Een visuele weergave van beschikbare luchtvaartweer- en luchthavengegevens.</p>
+        </div>
+      </section>
+
+      <section class="metar-footer-links" aria-label="Toekomstige footerinhoud">
+        <div class="metar-footer-links-inner">
+          <section><h2>Projectinformatie</h2><p>Inhoud volgt.</p></section>
+          <section><h2>Databronnen</h2><p>Inhoud volgt.</p></section>
+          <section><h2>Techniek</h2><p>Inhoud volgt.</p></section>
+          <section><h2>Documentatie</h2><p>Inhoud volgt.</p></section>
+        </div>
+      </section>
+
+      <p class="metar-footer-disclaimer">Educatief project — niet gebruiken voor vluchtplanning of operationele beslissingen.</p>
+    </footer>
+    </div>
+
+    <section class="detail-panel recent-history-panel" id="history-panel" aria-labelledby="recent-history-title" hidden>
+      <h1 class="recent-history-title" id="recent-history-title">METAR history</h1>
+
+      <nav class="recent-history-years" aria-label="Historyperiode">
+        <button class="recent-history-year active" type="button" aria-current="page">Recent</button>
+        <button class="recent-history-year" type="button" disabled>2026</button>
+        <button class="recent-history-year" type="button" disabled>2025</button>
+        <button class="recent-history-year" type="button" disabled>2024</button>
+        <button class="recent-history-year" type="button" disabled>2023</button>
+        <button class="recent-history-year" type="button" disabled>2022</button>
+        <button class="recent-history-year" type="button" disabled>2021</button>
+        <button class="recent-history-year" type="button" disabled>2020</button>
+        <button class="recent-history-year" type="button" disabled>2019</button>
+        <button class="recent-history-year" type="button" disabled>2018</button>
+        <button class="recent-history-year" type="button" disabled>2017</button>
+        <button class="recent-history-year" type="button" disabled>2016</button>
+        <button class="recent-history-year" type="button" disabled>2015</button>
+        <button class="recent-history-year" type="button" disabled>2014</button>
+        <button class="recent-history-year" type="button" disabled>2013</button>
+        <button class="recent-history-year" type="button" disabled>2012</button>
+        <button class="recent-history-year" type="button" disabled>2011</button>
+        <button class="recent-history-year" type="button" disabled>2010</button>
+        <button class="recent-history-year" type="button" disabled>2009</button>
+        <button class="recent-history-year" type="button" disabled>2008</button>
+        <button class="recent-history-year" type="button" disabled>2007</button>
+      </nav>
+
+      <p class="recent-history-intro">Hieronder staan de recente METAR- en SPECI-observaties van de afgelopen dagen. Het jaararchief is nog niet beschikbaar.</p>
+
+      <p id="recent-history-loading" role="status">Recente METAR-history laden…</p>
+
+      <section class="taf-unavailable" id="recent-history-unavailable" hidden>
+        <h2>Geen recente METAR-history beschikbaar</h2>
+        <p id="recent-history-unavailable-message">Voor deze luchthaven staat geen recente history in de lokale dataset.</p>
+      </section>
+
+      <div id="recent-history-content" hidden>
+        <p class="recent-history-summary" id="recent-history-summary"></p>
+        <div id="recent-history-groups"></div>
+      </div>
+    </section>
+
+    <section class="detail-panel airport-tab-panel" id="airport-panel" aria-labelledby="airport-tab-title" hidden>
+      <div class="airport-tab-layout">
+        <div class="airport-tab-primary">
+          <h1 class="airport-section-title" id="airport-tab-title">About airport</h1>
+
+          <div class="airport-about-row">
+            <div class="airport-table-scroll">
+              <table class="airport-info-table" aria-label="Airportinformatie">
+                <tbody>
+                  <tr><th scope="row">ICAO</th><td id="airport-info-icao">—</td></tr>
+                  <tr><th scope="row">IATA</th><td id="airport-info-iata">—</td></tr>
+                  <tr><th scope="row">FIR</th><td id="airport-info-fir">—</td></tr>
+                  <tr><th scope="row">Region</th><td id="airport-info-region">—</td></tr>
+                  <tr><th scope="row">Country</th><td id="airport-info-country">—</td></tr>
+                  <tr><th scope="row">Runways</th><td id="airport-info-runways">—</td></tr>
+                  <tr><th scope="row">Type</th><td id="airport-info-type">—</td></tr>
+                  <tr><th scope="row">Elevation</th><td id="airport-info-elevation">—</td></tr>
+                  <tr><th scope="row">Coordinates</th><td><span id="airport-info-coordinates">—</span><small id="airport-info-dms">—</small></td></tr>
+                  <tr><th scope="row">Variation</th><td id="airport-info-variation">—</td></tr>
+                  <tr><th scope="row">Timezone</th><td id="airport-info-timezone">—</td></tr>
+                  <tr><th scope="row">UTC offset</th><td id="airport-info-utc-offset">—</td></tr>
+                  <tr><th scope="row">Local time</th><td id="airport-info-local-time">—</td></tr>
+                  <tr><th scope="row">Source</th><td id="airport-info-source">—</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="airport-map-wrap">
+              <div id="airport-tab-map" aria-label="Kaart met airport, runways, nearby airports en navigational aids"></div>
+              <p class="airport-map-status" id="airport-map-status" role="status">Kaart laden…</p>
+            </div>
+          </div>
+
+          <section class="airport-runways-section" aria-labelledby="airport-runways-title">
+            <h2 class="airport-section-title" id="airport-runways-title">Runways</h2>
+            <div class="airport-runways-row">
+              <div class="airport-table-scroll">
+                <table class="airport-data-table airport-runway-table">
+                  <thead><tr><th>ID</th><th>True heading</th><th>Magnetic heading</th><th>Length</th><th>Width</th><th>Surface</th><th>Latitude</th><th>Longitude</th><th>Elevation</th><th>Displaced threshold</th><th>Status</th></tr></thead>
+                  <tbody id="airport-runway-details"></tbody>
+                </table>
+              </div>
+              <aside class="airport-notice-box">
+                <strong>Do not use for flight planning</strong>
+                <p id="airport-runway-notice">Runwaygegevens kunnen onvolledig of geschat zijn.</p>
+              </aside>
+            </div>
+          </section>
+
+          <article class="airport-description-section" aria-labelledby="airport-description-title">
+            <h2 class="airport-section-title" id="airport-description-title">Airport</h2>
+            <p id="airport-description-main">—</p>
+            <p id="airport-description-codes">—</p>
+            <p id="airport-description-time">—</p>
+          </article>
+        </div>
+
+        <aside class="airport-tab-secondary">
+          <section aria-labelledby="airport-nearby-title">
+            <h2 class="airport-section-title" id="airport-nearby-title">Nearby airports</h2>
+            <div class="airport-table-scroll">
+              <table class="airport-data-table airport-nearby-table">
+                <thead><tr><th aria-label="Type"></th><th>Airport</th><th>ID</th><th>Distance</th><th>Direction</th></tr></thead>
+                <tbody id="airport-nearby-body"></tbody>
+              </table>
+            </div>
+            <p class="airport-optional-status" id="airport-nearby-status" role="status">Nearby airports worden geladen wanneer deze tab opent…</p>
+          </section>
+
+          <section class="airport-navaids-section" aria-labelledby="airport-navaids-title">
+            <h2 class="airport-section-title" id="airport-navaids-title">Navigational aids</h2>
+            <div class="airport-table-scroll">
+              <table class="airport-data-table airport-navaid-table">
+                <thead><tr><th aria-label="Type"></th><th>Name</th><th>Ident</th><th>Type</th><th>Frequency</th><th>Distance</th><th>Direction</th></tr></thead>
+                <tbody id="airport-navaid-body"></tbody>
+              </table>
+            </div>
+            <p class="airport-optional-status" id="airport-navaid-status" role="status">Navigational aids worden geladen wanneer deze tab opent…</p>
+          </section>
+        </aside>
+      </div>
+    </section>
+
+    <section class="detail-panel trends-panel" id="trends-panel" aria-labelledby="trends-title" hidden>
+      <h1 class="trends-title" id="trends-title">Trends</h1>
+      <p class="trends-intro" id="trends-intro">Trenddata laden…</p>
+      <p class="trends-coverage" id="trends-coverage" hidden></p>
+
+      <p class="trends-loading" id="trends-loading" role="status">Historische METAR-trends laden…</p>
+
+      <section class="taf-unavailable trends-unavailable" id="trends-unavailable" hidden>
+        <h2>No trend data available</h2>
+        <p id="trends-unavailable-message">No trend data available for this airport yet.</p>
+      </section>
+
+      <div class="trends-content" id="trends-content" hidden></div>
+    </section>
+
+    <section class="detail-panel taf-panel" id="taf-panel" aria-labelledby="taf-title" hidden>
+      <div class="station-title-row">
+        <h1 id="taf-title">TAF</h1>
+        <span class="station-chip" id="taf-station-icao">ICAO</span>
+      </div>
+
+      <div class="taf-meta" id="taf-meta" hidden>
+        <p><strong>Geldig:</strong> <span id="taf-validity">—</span></p>
+        <p><strong>Uitgegeven:</strong> <span id="taf-issue-time">—</span></p>
+      </div>
+
+      <section class="taf-unavailable" id="taf-unavailable" hidden>
+        <h2>Geen actuele TAF beschikbaar</h2>
+        <p id="taf-unavailable-message">Voor deze luchthaven staat geen actuele TAF in de lokale dataset.</p>
+      </section>
+
+      <div id="taf-available" hidden>
+        <section class="taf-timeline-section" aria-labelledby="taf-timeline-title">
+          <h2 class="visually-hidden" id="taf-timeline-title">Uurlijkse TAF-tijdlijn</h2>
+          <div class="taf-timeline-scroll">
+            <table class="taf-timeline" id="taf-timeline">
+              <tbody id="taf-timeline-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="taf-original" aria-labelledby="taf-original-title">
+          <h2 id="taf-original-title">Original</h2>
+          <pre><code id="raw-taf"></code></pre>
+        </section>
+
+        <section class="taf-forecast" aria-labelledby="taf-forecast-title">
+          <h2 id="taf-forecast-title">Forecast</h2>
+          <ol class="taf-forecast-list" id="taf-forecast-list"></ol>
+        </section>
+
+        <section class="taf-airport-copy" aria-labelledby="taf-airport-title">
+          <h2 id="taf-airport-title">TAF airport</h2>
+          <p id="taf-airport-description">—</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <section class="detail-error" id="detail-error" hidden>
+    <h1>METAR niet beschikbaar</h1>
+    <p id="detail-error-message">Voor dit vliegveld is geen lokale METAR gevonden.</p>
+    <a href="./">Terug naar de kaart</a>
+  </section>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/metar-detail.js"></script>
+</body>
+</html>

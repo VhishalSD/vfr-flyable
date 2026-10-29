@@ -1,0 +1,4328 @@
+[
+  {
+    "icao": "EBAL",
+    "name": "Aalst Hospital Helistop",
+    "country": "Belgium",
+    "lat": 50.943087,
+    "lon": 4.055763
+  },
+  {
+    "icao": "EBAM",
+    "name": "Amougies Airfield",
+    "country": "Belgium",
+    "lat": 50.740101,
+    "lon": 3.4849
+  },
+  {
+    "icao": "EBAR",
+    "name": "Arlon-Sterpenich Ultralight Airfield",
+    "country": "Belgium",
+    "lat": 49.661981,
+    "lon": 5.885953
+  },
+  {
+    "icao": "EBAS",
+    "name": "Gravenwezel Heliport",
+    "country": "Belgium",
+    "lat": 51.247065,
+    "lon": 4.54272
+  },
+  {
+    "icao": "EBAV",
+    "name": "Avernas-le-Bauduin Ultralight Airfield",
+    "country": "Belgium",
+    "lat": 50.706147,
+    "lon": 5.067739
+  },
+  {
+    "icao": "EBAW",
+    "name": "Antwerp International Airport (Deurne)",
+    "country": "Belgium",
+    "lat": 51.190667,
+    "lon": 4.463153
+  },
+  {
+    "icao": "EBBA",
+    "name": "Baudour Heliport",
+    "country": "Belgium",
+    "lat": 50.469514,
+    "lon": 3.838767
+  },
+  {
+    "icao": "EBBE",
+    "name": "Beauvechain Air Base",
+    "country": "Belgium",
+    "lat": 50.758598,
+    "lon": 4.76833
+  },
+  {
+    "icao": "EBBH",
+    "name": "Keysers Heliport",
+    "country": "Belgium",
+    "lat": 51.343409,
+    "lon": 4.622055
+  },
+  {
+    "icao": "EBBM",
+    "name": "Michelbeke Heliport",
+    "country": "Belgium",
+    "lat": 50.830885,
+    "lon": 3.774096
+  },
+  {
+    "icao": "EBBN",
+    "name": "Büllingen Airfield",
+    "country": "Belgium",
+    "lat": 50.415001,
+    "lon": 6.27639
+  },
+  {
+    "icao": "EBBR",
+    "name": "Brussels Airport",
+    "country": "Belgium",
+    "lat": 50.901402,
+    "lon": 4.48444
+  },
+  {
+    "icao": "EBBT",
+    "name": "Brasschaat Airfield",
+    "country": "Belgium",
+    "lat": 51.34259,
+    "lon": 4.503451
+  },
+  {
+    "icao": "EBBV",
+    "name": "Brecht/Vochten Heliport",
+    "country": "Belgium",
+    "lat": 51.332,
+    "lon": 4.62466
+  },
+  {
+    "icao": "EBBX",
+    "name": "Jehonville Air Base",
+    "country": "Belgium",
+    "lat": 49.891483,
+    "lon": 5.227405
+  },
+  {
+    "icao": "EBBY",
+    "name": "Baisy-Thy Ultralight Airfield",
+    "country": "Belgium",
+    "lat": 50.56814,
+    "lon": 4.435219
+  },
+  {
+    "icao": "EBBZ",
+    "name": "Buzet Aerodrome",
+    "country": "Belgium",
+    "lat": 50.542335,
+    "lon": 4.382472
+  },
+  {
+    "icao": "EBCF",
+    "name": "Cerfontaine Airfield",
+    "country": "Belgium",
+    "lat": 50.152802,
+    "lon": 4.38722
+  },
+  {
+    "icao": "EBCI",
+    "name": "Brussels South Charleroi Airport",
+    "country": "Belgium",
+    "lat": 50.461963,
+    "lon": 4.459562
+  },
+  {
+    "icao": "EBCV",
+    "name": "Chièvres Air Base",
+    "country": "Belgium",
+    "lat": 50.575802,
+    "lon": 3.831
+  },
+  {
+    "icao": "EBDI",
+    "name": "Diksmuide Heliport",
+    "country": "Belgium",
+    "lat": 51.019276,
+    "lon": 2.858205
+  },
+  {
+    "icao": "EBDT",
+    "name": "Schaffen Airfield",
+    "country": "Belgium",
+    "lat": 51.004032,
+    "lon": 5.064697
+  },
+  {
+    "icao": "EBEN",
+    "name": "Engels Heliport",
+    "country": "Belgium",
+    "lat": 51.211858,
+    "lon": 4.581093
+  },
+  {
+    "icao": "EBEU",
+    "name": "Antwerp University Hospital Heliport",
+    "country": "Belgium",
+    "lat": 51.155894,
+    "lon": 4.409841
+  },
+  {
+    "icao": "EBFN",
+    "name": "Koksijde Air Base",
+    "country": "Belgium",
+    "lat": 51.090302,
+    "lon": 2.65278
+  },
+  {
+    "icao": "EBGB",
+    "name": "Grimbergen Airfield",
+    "country": "Belgium",
+    "lat": 50.948546,
+    "lon": 4.39181
+  },
+  {
+    "icao": "EBGG",
+    "name": "Overboelare Airfield",
+    "country": "Belgium",
+    "lat": 50.7556,
+    "lon": 3.86389
+  },
+  {
+    "icao": "EBHN",
+    "name": "Hoevenen Airfield",
+    "country": "Belgium",
+    "lat": 51.306099,
+    "lon": 4.38722
+  },
+  {
+    "icao": "EBKH",
+    "name": "Balen-Keiheuvel Airfield",
+    "country": "Belgium",
+    "lat": 51.180957,
+    "lon": 5.221124
+  },
+  {
+    "icao": "EBKT",
+    "name": "Kortrijk-Wevelgem International Airport",
+    "country": "Belgium",
+    "lat": 50.818878,
+    "lon": 3.209551
+  },
+  {
+    "icao": "EBLB",
+    "name": "Elsenborn Air Base",
+    "country": "Belgium",
+    "lat": 50.484818,
+    "lon": 6.183014
+  },
+  {
+    "icao": "EBLE",
+    "name": "Leopoldsburg Airfield",
+    "country": "Belgium",
+    "lat": 51.12,
+    "lon": 5.307222
+  },
+  {
+    "icao": "EBLG",
+    "name": "Liège Airport",
+    "country": "Belgium",
+    "lat": 50.638574,
+    "lon": 5.443897
+  },
+  {
+    "icao": "EBMB",
+    "name": "Melsbroek Air Base",
+    "country": "Belgium",
+    "lat": 50.913419,
+    "lon": 4.491005
+  },
+  {
+    "icao": "EBNM",
+    "name": "Namur-Suarlée Airfield",
+    "country": "Belgium",
+    "lat": 50.489705,
+    "lon": 4.769697
+  },
+  {
+    "icao": "EBOS",
+    "name": "Ostend-Bruges International Airport",
+    "country": "Belgium",
+    "lat": 51.1998,
+    "lon": 2.874673
+  },
+  {
+    "icao": "EBSG",
+    "name": "Saint-Ghislain Airfield",
+    "country": "Belgium",
+    "lat": 50.458009,
+    "lon": 3.821
+  },
+  {
+    "icao": "EBSH",
+    "name": "Saint Hubert Airfield",
+    "country": "Belgium",
+    "lat": 50.0359,
+    "lon": 5.40425
+  },
+  {
+    "icao": "EBSP",
+    "name": "Spa-La Sauvenière Airfield",
+    "country": "Belgium",
+    "lat": 50.482006,
+    "lon": 5.913434
+  },
+  {
+    "icao": "EBTN",
+    "name": "Goetsenhoven Airfield",
+    "country": "Belgium",
+    "lat": 50.7817,
+    "lon": 4.95778
+  },
+  {
+    "icao": "EBTX",
+    "name": "Theux (Verviers) Airfield",
+    "country": "Belgium",
+    "lat": 50.551099,
+    "lon": 5.853996
+  },
+  {
+    "icao": "EBTY",
+    "name": "Maubray Airfield",
+    "country": "Belgium",
+    "lat": 50.531639,
+    "lon": 3.496185
+  },
+  {
+    "icao": "EBZH",
+    "name": "Kiewit Airfield Hasselt",
+    "country": "Belgium",
+    "lat": 50.970375,
+    "lon": 5.375331
+  },
+  {
+    "icao": "EBZR",
+    "name": "Oostmalle Airfield",
+    "country": "Belgium",
+    "lat": 51.269092,
+    "lon": 4.762428
+  },
+  {
+    "icao": "EBZW",
+    "name": "Genk Zwartberg Airfield",
+    "country": "Belgium",
+    "lat": 51.0154,
+    "lon": 5.52647
+  },
+  {
+    "icao": "EDAB",
+    "name": "Bautzen Airfield",
+    "country": "Germany",
+    "lat": 51.193611,
+    "lon": 14.519722
+  },
+  {
+    "icao": "EDAC",
+    "name": "Leipzig–Altenburg Airport",
+    "country": "Germany",
+    "lat": 50.981945,
+    "lon": 12.506389
+  },
+  {
+    "icao": "EDAD",
+    "name": "Dessau Airfield",
+    "country": "Germany",
+    "lat": 51.8318,
+    "lon": 12.184011
+  },
+  {
+    "icao": "EDAE",
+    "name": "Eisenhüttenstadt Airfield",
+    "country": "Germany",
+    "lat": 52.197199,
+    "lon": 14.585696
+  },
+  {
+    "icao": "EDAG",
+    "name": "Großrückerswalde Airfield",
+    "country": "Germany",
+    "lat": 50.644169,
+    "lon": 13.126389
+  },
+  {
+    "icao": "EDAH",
+    "name": "Heringsdorf Airport",
+    "country": "Germany",
+    "lat": 53.8787,
+    "lon": 14.1523
+  },
+  {
+    "icao": "EDAI",
+    "name": "Sonderlandeplatz Segeletz",
+    "country": "Germany",
+    "lat": 52.826668,
+    "lon": 12.541944
+  },
+  {
+    "icao": "EDAJ",
+    "name": "Gera-Leumnitz Airfield",
+    "country": "Germany",
+    "lat": 50.881668,
+    "lon": 12.135833
+  },
+  {
+    "icao": "EDAK",
+    "name": "Großenhain Airfield",
+    "country": "Germany",
+    "lat": 51.308056,
+    "lon": 13.555556
+  },
+  {
+    "icao": "EDAM",
+    "name": "Merseburg Airfield",
+    "country": "Germany",
+    "lat": 51.362564,
+    "lon": 11.94113
+  },
+  {
+    "icao": "EDAN",
+    "name": "Neustadt-Glewe Airfield",
+    "country": "Germany",
+    "lat": 53.362444,
+    "lon": 11.613764
+  },
+  {
+    "icao": "EDAO",
+    "name": "Nordhausen Airfield",
+    "country": "Germany",
+    "lat": 51.493475,
+    "lon": 10.837562
+  },
+  {
+    "icao": "EDAP",
+    "name": "Cottbus-Neuhausen Airfield",
+    "country": "Germany",
+    "lat": 51.684723,
+    "lon": 14.423056
+  },
+  {
+    "icao": "EDAQ",
+    "name": "Halle-Oppin Airfield",
+    "country": "Germany",
+    "lat": 51.552223,
+    "lon": 12.053889
+  },
+  {
+    "icao": "EDAR",
+    "name": "Pirna-Pratzschwitz Airfield",
+    "country": "Germany",
+    "lat": 50.979603,
+    "lon": 13.908445
+  },
+  {
+    "icao": "EDAS",
+    "name": "Finsterwalde-Heinrichsruh Airfield",
+    "country": "Germany",
+    "lat": 51.634641,
+    "lon": 13.67505
+  },
+  {
+    "icao": "EDAT",
+    "name": "Nardt Airfield",
+    "country": "Germany",
+    "lat": 51.451111,
+    "lon": 14.199444
+  },
+  {
+    "icao": "EDAU",
+    "name": "Riesa-Göhlis Airport",
+    "country": "Germany",
+    "lat": 51.29361,
+    "lon": 13.356111
+  },
+  {
+    "icao": "EDAV",
+    "name": "Eberswalde-Finow Airfield",
+    "country": "Germany",
+    "lat": 52.826313,
+    "lon": 13.701324
+  },
+  {
+    "icao": "EDAW",
+    "name": "Roitzschjora Airfield",
+    "country": "Germany",
+    "lat": 51.577778,
+    "lon": 12.494444
+  },
+  {
+    "icao": "EDAX",
+    "name": "Müritz Airpark",
+    "country": "Germany",
+    "lat": 53.306389,
+    "lon": 12.752222
+  },
+  {
+    "icao": "EDAY",
+    "name": "Strausberg Airfield",
+    "country": "Germany",
+    "lat": 52.580555,
+    "lon": 13.916667
+  },
+  {
+    "icao": "EDAZ",
+    "name": "Schönhagen Airfield",
+    "country": "Germany",
+    "lat": 52.204631,
+    "lon": 13.159526
+  },
+  {
+    "icao": "EDBA",
+    "name": "Arnstadt-Alkersleben Airfield",
+    "country": "Germany",
+    "lat": 50.841873,
+    "lon": 11.069934
+  },
+  {
+    "icao": "EDBC",
+    "name": "Cochstedt Airport",
+    "country": "Germany",
+    "lat": 51.8564,
+    "lon": 11.4203
+  },
+  {
+    "icao": "EDBE",
+    "name": "Brandenburg-Mühlenfeld Airfield",
+    "country": "Germany",
+    "lat": 52.4375,
+    "lon": 12.59
+  },
+  {
+    "icao": "EDBF",
+    "name": "Fehrbellin Airfield",
+    "country": "Germany",
+    "lat": 52.793493,
+    "lon": 12.760324
+  },
+  {
+    "icao": "EDBG",
+    "name": "Burg Airfield",
+    "country": "Germany",
+    "lat": 52.241772,
+    "lon": 11.85619
+  },
+  {
+    "icao": "EDBH",
+    "name": "Stralsund-Barth Airport",
+    "country": "Germany",
+    "lat": 54.338253,
+    "lon": 12.710515
+  },
+  {
+    "icao": "EDBI",
+    "name": "Zwickau Airfield",
+    "country": "Germany",
+    "lat": 50.701668,
+    "lon": 12.453889
+  },
+  {
+    "icao": "EDBJ",
+    "name": "Jena-Schöngleina Airfield",
+    "country": "Germany",
+    "lat": 50.915345,
+    "lon": 11.714201
+  },
+  {
+    "icao": "EDBK",
+    "name": "Kyritz Airfield",
+    "country": "Germany",
+    "lat": 52.918888,
+    "lon": 12.425278
+  },
+  {
+    "icao": "EDBL",
+    "name": "Laucha Airfield",
+    "country": "Germany",
+    "lat": 51.245834,
+    "lon": 11.693333
+  },
+  {
+    "icao": "EDBM",
+    "name": "Magdeburg City Airfield",
+    "country": "Germany",
+    "lat": 52.073612,
+    "lon": 11.626389
+  },
+  {
+    "icao": "EDBN",
+    "name": "Neubrandenburg Trollenhagen Airport",
+    "country": "Germany",
+    "lat": 53.6022,
+    "lon": 13.306
+  },
+  {
+    "icao": "EDBO",
+    "name": "Oehna Airfield",
+    "country": "Germany",
+    "lat": 51.899734,
+    "lon": 13.052809
+  },
+  {
+    "icao": "EDBP",
+    "name": "Pinnow Airfield",
+    "country": "Germany",
+    "lat": 53.615276,
+    "lon": 11.561111
+  },
+  {
+    "icao": "EDBQ",
+    "name": "Bronkow Airfield",
+    "country": "Germany",
+    "lat": 51.672075,
+    "lon": 13.960104
+  },
+  {
+    "icao": "EDBR",
+    "name": "Rothenburg/Görlitz Airfield",
+    "country": "Germany",
+    "lat": 51.363335,
+    "lon": 14.95
+  },
+  {
+    "icao": "EDBS",
+    "name": "Sömmerda-Dermsdorf Airfield",
+    "country": "Germany",
+    "lat": 51.198414,
+    "lon": 11.191764
+  },
+  {
+    "icao": "EDBT",
+    "name": "Allstedt Airfield",
+    "country": "Germany",
+    "lat": 51.380554,
+    "lon": 11.446667
+  },
+  {
+    "icao": "EDBU",
+    "name": "Pritzwalk-Sommersberg Airfield",
+    "country": "Germany",
+    "lat": 53.180019,
+    "lon": 12.184553
+  },
+  {
+    "icao": "EDBV",
+    "name": "Stralsund Airfield",
+    "country": "Germany",
+    "lat": 54.335835,
+    "lon": 13.043333
+  },
+  {
+    "icao": "EDBW",
+    "name": "Werneuchen Airfield",
+    "country": "Germany",
+    "lat": 52.631668,
+    "lon": 13.766944
+  },
+  {
+    "icao": "EDBX",
+    "name": "Görlitz Airfield",
+    "country": "Germany",
+    "lat": 51.15889,
+    "lon": 14.950278
+  },
+  {
+    "icao": "EDBY",
+    "name": "Schmoldow Airfield",
+    "country": "Germany",
+    "lat": 53.972761,
+    "lon": 13.343377
+  },
+  {
+    "icao": "EDBZ",
+    "name": "Schwarzheide/Schipkau Airfield",
+    "country": "Germany",
+    "lat": 51.491929,
+    "lon": 13.879366
+  },
+  {
+    "icao": "EDCA",
+    "name": "Anklam Otto Lilienthal Airfield",
+    "country": "Germany",
+    "lat": 53.832801,
+    "lon": 13.668607
+  },
+  {
+    "icao": "EDCE",
+    "name": "Müncheberg-Eggersdorf Airfield",
+    "country": "Germany",
+    "lat": 52.482791,
+    "lon": 14.090738
+  },
+  {
+    "icao": "EDCG",
+    "name": "Rügen Airport",
+    "country": "Germany",
+    "lat": 54.38347,
+    "lon": 13.325542
+  },
+  {
+    "icao": "EDCH",
+    "name": "Sprossen (Zeitz) Airfield",
+    "country": "Germany",
+    "lat": 51.043407,
+    "lon": 12.231895
+  },
+  {
+    "icao": "EDCI",
+    "name": "Klix Airfield",
+    "country": "Germany",
+    "lat": 51.271819,
+    "lon": 14.505708
+  },
+  {
+    "icao": "EDCJ",
+    "name": "Chemnitz/Jahnsdorf Airfield",
+    "country": "Germany",
+    "lat": 50.747501,
+    "lon": 12.8375
+  },
+  {
+    "icao": "EDCK",
+    "name": "Köthen Airport",
+    "country": "Germany",
+    "lat": 51.723745,
+    "lon": 11.948826
+  },
+  {
+    "icao": "EDCL",
+    "name": "Klietz-Scharlibbe Airfield",
+    "country": "Germany",
+    "lat": 52.709442,
+    "lon": 12.073333
+  },
+  {
+    "icao": "EDCM",
+    "name": "Kamenz Airfield",
+    "country": "Germany",
+    "lat": 51.296944,
+    "lon": 14.1275
+  },
+  {
+    "icao": "EDCO",
+    "name": "Obermehler-Schlotheim Airfield",
+    "country": "Germany",
+    "lat": 51.267776,
+    "lon": 10.634722
+  },
+  {
+    "icao": "EDCP",
+    "name": "Peenemünde Airport",
+    "country": "Germany",
+    "lat": 54.15778,
+    "lon": 13.774444
+  },
+  {
+    "icao": "EDCQ",
+    "name": "Aschersleben Airfield",
+    "country": "Germany",
+    "lat": 51.766945,
+    "lon": 11.498333
+  },
+  {
+    "icao": "EDCR",
+    "name": "Rerik-Zweedorf Airfield",
+    "country": "Germany",
+    "lat": 54.081944,
+    "lon": 11.649167
+  },
+  {
+    "icao": "EDCS",
+    "name": "Saarmund Airfield",
+    "country": "Germany",
+    "lat": 52.308334,
+    "lon": 13.100556
+  },
+  {
+    "icao": "EDDB",
+    "name": "Berlin Brandenburg Airport",
+    "country": "Germany",
+    "lat": 52.361738,
+    "lon": 13.502341
+  },
+  {
+    "icao": "EDDC",
+    "name": "Dresden Airport",
+    "country": "Germany",
+    "lat": 51.134123,
+    "lon": 13.767831
+  },
+  {
+    "icao": "EDDE",
+    "name": "Erfurt-Weimar Airport",
+    "country": "Germany",
+    "lat": 50.978281,
+    "lon": 10.960713
+  },
+  {
+    "icao": "EDDF",
+    "name": "Frankfurt Main Airport",
+    "country": "Germany",
+    "lat": 50.026706,
+    "lon": 8.55835
+  },
+  {
+    "icao": "EDDG",
+    "name": "Münster Osnabrück Airport",
+    "country": "Germany",
+    "lat": 52.133816,
+    "lon": 7.688482
+  },
+  {
+    "icao": "EDDH",
+    "name": "Hamburg Helmut Schmidt Airport",
+    "country": "Germany",
+    "lat": 53.630402,
+    "lon": 9.98823
+  },
+  {
+    "icao": "EDDK",
+    "name": "Cologne Bonn Airport",
+    "country": "Germany",
+    "lat": 50.865898,
+    "lon": 7.14274
+  },
+  {
+    "icao": "EDDL",
+    "name": "Düsseldorf Airport",
+    "country": "Germany",
+    "lat": 51.289501,
+    "lon": 6.76678
+  },
+  {
+    "icao": "EDDM",
+    "name": "Munich Airport",
+    "country": "Germany",
+    "lat": 48.353802,
+    "lon": 11.7861
+  },
+  {
+    "icao": "EDDN",
+    "name": "Nuremberg Airport",
+    "country": "Germany",
+    "lat": 49.498699,
+    "lon": 11.078056
+  },
+  {
+    "icao": "EDDP",
+    "name": "Leipzig/Halle Airport",
+    "country": "Germany",
+    "lat": 51.420657,
+    "lon": 12.232705
+  },
+  {
+    "icao": "EDDR",
+    "name": "Saarbrücken Airport",
+    "country": "Germany",
+    "lat": 49.214545,
+    "lon": 7.109735
+  },
+  {
+    "icao": "EDDS",
+    "name": "Stuttgart Airport",
+    "country": "Germany",
+    "lat": 48.689899,
+    "lon": 9.22196
+  },
+  {
+    "icao": "EDDV",
+    "name": "Hannover Airport",
+    "country": "Germany",
+    "lat": 52.461102,
+    "lon": 9.68508
+  },
+  {
+    "icao": "EDDW",
+    "name": "Bremen Airport",
+    "country": "Germany",
+    "lat": 53.046786,
+    "lon": 8.78932
+  },
+  {
+    "icao": "EDEL",
+    "name": "Langenlonsheim Airfield",
+    "country": "Germany",
+    "lat": 49.908333,
+    "lon": 7.907778
+  },
+  {
+    "icao": "EDEP",
+    "name": "Heppenheim Glider Field",
+    "country": "Germany",
+    "lat": 49.621944,
+    "lon": 8.624444
+  },
+  {
+    "icao": "EDFA",
+    "name": "Anspach-Taunus Airfield",
+    "country": "Germany",
+    "lat": 50.288334,
+    "lon": 8.533889
+  },
+  {
+    "icao": "EDFE",
+    "name": "Frankfurt-Egelsbach Airport",
+    "country": "Germany",
+    "lat": 49.96,
+    "lon": 8.643043
+  },
+  {
+    "icao": "EDFH",
+    "name": "Frankfurt-Hahn Airport",
+    "country": "Germany",
+    "lat": 49.946353,
+    "lon": 7.261734
+  },
+  {
+    "icao": "EDFK",
+    "name": "Bad Kissingen Airfield",
+    "country": "Germany",
+    "lat": 50.210556,
+    "lon": 10.068889
+  },
+  {
+    "icao": "EDFM",
+    "name": "Mannheim-City Airport",
+    "country": "Germany",
+    "lat": 49.473057,
+    "lon": 8.514167
+  },
+  {
+    "icao": "EDFP",
+    "name": "Ober-Mörlen Airfield",
+    "country": "Germany",
+    "lat": 50.3622,
+    "lon": 8.71164
+  },
+  {
+    "icao": "EDFQ",
+    "name": "Allendorf-Eder Airfield",
+    "country": "Germany",
+    "lat": 51.035268,
+    "lon": 8.681002
+  },
+  {
+    "icao": "EDFR",
+    "name": "Rothenburg ob der Tauber Airfield",
+    "country": "Germany",
+    "lat": 49.388941,
+    "lon": 10.218564
+  },
+  {
+    "icao": "EDFV",
+    "name": "Worms Airfield",
+    "country": "Germany",
+    "lat": 49.606945,
+    "lon": 8.368333
+  },
+  {
+    "icao": "EDFZ",
+    "name": "Mainz-Finthen Airfield",
+    "country": "Germany",
+    "lat": 49.967499,
+    "lon": 8.147222
+  },
+  {
+    "icao": "EDGE",
+    "name": "Eisenach-Kindel Airport",
+    "country": "Germany",
+    "lat": 50.991604,
+    "lon": 10.47973
+  },
+  {
+    "icao": "EDGO",
+    "name": "Oedheim Heliport",
+    "country": "Germany",
+    "lat": 49.241471,
+    "lon": 9.234363
+  },
+  {
+    "icao": "EDGS",
+    "name": "Siegerland Airport",
+    "country": "Germany",
+    "lat": 50.707699,
+    "lon": 8.08297
+  },
+  {
+    "icao": "EDGZ",
+    "name": "Weinheim/Bergstraße Airfield",
+    "country": "Germany",
+    "lat": 49.566763,
+    "lon": 8.61145
+  },
+  {
+    "icao": "EDHB",
+    "name": "Grube Airfield",
+    "country": "Germany",
+    "lat": 54.244446,
+    "lon": 11.024722
+  },
+  {
+    "icao": "EDHE",
+    "name": "Uetersen-Heist Airfield",
+    "country": "Germany",
+    "lat": 53.645477,
+    "lon": 9.703503
+  },
+  {
+    "icao": "EDHI",
+    "name": "Hamburg-Finkenwerder Airport",
+    "country": "Germany",
+    "lat": 53.535278,
+    "lon": 9.835556
+  },
+  {
+    "icao": "EDHK",
+    "name": "Kiel-Holtenau Airport",
+    "country": "Germany",
+    "lat": 54.37957,
+    "lon": 10.145266
+  },
+  {
+    "icao": "EDHL",
+    "name": "Lübeck Blankensee Airport",
+    "country": "Germany",
+    "lat": 53.805401,
+    "lon": 10.7192
+  },
+  {
+    "icao": "EDHN",
+    "name": "Neumünster Airport",
+    "country": "Germany",
+    "lat": 54.079445,
+    "lon": 9.941389
+  },
+  {
+    "icao": "EDHO",
+    "name": "Ahrenlohe Airfield",
+    "country": "Germany",
+    "lat": 53.70031,
+    "lon": 9.742119
+  },
+  {
+    "icao": "EDHS",
+    "name": "Stade Airfield",
+    "country": "Germany",
+    "lat": 53.561111,
+    "lon": 9.499167
+  },
+  {
+    "icao": "EDHY",
+    "name": "Hoya Airfield",
+    "country": "Germany",
+    "lat": 52.8119,
+    "lon": 9.1638
+  },
+  {
+    "icao": "EDJA",
+    "name": "Memmingen Allgau Airport",
+    "country": "Germany",
+    "lat": 47.988092,
+    "lon": 10.238248
+  },
+  {
+    "icao": "EDKA",
+    "name": "Aachen-Merzbrück Airport",
+    "country": "Germany",
+    "lat": 50.823055,
+    "lon": 6.186389
+  },
+  {
+    "icao": "EDKL",
+    "name": "Leverkusen Airfield",
+    "country": "Germany",
+    "lat": 51.015278,
+    "lon": 7.005556
+  },
+  {
+    "icao": "EDKN",
+    "name": "Wipperfürth-Neye Airfield",
+    "country": "Germany",
+    "lat": 51.124168,
+    "lon": 7.373611
+  },
+  {
+    "icao": "EDKS",
+    "name": "Iserlohn-Sümmern Glider Field",
+    "country": "Germany",
+    "lat": 51.436389,
+    "lon": 7.699722
+  },
+  {
+    "icao": "EDKV",
+    "name": "Dahlemer Binz Airfield",
+    "country": "Germany",
+    "lat": 50.40611,
+    "lon": 6.530256
+  },
+  {
+    "icao": "EDLD",
+    "name": "Dinslaken-Schwarze Heide Airfield",
+    "country": "Germany",
+    "lat": 51.616018,
+    "lon": 6.861262
+  },
+  {
+    "icao": "EDLE",
+    "name": "Essen-Mülheim Airport",
+    "country": "Germany",
+    "lat": 51.402302,
+    "lon": 6.93733
+  },
+  {
+    "icao": "EDLI",
+    "name": "Bielefeld Airport",
+    "country": "Germany",
+    "lat": 51.964722,
+    "lon": 8.544444
+  },
+  {
+    "icao": "EDLK",
+    "name": "Krefeld-Egelsberg Airfield",
+    "country": "Germany",
+    "lat": 51.384998,
+    "lon": 6.587778
+  },
+  {
+    "icao": "EDLN",
+    "name": "Mönchengladbach Airport",
+    "country": "Germany",
+    "lat": 51.230278,
+    "lon": 6.504444
+  },
+  {
+    "icao": "EDLP",
+    "name": "Paderborn Lippstadt Airport",
+    "country": "Germany",
+    "lat": 51.612527,
+    "lon": 8.617459
+  },
+  {
+    "icao": "EDLS",
+    "name": "Stadtlohn-Vreden Airfield",
+    "country": "Germany",
+    "lat": 51.995834,
+    "lon": 6.840556
+  },
+  {
+    "icao": "EDLU",
+    "name": "Oelde Bergeler Airfield",
+    "country": "Germany",
+    "lat": 51.830601,
+    "lon": 8.17472
+  },
+  {
+    "icao": "EDLV",
+    "name": "Weeze (Niederrhein) Airport",
+    "country": "Germany",
+    "lat": 51.601362,
+    "lon": 6.141228
+  },
+  {
+    "icao": "EDLW",
+    "name": "Dortmund Airport",
+    "country": "Germany",
+    "lat": 51.518299,
+    "lon": 7.61224
+  },
+  {
+    "icao": "EDMA",
+    "name": "Augsburg Airport",
+    "country": "Germany",
+    "lat": 48.425278,
+    "lon": 10.931667
+  },
+  {
+    "icao": "EDML",
+    "name": "Landshut Airfield",
+    "country": "Germany",
+    "lat": 48.512019,
+    "lon": 12.034865
+  },
+  {
+    "icao": "EDMN",
+    "name": "Mindelheim-Mattsies Airfield",
+    "country": "Germany",
+    "lat": 48.106945,
+    "lon": 10.525
+  },
+  {
+    "icao": "EDMO",
+    "name": "Oberpfaffenhofen Airport",
+    "country": "Germany",
+    "lat": 48.081402,
+    "lon": 11.2831
+  },
+  {
+    "icao": "EDMS",
+    "name": "Straubing Airport",
+    "country": "Germany",
+    "lat": 48.900833,
+    "lon": 12.516667
+  },
+  {
+    "icao": "EDNY",
+    "name": "Bodensee Airport Friedrichshafen",
+    "country": "Germany",
+    "lat": 47.671299,
+    "lon": 9.51149
+  },
+  {
+    "icao": "EDON",
+    "name": "Neuhardenberg Marxwalde Airfield",
+    "country": "Germany",
+    "lat": 52.613056,
+    "lon": 14.242778
+  },
+  {
+    "icao": "EDPA",
+    "name": "Aalen Heidenheim Elchingen Airfield",
+    "country": "Germany",
+    "lat": 48.777779,
+    "lon": 10.264722
+  },
+  {
+    "icao": "EDPH",
+    "name": "Schwabach-Heidenberg Airfield",
+    "country": "Germany",
+    "lat": 49.268019,
+    "lon": 11.012606
+  },
+  {
+    "icao": "EDPJ",
+    "name": "Laichingen Jakob Laur Airfield",
+    "country": "Germany",
+    "lat": 48.496944,
+    "lon": 9.640278
+  },
+  {
+    "icao": "EDQA",
+    "name": "Bamberg-Breitenau Airfield",
+    "country": "Germany",
+    "lat": 49.920403,
+    "lon": 10.914233
+  },
+  {
+    "icao": "EDQD",
+    "name": "Bayreuth Airport",
+    "country": "Germany",
+    "lat": 49.985001,
+    "lon": 11.64
+  },
+  {
+    "icao": "EDQE",
+    "name": "Burg Feuerstein Airport",
+    "country": "Germany",
+    "lat": 49.794167,
+    "lon": 11.133611
+  },
+  {
+    "icao": "EDQG",
+    "name": "Giebelstadt Airport",
+    "country": "Germany",
+    "lat": 49.6480560303,
+    "lon": 9.966388702390002
+  },
+  {
+    "icao": "EDQM",
+    "name": "Hof-Plauen Airport",
+    "country": "Germany",
+    "lat": 50.288544,
+    "lon": 11.852876
+  },
+  {
+    "icao": "EDQR",
+    "name": "Ebern-Sendelbach Airfield",
+    "country": "Germany",
+    "lat": 50.040004,
+    "lon": 10.822537
+  },
+  {
+    "icao": "EDQS",
+    "name": "Suhl-Goldlauter Airfield",
+    "country": "Germany",
+    "lat": 50.632047,
+    "lon": 10.726013
+  },
+  {
+    "icao": "EDQT",
+    "name": "Haßfurt-Schweinfurt Airfield",
+    "country": "Germany",
+    "lat": 50.0182,
+    "lon": 10.529165
+  },
+  {
+    "icao": "EDQW",
+    "name": "Weiden in der Oberpfalz Airfield",
+    "country": "Germany",
+    "lat": 49.678902,
+    "lon": 12.1164
+  },
+  {
+    "icao": "EDQX",
+    "name": "Hetzleser Berg Airfield",
+    "country": "Germany",
+    "lat": 49.642341,
+    "lon": 11.162574
+  },
+  {
+    "icao": "EDQY",
+    "name": "Coburg-Steinrücken Airfield",
+    "country": "Germany",
+    "lat": 50.230556,
+    "lon": 10.995833
+  },
+  {
+    "icao": "EDQZ",
+    "name": "Pegnitz-Zipser Berg Airfield",
+    "country": "Germany",
+    "lat": 49.76238,
+    "lon": 11.574619
+  },
+  {
+    "icao": "EDRB",
+    "name": "Bitburg Airport",
+    "country": "Germany",
+    "lat": 49.945278,
+    "lon": 6.565
+  },
+  {
+    "icao": "EDRH",
+    "name": "Hoppstädten-Weiersbach Airfield",
+    "country": "Germany",
+    "lat": 49.610558,
+    "lon": 7.186667
+  },
+  {
+    "icao": "EDRK",
+    "name": "Koblenz-Winningen Airfield",
+    "country": "Germany",
+    "lat": 50.325558,
+    "lon": 7.528611
+  },
+  {
+    "icao": "EDRN",
+    "name": "Nannhausen Airfield",
+    "country": "Germany",
+    "lat": 49.96992,
+    "lon": 7.478357
+  },
+  {
+    "icao": "EDRP",
+    "name": "Pirmasens-Pottschütthöhe Airfield",
+    "country": "Germany",
+    "lat": 49.264442,
+    "lon": 7.488333
+  },
+  {
+    "icao": "EDRQ",
+    "name": "Imsweiler UL",
+    "country": "Germany",
+    "lat": 49.606543,
+    "lon": 7.795593
+  },
+  {
+    "icao": "EDRT",
+    "name": "Trier-Föhren Airfield",
+    "country": "Germany",
+    "lat": 49.863888,
+    "lon": 6.7875
+  },
+  {
+    "icao": "EDRY",
+    "name": "Speyer Airfield",
+    "country": "Germany",
+    "lat": 49.304722,
+    "lon": 8.451389
+  },
+  {
+    "icao": "EDRZ",
+    "name": "Zweibrücken Airport",
+    "country": "Germany",
+    "lat": 49.2094,
+    "lon": 7.40056
+  },
+  {
+    "icao": "EDSB",
+    "name": "Karlsruhe Baden-Baden Airport",
+    "country": "Germany",
+    "lat": 48.7794,
+    "lon": 8.0805
+  },
+  {
+    "icao": "EDSD",
+    "name": "Deckenpfronn-Egelsee Airfield",
+    "country": "Germany",
+    "lat": 48.6385,
+    "lon": 8.8175
+  },
+  {
+    "icao": "EDSE",
+    "name": "Göppingen-Bezgenriet Airfield",
+    "country": "Germany",
+    "lat": 48.658611,
+    "lon": 9.624167
+  },
+  {
+    "icao": "EDSF",
+    "name": "Hütten Glider Field",
+    "country": "Germany",
+    "lat": 47.6333,
+    "lon": 7.9412
+  },
+  {
+    "icao": "EDSK",
+    "name": "Kehl-Sundheim Airfield",
+    "country": "Germany",
+    "lat": 48.561111,
+    "lon": 7.843333
+  },
+  {
+    "icao": "EDSM",
+    "name": "Müllheim Airfield",
+    "country": "Germany",
+    "lat": 47.824316,
+    "lon": 7.639475
+  },
+  {
+    "icao": "EDSP",
+    "name": "Poltringen Airfield",
+    "country": "Germany",
+    "lat": 48.547282,
+    "lon": 8.945918
+  },
+  {
+    "icao": "EDST",
+    "name": "Hahnweide Airfield",
+    "country": "Germany",
+    "lat": 48.631841,
+    "lon": 9.429201
+  },
+  {
+    "icao": "EDSV",
+    "name": "Wächtersberg-Hub Glider Airfield",
+    "country": "Germany",
+    "lat": 48.614931,
+    "lon": 8.755457
+  },
+  {
+    "icao": "EDSX",
+    "name": "Völkleshofen-Lichtenberg Airfield",
+    "country": "Germany",
+    "lat": 49.009332,
+    "lon": 9.354601
+  },
+  {
+    "icao": "EDTA",
+    "name": "Bohlhof Glider Field",
+    "country": "Germany",
+    "lat": 47.6509,
+    "lon": 8.3867
+  },
+  {
+    "icao": "EDTB",
+    "name": "Baden-Oos Airfield",
+    "country": "Germany",
+    "lat": 48.791943,
+    "lon": 8.185833
+  },
+  {
+    "icao": "EDTE",
+    "name": "Eutingen Airfield",
+    "country": "Germany",
+    "lat": 48.485439,
+    "lon": 8.778033
+  },
+  {
+    "icao": "EDTF",
+    "name": "Freiburg im Breisgau Airfield",
+    "country": "Germany",
+    "lat": 48.022778,
+    "lon": 7.8325
+  },
+  {
+    "icao": "EDTK",
+    "name": "Sinsheim Airfield",
+    "country": "Germany",
+    "lat": 49.2472,
+    "lon": 8.8938
+  },
+  {
+    "icao": "EDTL",
+    "name": "Lahr Airport",
+    "country": "Germany",
+    "lat": 48.369301,
+    "lon": 7.82772
+  },
+  {
+    "icao": "EDTR",
+    "name": "Herten-Rheinfelden Airfield",
+    "country": "Germany",
+    "lat": 47.56028,
+    "lon": 7.748333
+  },
+  {
+    "icao": "EDTZ",
+    "name": "Konstanz Airfield",
+    "country": "Germany",
+    "lat": 47.681435,
+    "lon": 9.139258
+  },
+  {
+    "icao": "EDUG",
+    "name": "Gransee Airfield",
+    "country": "Germany",
+    "lat": 53.00628,
+    "lon": 13.202177
+  },
+  {
+    "icao": "EDUO",
+    "name": "Oberrißdorf Airfield",
+    "country": "Germany",
+    "lat": 51.542895,
+    "lon": 11.595243
+  },
+  {
+    "icao": "EDUP",
+    "name": "Perleberg Glider Field",
+    "country": "Germany",
+    "lat": 53.070464,
+    "lon": 11.818672
+  },
+  {
+    "icao": "EDUW",
+    "name": "Tutow-Betriebs Airfield",
+    "country": "Germany",
+    "lat": 53.917731,
+    "lon": 13.22026
+  },
+  {
+    "icao": "EDUY",
+    "name": "Welzow-Sedlitzer See Seaplane Base",
+    "country": "Germany",
+    "lat": 51.557777,
+    "lon": 14.105
+  },
+  {
+    "icao": "EDUZ",
+    "name": "Zerbst Airfield",
+    "country": "Germany",
+    "lat": 52.000832,
+    "lon": 12.148611
+  },
+  {
+    "icao": "EDVA",
+    "name": "Bad Gandersheim Airfield",
+    "country": "Germany",
+    "lat": 51.854168,
+    "lon": 10.025556
+  },
+  {
+    "icao": "EDVC",
+    "name": "Celle-Arloh Airfield",
+    "country": "Germany",
+    "lat": 52.688163,
+    "lon": 10.11278
+  },
+  {
+    "icao": "EDVE",
+    "name": "Braunschweig-Wolfsburg Airport",
+    "country": "Germany",
+    "lat": 52.319199,
+    "lon": 10.5561
+  },
+  {
+    "icao": "EDVK",
+    "name": "Kassel Airport",
+    "country": "Germany",
+    "lat": 51.418395,
+    "lon": 9.391638
+  },
+  {
+    "icao": "EDVM",
+    "name": "Hildesheim Airfield",
+    "country": "Germany",
+    "lat": 52.179819,
+    "lon": 9.945803
+  },
+  {
+    "icao": "EDVP",
+    "name": "Peine-Glindbruchkippe Airfield",
+    "country": "Germany",
+    "lat": 52.3238,
+    "lon": 10.1815
+  },
+  {
+    "icao": "EDVQ",
+    "name": "Wilsche Glider Field",
+    "country": "Germany",
+    "lat": 52.524677,
+    "lon": 10.462597
+  },
+  {
+    "icao": "EDVR",
+    "name": "Rinteln Airfield",
+    "country": "Germany",
+    "lat": 52.175278,
+    "lon": 9.053333
+  },
+  {
+    "icao": "EDVY",
+    "name": "Porta Westfalica Airfield",
+    "country": "Germany",
+    "lat": 52.221367,
+    "lon": 8.859765
+  },
+  {
+    "icao": "EDWE",
+    "name": "Emden Airport",
+    "country": "Germany",
+    "lat": 53.391109,
+    "lon": 7.2275
+  },
+  {
+    "icao": "EDWG",
+    "name": "Wangerooge Airport",
+    "country": "Germany",
+    "lat": 53.782544,
+    "lon": 7.919584
+  },
+  {
+    "icao": "EDWI",
+    "name": "JadeWeser Airport",
+    "country": "Germany",
+    "lat": 53.50222,
+    "lon": 8.052222
+  },
+  {
+    "icao": "EDWJ",
+    "name": "Juist Airport",
+    "country": "Germany",
+    "lat": 53.681421,
+    "lon": 7.056398
+  },
+  {
+    "icao": "EDWL",
+    "name": "Langeoog Airport",
+    "country": "Germany",
+    "lat": 53.742379,
+    "lon": 7.496345
+  },
+  {
+    "icao": "EDWN",
+    "name": "Nordhorn-Lingen Airfield",
+    "country": "Germany",
+    "lat": 52.4575,
+    "lon": 7.182222
+  },
+  {
+    "icao": "EDWO",
+    "name": "Atterheide Airfield",
+    "country": "Germany",
+    "lat": 52.286388,
+    "lon": 7.969722
+  },
+  {
+    "icao": "EDWR",
+    "name": "Borkum Airport",
+    "country": "Germany",
+    "lat": 53.59639,
+    "lon": 6.709167
+  },
+  {
+    "icao": "EDWS",
+    "name": "Norden-Norddeich Airport",
+    "country": "Germany",
+    "lat": 53.633057,
+    "lon": 7.190278
+  },
+  {
+    "icao": "EDWT",
+    "name": "Blexen Airfield",
+    "country": "Germany",
+    "lat": 53.5383,
+    "lon": 8.5388
+  },
+  {
+    "icao": "EDWU",
+    "name": "Varrelbusch Airfield",
+    "country": "Germany",
+    "lat": 52.908333,
+    "lon": 8.040556
+  },
+  {
+    "icao": "EDWY",
+    "name": "Norderney Airport",
+    "country": "Germany",
+    "lat": 53.706944,
+    "lon": 7.23
+  },
+  {
+    "icao": "EDWZ",
+    "name": "Baltrum Airport",
+    "country": "Germany",
+    "lat": 53.72485,
+    "lon": 7.373257
+  },
+  {
+    "icao": "EDXA",
+    "name": "Flugplatz Achmer",
+    "country": "Germany",
+    "lat": 52.37722,
+    "lon": 7.913333
+  },
+  {
+    "icao": "EDXB",
+    "name": "Heide-Büsum Airport",
+    "country": "Germany",
+    "lat": 54.153332,
+    "lon": 8.901667
+  },
+  {
+    "icao": "EDXC",
+    "name": "Schleswig-Kropp Airfield",
+    "country": "Germany",
+    "lat": 54.425497,
+    "lon": 9.541883
+  },
+  {
+    "icao": "EDXD",
+    "name": "Bohmte-Bad Essen Airfield",
+    "country": "Germany",
+    "lat": 52.351391,
+    "lon": 8.328333
+  },
+  {
+    "icao": "EDXE",
+    "name": "Rheine-Eschendorf Airfield",
+    "country": "Germany",
+    "lat": 52.276389,
+    "lon": 7.492778
+  },
+  {
+    "icao": "EDXF",
+    "name": "Flensburg-Schäferhaus Airport",
+    "country": "Germany",
+    "lat": 54.773335,
+    "lon": 9.378889
+  },
+  {
+    "icao": "EDXH",
+    "name": "Helgoland-Düne Airport",
+    "country": "Germany",
+    "lat": 54.18528,
+    "lon": 7.915833
+  },
+  {
+    "icao": "EDXJ",
+    "name": "Husum-Schwesing Airport",
+    "country": "Germany",
+    "lat": 54.5099983215,
+    "lon": 9.138333320620001
+  },
+  {
+    "icao": "EDXK",
+    "name": "Leck Airfield",
+    "country": "Germany",
+    "lat": 54.790905,
+    "lon": 8.963439
+  },
+  {
+    "icao": "EDXO",
+    "name": "Sankt Peter-Ording Airport",
+    "country": "Germany",
+    "lat": 54.308887,
+    "lon": 8.686944
+  },
+  {
+    "icao": "EDXP",
+    "name": "Harlesiel Airfield",
+    "country": "Germany",
+    "lat": 53.706669,
+    "lon": 7.820278
+  },
+  {
+    "icao": "EDXQ",
+    "name": "Rotenburg (Wümme) Airfield",
+    "country": "Germany",
+    "lat": 53.128334,
+    "lon": 9.348611
+  },
+  {
+    "icao": "EDXR",
+    "name": "Rendsburg-Schachtholm Airfield",
+    "country": "Germany",
+    "lat": 54.220001,
+    "lon": 9.599444
+  },
+  {
+    "icao": "EDXS",
+    "name": "Seedorf Airfield",
+    "country": "Germany",
+    "lat": 53.335556,
+    "lon": 9.259444
+  },
+  {
+    "icao": "EDXT",
+    "name": "Sierksdorf/Hof Altona Airfield",
+    "country": "Germany",
+    "lat": 54.066743,
+    "lon": 10.742183
+  },
+  {
+    "icao": "EDXU",
+    "name": "Hüttenbusch Airfield",
+    "country": "Germany",
+    "lat": 53.286667,
+    "lon": 8.947222
+  },
+  {
+    "icao": "EDXW",
+    "name": "Westerland Sylt Airport",
+    "country": "Germany",
+    "lat": 54.9132,
+    "lon": 8.34047
+  },
+  {
+    "icao": "EDXY",
+    "name": "Wyk auf Föhr Airport",
+    "country": "Germany",
+    "lat": 54.684444,
+    "lon": 8.528333
+  },
+  {
+    "icao": "EDXZ",
+    "name": "Kührstedt-Bederkesa Airfield",
+    "country": "Germany",
+    "lat": 53.568054,
+    "lon": 8.789444
+  },
+  {
+    "icao": "EDYA",
+    "name": "Amrumbank West",
+    "country": "Germany",
+    "lat": 54.519813,
+    "lon": 7.735453
+  },
+  {
+    "icao": "EDYH",
+    "name": "Helwin A",
+    "country": "Germany",
+    "lat": 54.451897,
+    "lon": 7.740036
+  },
+  {
+    "icao": "EDYM",
+    "name": "Meerwind S O",
+    "country": "Germany",
+    "lat": 54.399167,
+    "lon": 7.700052
+  },
+  {
+    "icao": "EGAA",
+    "name": "Belfast International Airport",
+    "country": "United Kingdom",
+    "lat": 54.6575012207,
+    "lon": -6.2158298492399995
+  },
+  {
+    "icao": "EGAB",
+    "name": "Enniskillen/St Angelo Airport",
+    "country": "United Kingdom",
+    "lat": 54.398274,
+    "lon": -7.651179
+  },
+  {
+    "icao": "EGAC",
+    "name": "George Best Belfast City Airport",
+    "country": "United Kingdom",
+    "lat": 54.618099,
+    "lon": -5.8725
+  },
+  {
+    "icao": "EGAD",
+    "name": "Newtownards Airport",
+    "country": "United Kingdom",
+    "lat": 54.5811,
+    "lon": -5.69194
+  },
+  {
+    "icao": "EGAE",
+    "name": "City of Derry Airport",
+    "country": "United Kingdom",
+    "lat": 55.042801,
+    "lon": -7.16111
+  },
+  {
+    "icao": "EGBB",
+    "name": "Birmingham Airport",
+    "country": "United Kingdom",
+    "lat": 52.453899,
+    "lon": -1.74803
+  },
+  {
+    "icao": "EGBC",
+    "name": "Cheltenham Racecourse Heliport",
+    "country": "United Kingdom",
+    "lat": 51.925626,
+    "lon": -2.054351
+  },
+  {
+    "icao": "EGBD",
+    "name": "Derby Airfield",
+    "country": "United Kingdom",
+    "lat": 52.859699,
+    "lon": -1.6175
+  },
+  {
+    "icao": "EGBF",
+    "name": "Bedford Aerodrome",
+    "country": "United Kingdom",
+    "lat": 52.23071,
+    "lon": -0.463825
+  },
+  {
+    "icao": "EGBG",
+    "name": "Leicester Airport",
+    "country": "United Kingdom",
+    "lat": 52.606574,
+    "lon": -1.030226
+  },
+  {
+    "icao": "EGBJ",
+    "name": "Gloucestershire Airport",
+    "country": "United Kingdom",
+    "lat": 51.894199,
+    "lon": -2.16722
+  },
+  {
+    "icao": "EGBK",
+    "name": "Sywell Aerodrome",
+    "country": "United Kingdom",
+    "lat": 52.305302,
+    "lon": -0.793056
+  },
+  {
+    "icao": "EGBM",
+    "name": "Tatenhill Airfield",
+    "country": "United Kingdom",
+    "lat": 52.81431,
+    "lon": -1.767942
+  },
+  {
+    "icao": "EGBN",
+    "name": "Nottingham City Airport",
+    "country": "United Kingdom",
+    "lat": 52.919998,
+    "lon": -1.07917
+  },
+  {
+    "icao": "EGBO",
+    "name": "Wolverhampton Halfpenny Green Airport",
+    "country": "United Kingdom",
+    "lat": 52.517502,
+    "lon": -2.25944
+  },
+  {
+    "icao": "EGBP",
+    "name": "Cotswold Airport",
+    "country": "United Kingdom",
+    "lat": 51.668528,
+    "lon": -2.056599
+  },
+  {
+    "icao": "EGBT",
+    "name": "Turweston Aerodrome",
+    "country": "United Kingdom",
+    "lat": 52.040798,
+    "lon": -1.09556
+  },
+  {
+    "icao": "EGBV",
+    "name": "Silverstone Heliport",
+    "country": "United Kingdom",
+    "lat": 52.070172,
+    "lon": -1.012675
+  },
+  {
+    "icao": "EGCC",
+    "name": "Manchester Airport",
+    "country": "United Kingdom",
+    "lat": 53.349375,
+    "lon": -2.279521
+  },
+  {
+    "icao": "EGCG",
+    "name": "Strubby Airfield",
+    "country": "United Kingdom",
+    "lat": 53.310956,
+    "lon": 0.173017
+  },
+  {
+    "icao": "EGCJ",
+    "name": "Sherburn-in-Elmet Airfield",
+    "country": "United Kingdom",
+    "lat": 53.788458,
+    "lon": -1.216877
+  },
+  {
+    "icao": "EGCM",
+    "name": "Leeds East Airport",
+    "country": "United Kingdom",
+    "lat": 53.834747,
+    "lon": -1.194678
+  },
+  {
+    "icao": "EGCS",
+    "name": "Sturgate Airfield",
+    "country": "United Kingdom",
+    "lat": 53.381242,
+    "lon": -0.6848
+  },
+  {
+    "icao": "EGDJ",
+    "name": "Upavon Aerodrome",
+    "country": "United Kingdom",
+    "lat": 51.28657,
+    "lon": -1.782239
+  },
+  {
+    "icao": "EGDY",
+    "name": "RNAS Yeovilton",
+    "country": "United Kingdom",
+    "lat": 51.009399,
+    "lon": -2.63882
+  },
+  {
+    "icao": "EGEC",
+    "name": "Campbeltown Airport",
+    "country": "United Kingdom",
+    "lat": 55.437199,
+    "lon": -5.68639
+  },
+  {
+    "icao": "EGED",
+    "name": "Eday Airport",
+    "country": "United Kingdom",
+    "lat": 59.19060134887695,
+    "lon": -2.7722198963165283
+  },
+  {
+    "icao": "EGEF",
+    "name": "Fair Isle Airport",
+    "country": "United Kingdom",
+    "lat": 59.534721,
+    "lon": -1.628509
+  },
+  {
+    "icao": "EGEH",
+    "name": "Whalsay Airstrip",
+    "country": "United Kingdom",
+    "lat": 60.376835,
+    "lon": -0.927229
+  },
+  {
+    "icao": "EGEI",
+    "name": "Broadford Airstrip",
+    "country": "United Kingdom",
+    "lat": 57.253131,
+    "lon": -5.827755
+  },
+  {
+    "icao": "EGEL",
+    "name": "Coll Airport",
+    "country": "United Kingdom",
+    "lat": 56.601898,
+    "lon": -6.61778
+  },
+  {
+    "icao": "EGEN",
+    "name": "North Ronaldsay Airport",
+    "country": "United Kingdom",
+    "lat": 59.3675003052,
+    "lon": -2.43443989754
+  },
+  {
+    "icao": "EGEO",
+    "name": "Oban Airport",
+    "country": "United Kingdom",
+    "lat": 56.463501,
+    "lon": -5.39967
+  },
+  {
+    "icao": "EGEP",
+    "name": "Papa Westray Airport",
+    "country": "United Kingdom",
+    "lat": 59.351012,
+    "lon": -2.900353
+  },
+  {
+    "icao": "EGER",
+    "name": "Stronsay Airport",
+    "country": "United Kingdom",
+    "lat": 59.1553,
+    "lon": -2.64139
+  },
+  {
+    "icao": "EGES",
+    "name": "Sanday Airport",
+    "country": "United Kingdom",
+    "lat": 59.250301,
+    "lon": -2.57667
+  },
+  {
+    "icao": "EGET",
+    "name": "Lerwick / Tingwall Airport",
+    "country": "United Kingdom",
+    "lat": 60.1922,
+    "lon": -1.24361
+  },
+  {
+    "icao": "EGEW",
+    "name": "Westray Airport",
+    "country": "United Kingdom",
+    "lat": 59.350475,
+    "lon": -2.950062
+  },
+  {
+    "icao": "EGEY",
+    "name": "Colonsay Airstrip",
+    "country": "United Kingdom",
+    "lat": 56.057499,
+    "lon": -6.24306
+  },
+  {
+    "icao": "EGFE",
+    "name": "Haverfordwest Airport",
+    "country": "United Kingdom",
+    "lat": 51.833099365234375,
+    "lon": -4.9611101150512695
+  },
+  {
+    "icao": "EGFF",
+    "name": "Cardiff International Airport",
+    "country": "United Kingdom",
+    "lat": 51.396702,
+    "lon": -3.34333
+  },
+  {
+    "icao": "EGFH",
+    "name": "Swansea Airport",
+    "country": "United Kingdom",
+    "lat": 51.601366,
+    "lon": -4.071006
+  },
+  {
+    "icao": "EGGD",
+    "name": "Bristol Airport",
+    "country": "United Kingdom",
+    "lat": 51.382326,
+    "lon": -2.716453
+  },
+  {
+    "icao": "EGGP",
+    "name": "Liverpool John Lennon Airport",
+    "country": "United Kingdom",
+    "lat": 53.334863,
+    "lon": -2.849637
+  },
+  {
+    "icao": "EGGW",
+    "name": "London Luton Airport",
+    "country": "United Kingdom",
+    "lat": 51.874699,
+    "lon": -0.368333
+  },
+  {
+    "icao": "EGHC",
+    "name": "Land's End Airport",
+    "country": "United Kingdom",
+    "lat": 50.102798,
+    "lon": -5.67056
+  },
+  {
+    "icao": "EGHE",
+    "name": "St. Mary's Airport",
+    "country": "United Kingdom",
+    "lat": 49.913375,
+    "lon": -6.291894
+  },
+  {
+    "icao": "EGHH",
+    "name": "Bournemouth Airport",
+    "country": "United Kingdom",
+    "lat": 50.780483,
+    "lon": -1.839576
+  },
+  {
+    "icao": "EGHI",
+    "name": "Southampton Airport",
+    "country": "United Kingdom",
+    "lat": 50.950298,
+    "lon": -1.3568
+  },
+  {
+    "icao": "EGHJ",
+    "name": "Bembridge Airport",
+    "country": "United Kingdom",
+    "lat": 50.678101,
+    "lon": -1.10944
+  },
+  {
+    "icao": "EGHK",
+    "name": "Penzance Heliport",
+    "country": "United Kingdom",
+    "lat": 50.130376,
+    "lon": -5.513946
+  },
+  {
+    "icao": "EGHL",
+    "name": "Lasham Airfield",
+    "country": "United Kingdom",
+    "lat": 51.18744,
+    "lon": -1.031663
+  },
+  {
+    "icao": "EGHQ",
+    "name": "Cornwall Airport Newquay",
+    "country": "United Kingdom",
+    "lat": 50.440601,
+    "lon": -4.99541
+  },
+  {
+    "icao": "EGHR",
+    "name": "Goodwood Aerodrome",
+    "country": "United Kingdom",
+    "lat": 50.859832,
+    "lon": -0.760073
+  },
+  {
+    "icao": "EGKA",
+    "name": "Brighton City Airport",
+    "country": "United Kingdom",
+    "lat": 50.835602,
+    "lon": -0.297222
+  },
+  {
+    "icao": "EGKB",
+    "name": "London Biggin Hill Airport",
+    "country": "United Kingdom",
+    "lat": 51.33079910279999,
+    "lon": 0.0324999988079
+  },
+  {
+    "icao": "EGKK",
+    "name": "London Gatwick Airport",
+    "country": "United Kingdom",
+    "lat": 51.148744,
+    "lon": -0.185739
+  },
+  {
+    "icao": "EGKR",
+    "name": "Redhill Aerodrome",
+    "country": "United Kingdom",
+    "lat": 51.2136,
+    "lon": -0.138611
+  },
+  {
+    "icao": "EGLC",
+    "name": "London City Airport",
+    "country": "United Kingdom",
+    "lat": 51.505299,
+    "lon": 0.055278
+  },
+  {
+    "icao": "EGLF",
+    "name": "Farnborough Airport",
+    "country": "United Kingdom",
+    "lat": 51.275799,
+    "lon": -0.776333
+  },
+  {
+    "icao": "EGLK",
+    "name": "Blackbushe Airport",
+    "country": "United Kingdom",
+    "lat": 51.323898,
+    "lon": -0.8475
+  },
+  {
+    "icao": "EGLL",
+    "name": "London Heathrow Airport",
+    "country": "United Kingdom",
+    "lat": 51.470748,
+    "lon": -0.459909
+  },
+  {
+    "icao": "EGLT",
+    "name": "Ascot Racecourse Heliport",
+    "country": "United Kingdom",
+    "lat": 51.421599,
+    "lon": -0.6598
+  },
+  {
+    "icao": "EGLW",
+    "name": "London Heliport",
+    "country": "United Kingdom",
+    "lat": 51.46992,
+    "lon": -0.179538
+  },
+  {
+    "icao": "EGMA",
+    "name": "Fowlmere Airfield",
+    "country": "United Kingdom",
+    "lat": 52.077499,
+    "lon": 0.061667
+  },
+  {
+    "icao": "EGMC",
+    "name": "London Southend Airport",
+    "country": "United Kingdom",
+    "lat": 51.570562,
+    "lon": 0.693627
+  },
+  {
+    "icao": "EGMD",
+    "name": "Lydd London Ashford Airport",
+    "country": "United Kingdom",
+    "lat": 50.956246,
+    "lon": 0.939074
+  },
+  {
+    "icao": "EGMF",
+    "name": "Farthing Corner / Stoneacre Farm Airfield",
+    "country": "United Kingdom",
+    "lat": 51.332788,
+    "lon": 0.601058
+  },
+  {
+    "icao": "EGMJ",
+    "name": "Little Gransden Airfield",
+    "country": "United Kingdom",
+    "lat": 52.165977,
+    "lon": -0.149222
+  },
+  {
+    "icao": "EGML",
+    "name": "Damyns Hall Aerodrome",
+    "country": "United Kingdom",
+    "lat": 51.527561,
+    "lon": 0.244189
+  },
+  {
+    "icao": "EGMT",
+    "name": "Thurrock Airfield",
+    "country": "United Kingdom",
+    "lat": 51.537505,
+    "lon": 0.367634
+  },
+  {
+    "icao": "EGNC",
+    "name": "Carlisle Lake District Airport",
+    "country": "United Kingdom",
+    "lat": 54.9375,
+    "lon": -2.80917
+  },
+  {
+    "icao": "EGNE",
+    "name": "Retford Gamston Airport",
+    "country": "United Kingdom",
+    "lat": 53.280602,
+    "lon": -0.951389
+  },
+  {
+    "icao": "EGNF",
+    "name": "Netherthorpe Airfield",
+    "country": "United Kingdom",
+    "lat": 53.317182,
+    "lon": -1.195573
+  },
+  {
+    "icao": "EGNH",
+    "name": "Blackpool Airport",
+    "country": "United Kingdom",
+    "lat": 53.771702,
+    "lon": -3.02861
+  },
+  {
+    "icao": "EGNJ",
+    "name": "Humberside Airport",
+    "country": "United Kingdom",
+    "lat": 53.576152,
+    "lon": -0.34954
+  },
+  {
+    "icao": "EGNL",
+    "name": "Barrow Walney Island Airport",
+    "country": "United Kingdom",
+    "lat": 54.1286111,
+    "lon": -3.2675
+  },
+  {
+    "icao": "EGNM",
+    "name": "Leeds Bradford Airport",
+    "country": "United Kingdom",
+    "lat": 53.865898,
+    "lon": -1.66057
+  },
+  {
+    "icao": "EGNO",
+    "name": "Warton Aerodrome",
+    "country": "United Kingdom",
+    "lat": 53.745098,
+    "lon": -2.88306
+  },
+  {
+    "icao": "EGNR",
+    "name": "Hawarden Airport",
+    "country": "United Kingdom",
+    "lat": 53.178101,
+    "lon": -2.97778
+  },
+  {
+    "icao": "EGNT",
+    "name": "Newcastle International Airport",
+    "country": "United Kingdom",
+    "lat": 55.037958,
+    "lon": -1.689577
+  },
+  {
+    "icao": "EGNV",
+    "name": "Teesside International Airport",
+    "country": "United Kingdom",
+    "lat": 54.509201,
+    "lon": -1.42941
+  },
+  {
+    "icao": "EGNW",
+    "name": "Wickenby Aerodrome",
+    "country": "United Kingdom",
+    "lat": 53.3167,
+    "lon": -0.349722
+  },
+  {
+    "icao": "EGNX",
+    "name": "East Midlands Airport",
+    "country": "United Kingdom",
+    "lat": 52.8311,
+    "lon": -1.32806
+  },
+  {
+    "icao": "EGOS",
+    "name": "RAF Shawbury",
+    "country": "United Kingdom",
+    "lat": 52.798199,
+    "lon": -2.66804
+  },
+  {
+    "icao": "EGOV",
+    "name": "Anglesey Airport",
+    "country": "United Kingdom",
+    "lat": 53.2481,
+    "lon": -4.53534
+  },
+  {
+    "icao": "EGOW",
+    "name": "RAF Woodvale",
+    "country": "United Kingdom",
+    "lat": 53.5816,
+    "lon": -3.05552
+  },
+  {
+    "icao": "EGPA",
+    "name": "Kirkwall Airport",
+    "country": "United Kingdom",
+    "lat": 58.957903,
+    "lon": -2.905077
+  },
+  {
+    "icao": "EGPB",
+    "name": "Sumburgh Airport",
+    "country": "United Kingdom",
+    "lat": 59.878899,
+    "lon": -1.29556
+  },
+  {
+    "icao": "EGPC",
+    "name": "Wick John O'Groats Airport",
+    "country": "United Kingdom",
+    "lat": 58.4589,
+    "lon": -3.09306
+  },
+  {
+    "icao": "EGPD",
+    "name": "Aberdeen International Airport",
+    "country": "United Kingdom",
+    "lat": 57.2019,
+    "lon": -2.19778
+  },
+  {
+    "icao": "EGPE",
+    "name": "Inverness Airport",
+    "country": "United Kingdom",
+    "lat": 57.5425,
+    "lon": -4.0475
+  },
+  {
+    "icao": "EGPF",
+    "name": "Glasgow Airport",
+    "country": "United Kingdom",
+    "lat": 55.871899,
+    "lon": -4.43306
+  },
+  {
+    "icao": "EGPH",
+    "name": "Edinburgh Airport",
+    "country": "United Kingdom",
+    "lat": 55.950145,
+    "lon": -3.372288
+  },
+  {
+    "icao": "EGPI",
+    "name": "Islay Airport",
+    "country": "United Kingdom",
+    "lat": 55.682708,
+    "lon": -6.257525
+  },
+  {
+    "icao": "EGPK",
+    "name": "Glasgow Prestwick Airport",
+    "country": "United Kingdom",
+    "lat": 55.501499,
+    "lon": -4.577182
+  },
+  {
+    "icao": "EGPL",
+    "name": "Benbecula Airport",
+    "country": "United Kingdom",
+    "lat": 57.481098,
+    "lon": -7.36278
+  },
+  {
+    "icao": "EGPN",
+    "name": "Dundee Airport",
+    "country": "United Kingdom",
+    "lat": 56.452499,
+    "lon": -3.02583
+  },
+  {
+    "icao": "EGPO",
+    "name": "Stornoway Airport",
+    "country": "United Kingdom",
+    "lat": 58.215599,
+    "lon": -6.33111
+  },
+  {
+    "icao": "EGPR",
+    "name": "Barra Airport",
+    "country": "United Kingdom",
+    "lat": 57.0228,
+    "lon": -7.44306
+  },
+  {
+    "icao": "EGPT",
+    "name": "Perth/Scone Airport",
+    "country": "United Kingdom",
+    "lat": 56.439201,
+    "lon": -3.37222
+  },
+  {
+    "icao": "EGPU",
+    "name": "Tiree Airport",
+    "country": "United Kingdom",
+    "lat": 56.499199,
+    "lon": -6.86917
+  },
+  {
+    "icao": "EGPW",
+    "name": "Unst Airfield",
+    "country": "United Kingdom",
+    "lat": 60.7472,
+    "lon": -0.85385
+  },
+  {
+    "icao": "EGQL",
+    "name": "Leuchars Station Airfield",
+    "country": "United Kingdom",
+    "lat": 56.37398,
+    "lon": -2.868862
+  },
+  {
+    "icao": "EGQS",
+    "name": "RAF Lossiemouth",
+    "country": "United Kingdom",
+    "lat": 57.7052,
+    "lon": -3.33917
+  },
+  {
+    "icao": "EGSA",
+    "name": "Shipdham Airfield",
+    "country": "United Kingdom",
+    "lat": 52.629398,
+    "lon": 0.928056
+  },
+  {
+    "icao": "EGSC",
+    "name": "Cambridge City Airport",
+    "country": "United Kingdom",
+    "lat": 52.205002,
+    "lon": 0.175
+  },
+  {
+    "icao": "EGSD",
+    "name": "Great Yarmouth - North Denes Heliport",
+    "country": "United Kingdom",
+    "lat": 52.635576,
+    "lon": 1.723016
+  },
+  {
+    "icao": "EGSF",
+    "name": "Peterborough Business Airport",
+    "country": "United Kingdom",
+    "lat": 52.468102,
+    "lon": -0.251111
+  },
+  {
+    "icao": "EGSG",
+    "name": "Stapleford Aerodrome",
+    "country": "United Kingdom",
+    "lat": 51.6525,
+    "lon": 0.155833
+  },
+  {
+    "icao": "EGSH",
+    "name": "Norwich Airport",
+    "country": "United Kingdom",
+    "lat": 52.6758,
+    "lon": 1.28278
+  },
+  {
+    "icao": "EGSI",
+    "name": "Marshland Airfield",
+    "country": "United Kingdom",
+    "lat": 52.643611,
+    "lon": 0.295
+  },
+  {
+    "icao": "EGSJ",
+    "name": "Seething Airfield",
+    "country": "United Kingdom",
+    "lat": 52.510997,
+    "lon": 1.416864
+  },
+  {
+    "icao": "EGSL",
+    "name": "Andrewsfield Aerodrome",
+    "country": "United Kingdom",
+    "lat": 51.895,
+    "lon": 0.449167
+  },
+  {
+    "icao": "EGSM",
+    "name": "Beccles Airfield",
+    "country": "United Kingdom",
+    "lat": 52.435299,
+    "lon": 1.61833
+  },
+  {
+    "icao": "EGSO",
+    "name": "Crowfield Airfield",
+    "country": "United Kingdom",
+    "lat": 52.173045,
+    "lon": 1.110649
+  },
+  {
+    "icao": "EGSP",
+    "name": "Peterborough/Sibson Airfield",
+    "country": "United Kingdom",
+    "lat": 52.5571,
+    "lon": -0.386982
+  },
+  {
+    "icao": "EGSQ",
+    "name": "Clacton Airfield",
+    "country": "United Kingdom",
+    "lat": 51.785,
+    "lon": 1.13
+  },
+  {
+    "icao": "EGSR",
+    "name": "Earls Colne Airfield",
+    "country": "United Kingdom",
+    "lat": 51.914398,
+    "lon": 0.6825
+  },
+  {
+    "icao": "EGSS",
+    "name": "London Stansted Airport",
+    "country": "United Kingdom",
+    "lat": 51.884998,
+    "lon": 0.235
+  },
+  {
+    "icao": "EGST",
+    "name": "Elmsett Airfield",
+    "country": "United Kingdom",
+    "lat": 52.075454,
+    "lon": 0.977654
+  },
+  {
+    "icao": "EGSU",
+    "name": "Duxford Aerodrome",
+    "country": "United Kingdom",
+    "lat": 52.090801,
+    "lon": 0.131944
+  },
+  {
+    "icao": "EGSV",
+    "name": "Old Buckenham Airfield",
+    "country": "United Kingdom",
+    "lat": 52.497501,
+    "lon": 1.05194
+  },
+  {
+    "icao": "EGSW",
+    "name": "Newmarket Heath Airfield",
+    "country": "United Kingdom",
+    "lat": 52.235147,
+    "lon": 0.350643
+  },
+  {
+    "icao": "EGSX",
+    "name": "North Weald Airfield",
+    "country": "United Kingdom",
+    "lat": 51.721699,
+    "lon": 0.154167
+  },
+  {
+    "icao": "EGSY",
+    "name": "MOD St Athan",
+    "country": "United Kingdom",
+    "lat": 51.405229,
+    "lon": -3.433254
+  },
+  {
+    "icao": "EGTB",
+    "name": "Wycombe Air Park",
+    "country": "United Kingdom",
+    "lat": 51.61177,
+    "lon": -0.808316
+  },
+  {
+    "icao": "EGTC",
+    "name": "Cranfield Airport",
+    "country": "United Kingdom",
+    "lat": 52.072201,
+    "lon": -0.616667
+  },
+  {
+    "icao": "EGTD",
+    "name": "Dunsfold Aerodrome",
+    "country": "United Kingdom",
+    "lat": 51.117199,
+    "lon": -0.535833
+  },
+  {
+    "icao": "EGTE",
+    "name": "Exeter International Airport",
+    "country": "United Kingdom",
+    "lat": 50.734261,
+    "lon": -3.413984
+  },
+  {
+    "icao": "EGTF",
+    "name": "Fairoaks Airport",
+    "country": "United Kingdom",
+    "lat": 51.348099,
+    "lon": -0.558889
+  },
+  {
+    "icao": "EGTH",
+    "name": "Old Warden Airfield",
+    "country": "United Kingdom",
+    "lat": 52.084591,
+    "lon": -0.3201
+  },
+  {
+    "icao": "EGTK",
+    "name": "London Oxford Airport",
+    "country": "United Kingdom",
+    "lat": 51.836899,
+    "lon": -1.32
+  },
+  {
+    "icao": "EGTN",
+    "name": "Enstone Aerodrome",
+    "country": "United Kingdom",
+    "lat": 51.928167,
+    "lon": -1.4285
+  },
+  {
+    "icao": "EGTO",
+    "name": "Rochester Airport",
+    "country": "United Kingdom",
+    "lat": 51.351898,
+    "lon": 0.503333
+  },
+  {
+    "icao": "EGTP",
+    "name": "Perranporth Airfield",
+    "country": "United Kingdom",
+    "lat": 50.330617,
+    "lon": -5.179317
+  },
+  {
+    "icao": "EGTR",
+    "name": "Elstree Airfield",
+    "country": "United Kingdom",
+    "lat": 51.6558,
+    "lon": -0.325833
+  },
+  {
+    "icao": "EGUB",
+    "name": "RAF Benson",
+    "country": "United Kingdom",
+    "lat": 51.614366,
+    "lon": -1.095991
+  },
+  {
+    "icao": "EGUL",
+    "name": "RAF Lakenheath",
+    "country": "United Kingdom",
+    "lat": 52.40954,
+    "lon": 0.561161
+  },
+  {
+    "icao": "EGUN",
+    "name": "RAF Mildenhall",
+    "country": "United Kingdom",
+    "lat": 52.3619,
+    "lon": 0.486406
+  },
+  {
+    "icao": "EGUY",
+    "name": "RAF Wyton",
+    "country": "United Kingdom",
+    "lat": 52.357117,
+    "lon": -0.107787
+  },
+  {
+    "icao": "EGVA",
+    "name": "RAF Fairford",
+    "country": "United Kingdom",
+    "lat": 51.683568,
+    "lon": -1.789172
+  },
+  {
+    "icao": "EGVN",
+    "name": "RAF Brize Norton",
+    "country": "United Kingdom",
+    "lat": 51.75,
+    "lon": -1.58362
+  },
+  {
+    "icao": "EGVO",
+    "name": "RAF Odiham",
+    "country": "United Kingdom",
+    "lat": 51.2341,
+    "lon": -0.942825
+  },
+  {
+    "icao": "EGWN",
+    "name": "RAF Halton",
+    "country": "United Kingdom",
+    "lat": 51.790699,
+    "lon": -0.737972
+  },
+  {
+    "icao": "EGWU",
+    "name": "RAF Northolt",
+    "country": "United Kingdom",
+    "lat": 51.553001,
+    "lon": -0.418167
+  },
+  {
+    "icao": "EGXC",
+    "name": "RAF Coningsby",
+    "country": "United Kingdom",
+    "lat": 53.092999,
+    "lon": -0.166014
+  },
+  {
+    "icao": "EGXH",
+    "name": "RAF Honington",
+    "country": "United Kingdom",
+    "lat": 52.342602,
+    "lon": 0.772939
+  },
+  {
+    "icao": "EGXT",
+    "name": "RAF Wittering",
+    "country": "United Kingdom",
+    "lat": 52.612598,
+    "lon": -0.476453
+  },
+  {
+    "icao": "EGXW",
+    "name": "RAF Waddington",
+    "country": "United Kingdom",
+    "lat": 53.166199,
+    "lon": -0.523811
+  },
+  {
+    "icao": "EGXY",
+    "name": "RAF Syerston",
+    "country": "United Kingdom",
+    "lat": 53.0228,
+    "lon": -0.911111
+  },
+  {
+    "icao": "EGYD",
+    "name": "RAF Cranwell",
+    "country": "United Kingdom",
+    "lat": 53.027308,
+    "lon": -0.493104
+  },
+  {
+    "icao": "EGYE",
+    "name": "RAF Barkston Heath",
+    "country": "United Kingdom",
+    "lat": 52.960616,
+    "lon": -0.559428
+  },
+  {
+    "icao": "EGYM",
+    "name": "RAF Marham",
+    "country": "United Kingdom",
+    "lat": 52.648395,
+    "lon": 0.550692
+  },
+  {
+    "icao": "EGZL",
+    "name": "Feshiebridge Glider Field",
+    "country": "United Kingdom",
+    "lat": 57.103667,
+    "lon": -3.891667
+  },
+  {
+    "icao": "EHAL",
+    "name": "Ameland Airport Ballum",
+    "country": "Netherlands",
+    "lat": 53.453612,
+    "lon": 5.678396
+  },
+  {
+    "icao": "EHAM",
+    "name": "Amsterdam Airport Schiphol",
+    "country": "Netherlands",
+    "lat": 52.308601,
+    "lon": 4.76389
+  },
+  {
+    "icao": "EHBD",
+    "name": "Kempen Airport Budel",
+    "country": "Netherlands",
+    "lat": 51.255299,
+    "lon": 5.60139
+  },
+  {
+    "icao": "EHBK",
+    "name": "Maastricht Aachen Airport",
+    "country": "Netherlands",
+    "lat": 50.911087,
+    "lon": 5.769401
+  },
+  {
+    "icao": "EHDL",
+    "name": "Deelen Air Base",
+    "country": "Netherlands",
+    "lat": 52.0606,
+    "lon": 5.87306
+  },
+  {
+    "icao": "EHDR",
+    "name": "Drachten Airfield",
+    "country": "Netherlands",
+    "lat": 53.117933,
+    "lon": 6.127324
+  },
+  {
+    "icao": "EHDV",
+    "name": "D15-FA-1 Heliport",
+    "country": "Netherlands",
+    "lat": 54.32472,
+    "lon": 2.93417
+  },
+  {
+    "icao": "EHEH",
+    "name": "Eindhoven Airport",
+    "country": "Netherlands",
+    "lat": 51.4500999451,
+    "lon": 5.37452983856
+  },
+  {
+    "icao": "EHGG",
+    "name": "Groningen Airport Eelde",
+    "country": "Netherlands",
+    "lat": 53.119107,
+    "lon": 6.577652
+  },
+  {
+    "icao": "EHGR",
+    "name": "Gilze Rijen Air Base",
+    "country": "Netherlands",
+    "lat": 51.567402,
+    "lon": 4.93183
+  },
+  {
+    "icao": "EHKD",
+    "name": "De Kooy Airfield / Den Helder Naval Air Station",
+    "country": "Netherlands",
+    "lat": 52.923401,
+    "lon": 4.78062
+  },
+  {
+    "icao": "EHLE",
+    "name": "Lelystad Airport",
+    "country": "Netherlands",
+    "lat": 52.453188,
+    "lon": 5.514622
+  },
+  {
+    "icao": "EHLW",
+    "name": "Leeuwarden Air Base",
+    "country": "Netherlands",
+    "lat": 53.228599548339844,
+    "lon": 5.760560035705566
+  },
+  {
+    "icao": "EHMC",
+    "name": "Air Operations Control Station Nieuw Milligen Heliport",
+    "country": "Netherlands",
+    "lat": 52.236685,
+    "lon": 5.749192
+  },
+  {
+    "icao": "EHMM",
+    "name": "Middenmeer Airfield",
+    "country": "Netherlands",
+    "lat": 52.814876,
+    "lon": 5.021245
+  },
+  {
+    "icao": "EHRD",
+    "name": "Rotterdam The Hague Airport",
+    "country": "Netherlands",
+    "lat": 51.956902,
+    "lon": 4.43722
+  },
+  {
+    "icao": "EHSE",
+    "name": "Breda International Airport",
+    "country": "Netherlands",
+    "lat": 51.554901,
+    "lon": 4.553003
+  },
+  {
+    "icao": "EHTE",
+    "name": "Teuge Airport",
+    "country": "Netherlands",
+    "lat": 52.242764,
+    "lon": 6.050004
+  },
+  {
+    "icao": "EHTS",
+    "name": "Terschelling Heliport",
+    "country": "Netherlands",
+    "lat": 53.384129,
+    "lon": 5.278094
+  },
+  {
+    "icao": "EHTW",
+    "name": "Twente Airport",
+    "country": "Netherlands",
+    "lat": 52.275833,
+    "lon": 6.889167
+  },
+  {
+    "icao": "EHTX",
+    "name": "Texel International Airport",
+    "country": "Netherlands",
+    "lat": 53.114962,
+    "lon": 4.830552
+  },
+  {
+    "icao": "EHVK",
+    "name": "Volkel Air Base",
+    "country": "Netherlands",
+    "lat": 51.657222,
+    "lon": 5.707778
+  },
+  {
+    "icao": "EHWO",
+    "name": "Woensdrecht Air Base",
+    "country": "Netherlands",
+    "lat": 51.4491,
+    "lon": 4.34203
+  },
+  {
+    "icao": "LFAB",
+    "name": "Dieppe-Saint-Aubin Airport",
+    "country": "France",
+    "lat": 49.884662,
+    "lon": 1.08101
+  },
+  {
+    "icao": "LFAC",
+    "name": "Calais Marck Airport",
+    "country": "France",
+    "lat": 50.962101,
+    "lon": 1.95476
+  },
+  {
+    "icao": "LFAD",
+    "name": "Compiègne Margny Airfield",
+    "country": "France",
+    "lat": 49.431242,
+    "lon": 2.801514
+  },
+  {
+    "icao": "LFAE",
+    "name": "Eu Mers-Le Tréport Airfield",
+    "country": "France",
+    "lat": 50.068168,
+    "lon": 1.424748
+  },
+  {
+    "icao": "LFAF",
+    "name": "Laon-Chambry Airfield",
+    "country": "France",
+    "lat": 49.595798,
+    "lon": 3.63167
+  },
+  {
+    "icao": "LFAG",
+    "name": "Péronne Saint-Quentin Airfield",
+    "country": "France",
+    "lat": 49.868871,
+    "lon": 3.029566
+  },
+  {
+    "icao": "LFAI",
+    "name": "Nangis-Les Loges Aerodrome",
+    "country": "France",
+    "lat": 48.596199,
+    "lon": 3.00679
+  },
+  {
+    "icao": "LFAJ",
+    "name": "Argentan Airfield",
+    "country": "France",
+    "lat": 48.709456,
+    "lon": 0.002856
+  },
+  {
+    "icao": "LFAK",
+    "name": "Dunkerque-Les Moëres Airfield",
+    "country": "France",
+    "lat": 51.039559,
+    "lon": 2.549129
+  },
+  {
+    "icao": "LFAL",
+    "name": "La Flèche-Thorée-les-Pins Airfield",
+    "country": "France",
+    "lat": 47.69261,
+    "lon": -0.002198
+  },
+  {
+    "icao": "LFAM",
+    "name": "Berck-sur-Mer Airfield",
+    "country": "France",
+    "lat": 50.4231,
+    "lon": 1.59194
+  },
+  {
+    "icao": "LFAO",
+    "name": "Bagnoles-Couterne Airfield",
+    "country": "France",
+    "lat": 48.545799,
+    "lon": -0.387444
+  },
+  {
+    "icao": "LFAP",
+    "name": "Rethel-Perthes Airfield",
+    "country": "France",
+    "lat": 49.48097,
+    "lon": 4.363304
+  },
+  {
+    "icao": "LFAQ",
+    "name": "Albert Bray airport",
+    "country": "France",
+    "lat": 49.970049,
+    "lon": 2.693939
+  },
+  {
+    "icao": "LFAR",
+    "name": "Montdidier Airfield",
+    "country": "France",
+    "lat": 49.672118,
+    "lon": 2.567811
+  },
+  {
+    "icao": "LFAS",
+    "name": "Falaise-Mont d'Eraines Airfield",
+    "country": "France",
+    "lat": 48.9272,
+    "lon": -0.144722
+  },
+  {
+    "icao": "LFAT",
+    "name": "Le Touquet-Côte d'Opale Airport",
+    "country": "France",
+    "lat": 50.518284,
+    "lon": 1.621656
+  },
+  {
+    "icao": "LFAU",
+    "name": "Aérodrome de Vauville",
+    "country": "France",
+    "lat": 49.622775,
+    "lon": -1.830688
+  },
+  {
+    "icao": "LFAV",
+    "name": "Valenciennes-Denain Airfield",
+    "country": "France",
+    "lat": 50.327823,
+    "lon": 3.461061
+  },
+  {
+    "icao": "LFAW",
+    "name": "Villerupt Aerodrome",
+    "country": "France",
+    "lat": 49.410424,
+    "lon": 5.889301
+  },
+  {
+    "icao": "LFAX",
+    "name": "Mortagne-au-Perche Airfield",
+    "country": "France",
+    "lat": 48.539157,
+    "lon": 0.532043
+  },
+  {
+    "icao": "LFAY",
+    "name": "Amiens Glisy Airfield",
+    "country": "France",
+    "lat": 49.873004,
+    "lon": 2.387074
+  },
+  {
+    "icao": "LFBA",
+    "name": "Agen La Garenne airport",
+    "country": "France",
+    "lat": 44.174171,
+    "lon": 0.59309
+  },
+  {
+    "icao": "LFBD",
+    "name": "Bordeaux–Mérignac Airport",
+    "country": "France",
+    "lat": 44.82865,
+    "lon": -0.715356
+  },
+  {
+    "icao": "LFBE",
+    "name": "Bergerac Dordogne-Périgord airport",
+    "country": "France",
+    "lat": 44.825298,
+    "lon": 0.518611
+  },
+  {
+    "icao": "LFBF",
+    "name": "Toulouse-Francazal (BA 101) Air Base",
+    "country": "France",
+    "lat": 43.545601,
+    "lon": 1.3675
+  },
+  {
+    "icao": "LFBG",
+    "name": "Cognac-Châteaubernard (BA 709) Air Base",
+    "country": "France",
+    "lat": 45.658298,
+    "lon": -0.3175
+  },
+  {
+    "icao": "LFBH",
+    "name": "La Rochelle Île de Ré Airport",
+    "country": "France",
+    "lat": 46.179199,
+    "lon": -1.19528
+  },
+  {
+    "icao": "LFBI",
+    "name": "Poitiers-Biard Airport",
+    "country": "France",
+    "lat": 46.5877,
+    "lon": 0.306666
+  },
+  {
+    "icao": "LFBJ",
+    "name": "Aérodrome de Saint-Junien",
+    "country": "France",
+    "lat": 45.902234,
+    "lon": 0.918225
+  },
+  {
+    "icao": "LFBK",
+    "name": "Montluçon-Guéret Airport",
+    "country": "France",
+    "lat": 46.222599,
+    "lon": 2.36396
+  },
+  {
+    "icao": "LFBL",
+    "name": "Limoges Airport",
+    "country": "France",
+    "lat": 45.862801,
+    "lon": 1.17944
+  },
+  {
+    "icao": "LFBM",
+    "name": "Mont-de-Marsan (BA 118) Air Base",
+    "country": "France",
+    "lat": 43.911701,
+    "lon": -0.5075
+  },
+  {
+    "icao": "LFBN",
+    "name": "Niort - Marais Poitevin Airport",
+    "country": "France",
+    "lat": 46.313477,
+    "lon": -0.394529
+  },
+  {
+    "icao": "LFBO",
+    "name": "Toulouse-Blagnac Airport",
+    "country": "France",
+    "lat": 43.629101,
+    "lon": 1.36382
+  },
+  {
+    "icao": "LFBP",
+    "name": "Pau Pyrénées Airport",
+    "country": "France",
+    "lat": 43.380001,
+    "lon": -0.418611
+  },
+  {
+    "icao": "LFBR",
+    "name": "Aérodrome de Muret - Lherm",
+    "country": "France",
+    "lat": 43.448898,
+    "lon": 1.26333
+  },
+  {
+    "icao": "LFBS",
+    "name": "Biscarrosse Parentis Airfield",
+    "country": "France",
+    "lat": 44.36756,
+    "lon": -1.133903
+  },
+  {
+    "icao": "LFBT",
+    "name": "Tarbes-Lourdes-Pyrénées Airport",
+    "country": "France",
+    "lat": 43.178699,
+    "lon": -0.006439
+  },
+  {
+    "icao": "LFBU",
+    "name": "Angoulême Brie-Champniers airport",
+    "country": "France",
+    "lat": 45.729198,
+    "lon": 0.221456
+  },
+  {
+    "icao": "LFBX",
+    "name": "Périgueux-Bassillac Airport",
+    "country": "France",
+    "lat": 45.198101,
+    "lon": 0.815556
+  },
+  {
+    "icao": "LFBY",
+    "name": "Dax Seyresse Airfield",
+    "country": "France",
+    "lat": 43.689201,
+    "lon": -1.06889
+  },
+  {
+    "icao": "LFBZ",
+    "name": "Biarritz Pays Basque airport",
+    "country": "France",
+    "lat": 43.468372,
+    "lon": -1.523223
+  },
+  {
+    "icao": "LFCA",
+    "name": "Aérodrome de Châtellerault-Targé",
+    "country": "France",
+    "lat": 46.782644,
+    "lon": 0.550485
+  },
+  {
+    "icao": "LFCC",
+    "name": "Cahors Lalbenque airport",
+    "country": "France",
+    "lat": 44.351398,
+    "lon": 1.47528
+  },
+  {
+    "icao": "LFCI",
+    "name": "Albi Le Sequestre airport",
+    "country": "France",
+    "lat": 43.913898,
+    "lon": 2.11306
+  },
+  {
+    "icao": "LFCK",
+    "name": "Castres Mazamet Airport",
+    "country": "France",
+    "lat": 43.556301,
+    "lon": 2.28918
+  },
+  {
+    "icao": "LFCQ",
+    "name": "Aérodrome de Graulhet-Montdragon",
+    "country": "France",
+    "lat": 43.771099,
+    "lon": 2.01083
+  },
+  {
+    "icao": "LFCR",
+    "name": "Rodez–Aveyron Airport",
+    "country": "France",
+    "lat": 44.407902,
+    "lon": 2.48267
+  },
+  {
+    "icao": "LFCX",
+    "name": "Aérodrome de Castelsarrasin Moissac",
+    "country": "France",
+    "lat": 44.086423,
+    "lon": 1.127191
+  },
+  {
+    "icao": "LFCY",
+    "name": "Royan-Médis Airport",
+    "country": "France",
+    "lat": 45.628101,
+    "lon": -0.9725
+  },
+  {
+    "icao": "LFCZ",
+    "name": "Aérodrome de Mimizan",
+    "country": "France",
+    "lat": 44.145928,
+    "lon": -1.16432
+  },
+  {
+    "icao": "LFDB",
+    "name": "Aérodrome Morin - Védrines",
+    "country": "France",
+    "lat": 44.0257,
+    "lon": 1.37804
+  },
+  {
+    "icao": "LFDG",
+    "name": "Aérodrome de Gaillac - Lisle-sur-Tarn",
+    "country": "France",
+    "lat": 43.8839,
+    "lon": 1.87556
+  },
+  {
+    "icao": "LFDH",
+    "name": "Auch Gers Airfield",
+    "country": "France",
+    "lat": 43.683606,
+    "lon": 0.599747
+  },
+  {
+    "icao": "LFDN",
+    "name": "Rochefort-Saint-Agnant (BA 721) Airport",
+    "country": "France",
+    "lat": 45.887798,
+    "lon": -0.983056
+  },
+  {
+    "icao": "LFEA",
+    "name": "Aérodrome de Belle Île",
+    "country": "France",
+    "lat": 47.325256,
+    "lon": -3.201255
+  },
+  {
+    "icao": "LFEB",
+    "name": "Dinan-Trélivan Airfield",
+    "country": "France",
+    "lat": 48.443351,
+    "lon": -2.103142
+  },
+  {
+    "icao": "LFEC",
+    "name": "Ouessant Airport",
+    "country": "France",
+    "lat": 48.4632,
+    "lon": -5.06358
+  },
+  {
+    "icao": "LFED",
+    "name": "Pontivy Airfield",
+    "country": "France",
+    "lat": 48.05674,
+    "lon": -2.920818
+  },
+  {
+    "icao": "LFEF",
+    "name": "Amboise Dierre Airfield",
+    "country": "France",
+    "lat": 47.339771,
+    "lon": 0.945861
+  },
+  {
+    "icao": "LFEG",
+    "name": "Argenton-sur-Creuse Airfield",
+    "country": "France",
+    "lat": 46.59626,
+    "lon": 1.601572
+  },
+  {
+    "icao": "LFEU",
+    "name": "Bar-le-Duc Airfield",
+    "country": "France",
+    "lat": 48.867519,
+    "lon": 5.185068
+  },
+  {
+    "icao": "LFEY",
+    "name": "Île d'Yeu Airport",
+    "country": "France",
+    "lat": 46.717641,
+    "lon": -2.392544
+  },
+  {
+    "icao": "LFFO",
+    "name": "Beauvoir Fromentine Airfield",
+    "country": "France",
+    "lat": 46.890422,
+    "lon": -2.088475
+  },
+  {
+    "icao": "LFGA",
+    "name": "Colmar Houssen airport",
+    "country": "France",
+    "lat": 48.109901,
+    "lon": 7.35901
+  },
+  {
+    "icao": "LFGJ",
+    "name": "Dole Tavaux Airport",
+    "country": "France",
+    "lat": 47.038955,
+    "lon": 5.427589
+  },
+  {
+    "icao": "LFHH",
+    "name": "Vienne Reventin Airfield",
+    "country": "France",
+    "lat": 45.462434,
+    "lon": 4.828147
+  },
+  {
+    "icao": "LFHM",
+    "name": "Megève Altiport",
+    "country": "France",
+    "lat": 45.823005,
+    "lon": 6.649406
+  },
+  {
+    "icao": "LFHO",
+    "name": "Aubenas-South Ardèche Airport",
+    "country": "France",
+    "lat": 44.544367,
+    "lon": 4.372194
+  },
+  {
+    "icao": "LFHP",
+    "name": "Le Puy-Loudes Airfield",
+    "country": "France",
+    "lat": 45.0807,
+    "lon": 3.76289
+  },
+  {
+    "icao": "LFHS",
+    "name": "Bourg-Ceyzériat Airfield",
+    "country": "France",
+    "lat": 46.200901,
+    "lon": 5.29203
+  },
+  {
+    "icao": "LFHU",
+    "name": "L'Alpe d'Huez - Henri Giraud Altiport",
+    "country": "France",
+    "lat": 45.087399,
+    "lon": 6.083604
+  },
+  {
+    "icao": "LFHV",
+    "name": "Villefranche-Tarare Airfield",
+    "country": "France",
+    "lat": 45.918314,
+    "lon": 4.635184
+  },
+  {
+    "icao": "LFHY",
+    "name": "Moulins-Montbeugny Airfield",
+    "country": "France",
+    "lat": 46.534599,
+    "lon": 3.42372
+  },
+  {
+    "icao": "LFJL",
+    "name": "Metz-Nancy-Lorraine Airport",
+    "country": "France",
+    "lat": 48.982101,
+    "lon": 6.25132
+  },
+  {
+    "icao": "LFJR",
+    "name": "Angers Marcé airport",
+    "country": "France",
+    "lat": 47.560299,
+    "lon": -0.312222
+  },
+  {
+    "icao": "LFKB",
+    "name": "Bastia-Poretta International airport",
+    "country": "France",
+    "lat": 42.5527,
+    "lon": 9.48373
+  },
+  {
+    "icao": "LFKC",
+    "name": "Calvi Sainte Catherine Airport",
+    "country": "France",
+    "lat": 42.530422,
+    "lon": 8.792984
+  },
+  {
+    "icao": "LFKF",
+    "name": "Figari Sud-Corse Airport",
+    "country": "France",
+    "lat": 41.50185,
+    "lon": 9.097092
+  },
+  {
+    "icao": "LFKG",
+    "name": "Aérodrome de Ghisonaccia - Alzitone",
+    "country": "France",
+    "lat": 42.053387,
+    "lon": 9.400241
+  },
+  {
+    "icao": "LFKJ",
+    "name": "Ajaccio Napoléon Bonaparte airport",
+    "country": "France",
+    "lat": 41.923599,
+    "lon": 8.80292
+  },
+  {
+    "icao": "LFKO",
+    "name": "Propriano Airport",
+    "country": "France",
+    "lat": 41.660599,
+    "lon": 8.88975
+  },
+  {
+    "icao": "LFKS",
+    "name": "Solenzara (BA 126) Air Base",
+    "country": "France",
+    "lat": 41.9244,
+    "lon": 9.406
+  },
+  {
+    "icao": "LFKX",
+    "name": "Méribel Altiport",
+    "country": "France",
+    "lat": 45.407505,
+    "lon": 6.577597
+  },
+  {
+    "icao": "LFLA",
+    "name": "Auxerre Branches airport",
+    "country": "France",
+    "lat": 47.850201,
+    "lon": 3.49711
+  },
+  {
+    "icao": "LFLB",
+    "name": "Chambéry Aix les Bains airport",
+    "country": "France",
+    "lat": 45.6381,
+    "lon": 5.88023
+  },
+  {
+    "icao": "LFLC",
+    "name": "Clermont-Ferrand Auvergne airport",
+    "country": "France",
+    "lat": 45.786701,
+    "lon": 3.16917
+  },
+  {
+    "icao": "LFLD",
+    "name": "Bourges airport",
+    "country": "France",
+    "lat": 47.060158,
+    "lon": 2.369633
+  },
+  {
+    "icao": "LFLE",
+    "name": "Chambéry Challes-les-Eaux Airfield",
+    "country": "France",
+    "lat": 45.5611,
+    "lon": 5.97576
+  },
+  {
+    "icao": "LFLG",
+    "name": "Grenoble Le Versoud Airfield",
+    "country": "France",
+    "lat": 45.218047,
+    "lon": 5.848317
+  },
+  {
+    "icao": "LFLH",
+    "name": "Chalon Champforgeuil Airfield",
+    "country": "France",
+    "lat": 46.825813,
+    "lon": 4.817646
+  },
+  {
+    "icao": "LFLI",
+    "name": "Annemasse Airfield",
+    "country": "France",
+    "lat": 46.192001,
+    "lon": 6.26839
+  },
+  {
+    "icao": "LFLJ",
+    "name": "Courchevel Altiport",
+    "country": "France",
+    "lat": 45.397531,
+    "lon": 6.63498
+  },
+  {
+    "icao": "LFLL",
+    "name": "Lyon Saint-Exupéry Airport",
+    "country": "France",
+    "lat": 45.725996,
+    "lon": 5.090139
+  },
+  {
+    "icao": "LFLN",
+    "name": "Saint-Yan Airport",
+    "country": "France",
+    "lat": 46.414019,
+    "lon": 4.014177
+  },
+  {
+    "icao": "LFLO",
+    "name": "Roanne-Renaison Airport",
+    "country": "France",
+    "lat": 46.053818,
+    "lon": 3.999023
+  },
+  {
+    "icao": "LFLP",
+    "name": "Annecy Meythet airport",
+    "country": "France",
+    "lat": 45.928947,
+    "lon": 6.0987
+  },
+  {
+    "icao": "LFLS",
+    "name": "Grenoble Alpes Isère Airport",
+    "country": "France",
+    "lat": 45.3629,
+    "lon": 5.32937
+  },
+  {
+    "icao": "LFLU",
+    "name": "Valence-Chabeuil Airport",
+    "country": "France",
+    "lat": 44.9216,
+    "lon": 4.9699
+  },
+  {
+    "icao": "LFLV",
+    "name": "Vichy-Charmeil Airport",
+    "country": "France",
+    "lat": 46.16969,
+    "lon": 3.403637
+  },
+  {
+    "icao": "LFLW",
+    "name": "Aurillac airport",
+    "country": "France",
+    "lat": 44.891399,
+    "lon": 2.42194
+  },
+  {
+    "icao": "LFLX",
+    "name": "Châteauroux Déols airport",
+    "country": "France",
+    "lat": 46.860221,
+    "lon": 1.728326
+  },
+  {
+    "icao": "LFLY",
+    "name": "Lyon Bron Airport",
+    "country": "France",
+    "lat": 45.727947,
+    "lon": 4.943991
+  },
+  {
+    "icao": "LFMA",
+    "name": "Aix Les Milles airport",
+    "country": "France",
+    "lat": 43.506294,
+    "lon": 5.366426
+  },
+  {
+    "icao": "LFMD",
+    "name": "Cannes Mandelieu Airport",
+    "country": "France",
+    "lat": 43.547998,
+    "lon": 6.955176
+  },
+  {
+    "icao": "LFMH",
+    "name": "Saint-Étienne-Bouthéon Airport",
+    "country": "France",
+    "lat": 45.5406,
+    "lon": 4.29639
+  },
+  {
+    "icao": "LFMI",
+    "name": "Istres-Le Tubé Air Base",
+    "country": "France",
+    "lat": 43.522701,
+    "lon": 4.92384
+  },
+  {
+    "icao": "LFMK",
+    "name": "Carcassonne Salvaza Airport",
+    "country": "France",
+    "lat": 43.216,
+    "lon": 2.30632
+  },
+  {
+    "icao": "LFML",
+    "name": "Marseille Provence Airport",
+    "country": "France",
+    "lat": 43.438088,
+    "lon": 5.2125
+  },
+  {
+    "icao": "LFMN",
+    "name": "Nice-Côte d'Azur Airport",
+    "country": "France",
+    "lat": 43.658401,
+    "lon": 7.21587
+  },
+  {
+    "icao": "LFMP",
+    "name": "Perpignan-Rivesaltes (Llabanère) Airport",
+    "country": "France",
+    "lat": 42.740398,
+    "lon": 2.87067
+  },
+  {
+    "icao": "LFMQ",
+    "name": "Le Castellet Airport",
+    "country": "France",
+    "lat": 43.252499,
+    "lon": 5.78519
+  },
+  {
+    "icao": "LFMR",
+    "name": "Barcelonnette - Saint-Pons Airfield",
+    "country": "France",
+    "lat": 44.387198,
+    "lon": 6.608831
+  },
+  {
+    "icao": "LFMT",
+    "name": "Montpellier-Méditerranée Airport",
+    "country": "France",
+    "lat": 43.576199,
+    "lon": 3.96301
+  },
+  {
+    "icao": "LFMU",
+    "name": "Béziers Vias airport",
+    "country": "France",
+    "lat": 43.323502,
+    "lon": 3.3539
+  },
+  {
+    "icao": "LFMV",
+    "name": "Avignon Caumont airport",
+    "country": "France",
+    "lat": 43.907299,
+    "lon": 4.90183
+  },
+  {
+    "icao": "LFNA",
+    "name": "Gap-Tallard Airfield",
+    "country": "France",
+    "lat": 44.455002,
+    "lon": 6.03778
+  },
+  {
+    "icao": "LFNB",
+    "name": "Mende-Brenoux Airfield",
+    "country": "France",
+    "lat": 44.502102,
+    "lon": 3.53282
+  },
+  {
+    "icao": "LFNC",
+    "name": "Mont-Dauphin Saint-Crépin Airfield",
+    "country": "France",
+    "lat": 44.701698,
+    "lon": 6.60028
+  },
+  {
+    "icao": "LFNN",
+    "name": "Narbonne Airfield",
+    "country": "France",
+    "lat": 43.194168,
+    "lon": 3.051667
+  },
+  {
+    "icao": "LFOB",
+    "name": "Beauvais-Tillé airport",
+    "country": "France",
+    "lat": 49.454399,
+    "lon": 2.11278
+  },
+  {
+    "icao": "LFOE",
+    "name": "Évreux-Fauville (BA 105) Air Base",
+    "country": "France",
+    "lat": 49.028702,
+    "lon": 1.21986
+  },
+  {
+    "icao": "LFOH",
+    "name": "Le Havre-Octeville Airport",
+    "country": "France",
+    "lat": 49.534038,
+    "lon": 0.088406
+  },
+  {
+    "icao": "LFOI",
+    "name": "Abbeville-Buigny Baie de Somme Airfield",
+    "country": "France",
+    "lat": 50.143501,
+    "lon": 1.831891
+  },
+  {
+    "icao": "LFOK",
+    "name": "Chalons Vatry airport",
+    "country": "France",
+    "lat": 48.77333,
+    "lon": 4.20611
+  },
+  {
+    "icao": "LFOO",
+    "name": "Les Sables-d'Olonne Talmont Airport",
+    "country": "France",
+    "lat": 46.476898,
+    "lon": -1.72278
+  },
+  {
+    "icao": "LFOP",
+    "name": "Rouen Vallée de Seine Airport",
+    "country": "France",
+    "lat": 49.384887,
+    "lon": 1.179142
+  },
+  {
+    "icao": "LFOQ",
+    "name": "Blois Le Breuil Airfield",
+    "country": "France",
+    "lat": 47.678502,
+    "lon": 1.20884
+  },
+  {
+    "icao": "LFOT",
+    "name": "Tours Val de Loire Airport",
+    "country": "France",
+    "lat": 47.432201,
+    "lon": 0.727606
+  },
+  {
+    "icao": "LFOU",
+    "name": "Cholet Le Pontreau airfield",
+    "country": "France",
+    "lat": 47.0821,
+    "lon": -0.877064
+  },
+  {
+    "icao": "LFOV",
+    "name": "Laval-Entrammes Airport",
+    "country": "France",
+    "lat": 48.032208,
+    "lon": -0.743999
+  },
+  {
+    "icao": "LFOZ",
+    "name": "Orléans–Saint-Denis-de-l'Hôtel Airport",
+    "country": "France",
+    "lat": 47.897758,
+    "lon": 2.164478
+  },
+  {
+    "icao": "LFPB",
+    "name": "Paris-Le Bourget International Airport",
+    "country": "France",
+    "lat": 48.962276,
+    "lon": 2.436539
+  },
+  {
+    "icao": "LFPC",
+    "name": "Creil Air Base",
+    "country": "France",
+    "lat": 49.253502,
+    "lon": 2.51914
+  },
+  {
+    "icao": "LFPF",
+    "name": "Beynes Thiverval Airfield",
+    "country": "France",
+    "lat": 48.843165,
+    "lon": 1.906279
+  },
+  {
+    "icao": "LFPG",
+    "name": "Charles de Gaulle International Airport",
+    "country": "France",
+    "lat": 49.00896,
+    "lon": 2.554117
+  },
+  {
+    "icao": "LFPK",
+    "name": "Coulommiers-Voisins Aerodrome",
+    "country": "France",
+    "lat": 48.839602,
+    "lon": 3.008653
+  },
+  {
+    "icao": "LFPL",
+    "name": "Lognes Emerainville Airfield",
+    "country": "France",
+    "lat": 48.821028,
+    "lon": 2.625967
+  },
+  {
+    "icao": "LFPN",
+    "name": "Toussus-le-Noble Airport",
+    "country": "France",
+    "lat": 48.7519,
+    "lon": 2.10619
+  },
+  {
+    "icao": "LFPO",
+    "name": "Paris-Orly Airport",
+    "country": "France",
+    "lat": 48.729499,
+    "lon": 2.358963
+  },
+  {
+    "icao": "LFPT",
+    "name": "Pontoise-Cormeilles Aerodrome",
+    "country": "France",
+    "lat": 49.096064,
+    "lon": 2.035543
+  },
+  {
+    "icao": "LFPX",
+    "name": "Chavenay-Villepreux Airfield",
+    "country": "France",
+    "lat": 48.842323,
+    "lon": 1.9805
+  },
+  {
+    "icao": "LFQG",
+    "name": "Nevers-Fourchambault Airport",
+    "country": "France",
+    "lat": 47.002913,
+    "lon": 3.113114
+  },
+  {
+    "icao": "LFQM",
+    "name": "Besançon La Vèze Airfield",
+    "country": "France",
+    "lat": 47.206615,
+    "lon": 6.083168
+  },
+  {
+    "icao": "LFQQ",
+    "name": "Lille Airport",
+    "country": "France",
+    "lat": 50.566564,
+    "lon": 3.102429
+  },
+  {
+    "icao": "LFQT",
+    "name": "Merville-Calonne Airport",
+    "country": "France",
+    "lat": 50.618401,
+    "lon": 2.64224
+  },
+  {
+    "icao": "LFQV",
+    "name": "Charleville-Mézières Ardennes-Etienne Riché Airfield",
+    "country": "France",
+    "lat": 49.783901,
+    "lon": 4.64708
+  },
+  {
+    "icao": "LFQX",
+    "name": "Juvancourt Aerodrome",
+    "country": "France",
+    "lat": 48.113977,
+    "lon": 4.819424
+  },
+  {
+    "icao": "LFRB",
+    "name": "Brest Bretagne airport",
+    "country": "France",
+    "lat": 48.447899,
+    "lon": -4.41854
+  },
+  {
+    "icao": "LFRC",
+    "name": "Cherbourg Manche airport",
+    "country": "France",
+    "lat": 49.650101,
+    "lon": -1.47028
+  },
+  {
+    "icao": "LFRD",
+    "name": "Dinard Pleurtuit Saint-Malo airport",
+    "country": "France",
+    "lat": 48.5877,
+    "lon": -2.07996
+  },
+  {
+    "icao": "LFRE",
+    "name": "La Baule-Escoublac Airport",
+    "country": "France",
+    "lat": 47.289398,
+    "lon": -2.34639
+  },
+  {
+    "icao": "LFRF",
+    "name": "Granville Airport",
+    "country": "France",
+    "lat": 48.883099,
+    "lon": -1.56417
+  },
+  {
+    "icao": "LFRG",
+    "name": "Deauville Normandie airport",
+    "country": "France",
+    "lat": 49.365237,
+    "lon": 0.154481
+  },
+  {
+    "icao": "LFRH",
+    "name": "Lorient South Brittany (Bretagne Sud) Airport",
+    "country": "France",
+    "lat": 47.760601,
+    "lon": -3.44
+  },
+  {
+    "icao": "LFRI",
+    "name": "La Roche-sur-Yon Les Ajoncs Airport",
+    "country": "France",
+    "lat": 46.7019,
+    "lon": -1.37863
+  },
+  {
+    "icao": "LFRJ",
+    "name": "Landivisiau Air Base",
+    "country": "France",
+    "lat": 48.5303,
+    "lon": -4.15164
+  },
+  {
+    "icao": "LFRK",
+    "name": "Caen Carpiquet airport",
+    "country": "France",
+    "lat": 49.17678,
+    "lon": -0.454883
+  },
+  {
+    "icao": "LFRM",
+    "name": "Le Mans-Arnage Airport",
+    "country": "France",
+    "lat": 47.948604,
+    "lon": 0.201702
+  },
+  {
+    "icao": "LFRN",
+    "name": "Rennes-Saint-Jacques Airport",
+    "country": "France",
+    "lat": 48.0695,
+    "lon": -1.73479
+  },
+  {
+    "icao": "LFRO",
+    "name": "Lannion Airport",
+    "country": "France",
+    "lat": 48.754398,
+    "lon": -3.47166
+  },
+  {
+    "icao": "LFRQ",
+    "name": "Quimper-Cornouaille Airport",
+    "country": "France",
+    "lat": 47.973031,
+    "lon": -4.169655
+  },
+  {
+    "icao": "LFRS",
+    "name": "Nantes Atlantique Airport",
+    "country": "France",
+    "lat": 47.153198,
+    "lon": -1.61073
+  },
+  {
+    "icao": "LFRT",
+    "name": "Saint-Brieuc-Armor Airport",
+    "country": "France",
+    "lat": 48.538628,
+    "lon": -2.853518
+  },
+  {
+    "icao": "LFRU",
+    "name": "Morlaix-Ploujean Airport",
+    "country": "France",
+    "lat": 48.6031990051,
+    "lon": -3.81577992439
+  },
+  {
+    "icao": "LFRV",
+    "name": "Vannes-Meucon Airport",
+    "country": "France",
+    "lat": 47.723301,
+    "lon": -2.71856
+  },
+  {
+    "icao": "LFRZ",
+    "name": "Saint-Nazaire-Montoir Airport",
+    "country": "France",
+    "lat": 47.31142,
+    "lon": -2.152634
+  },
+  {
+    "icao": "LFSB",
+    "name": "EuroAirport Basel–Mulhouse–Freiburg",
+    "country": "France",
+    "lat": 47.60068,
+    "lon": 7.521117
+  },
+  {
+    "icao": "LFSD",
+    "name": "Dijon Longvic airport",
+    "country": "France",
+    "lat": 47.268902,
+    "lon": 5.09
+  },
+  {
+    "icao": "LFSG",
+    "name": "Épinal Mirecourt Airport",
+    "country": "France",
+    "lat": 48.325001,
+    "lon": 6.06998
+  },
+  {
+    "icao": "LFSL",
+    "name": "Brive Souillac airport",
+    "country": "France",
+    "lat": 45.039722,
+    "lon": 1.485556
+  },
+  {
+    "icao": "LFSN",
+    "name": "Nancy-Essey Airport",
+    "country": "France",
+    "lat": 48.692101,
+    "lon": 6.23046
+  },
+  {
+    "icao": "LFST",
+    "name": "Strasbourg Airport",
+    "country": "France",
+    "lat": 48.5383,
+    "lon": 7.62823
+  },
+  {
+    "icao": "LFTA",
+    "name": "La Tranche-sur-Mer ULM",
+    "country": "France",
+    "lat": 46.363534,
+    "lon": -1.427364
+  },
+  {
+    "icao": "LFTB",
+    "name": "Berre/Marignane Seaplane Base",
+    "country": "France",
+    "lat": 43.444635,
+    "lon": 5.209672
+  },
+  {
+    "icao": "LFTH",
+    "name": "Toulon-Hyères Airport",
+    "country": "France",
+    "lat": 43.097301,
+    "lon": 6.14603
+  },
+  {
+    "icao": "LFTW",
+    "name": "Nîmes-Arles-Camargue Airport",
+    "country": "France",
+    "lat": 43.757401,
+    "lon": 4.41635
+  },
+  {
+    "icao": "LFTZ",
+    "name": "La Môle Airport",
+    "country": "France",
+    "lat": 43.205399,
+    "lon": 6.482
+  }
+]
